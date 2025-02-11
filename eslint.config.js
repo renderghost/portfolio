@@ -12,13 +12,17 @@ export default [
     files: ['**/*.{js,jsx,ts,tsx}'],
     languageOptions: {
       ecmaVersion: 2020,
-      globals: globals.browser,
+      globals: {
+        ...globals.browser,
+        ...globals.node
+      },
       parser: typescriptParser,
       parserOptions: {
         ecmaVersion: 'latest',
         ecmaFeatures: { jsx: true },
         sourceType: 'module',
-        project: './tsconfig.json',
+        project: './tsconfig.eslint.json',
+        tsconfigRootDir: process.cwd(),
       },
     },
     settings: { react: { version: '18.3' } },
