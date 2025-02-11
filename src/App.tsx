@@ -1,6 +1,6 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
-import Header from './components/layout/Header';
+import Header from './components/molecule/Header';
 
 // Placeholder components for our pages
 const Home: React.FC = () => <div>Home Page</div>;
