@@ -1,27 +1,21 @@
+import About from '@/pages/About';
+import Articles from '@/pages/Articles';
+import Home from '@/pages/Home';
+import Studies from '@/pages/Studies';
 import React from 'react';
-import { Routes, Route } from 'react-router-dom';
-import Header from './components/molecule/Header';
-
-// Placeholder components for our pages
-const Home: React.FC = () => <div>Home Page</div>;
-const Portfolio: React.FC = () => <div>Portfolio Page</div>;
-const About: React.FC = () => <div>About Page</div>;
-const Articles: React.FC = () => <div>Articles Page</div>;
+import { Route, Routes } from 'react-router-dom';
 
 const App: React.FC = () => {
-	return (
-		<div className='min-h-screen flex flex-col'>
-			<Header />
-			<main className='flex-grow container mx-auto px-4 py-8'>
-				<Routes>
-					<Route path='/' element={<Home />} />
-					<Route path='/portfolio' element={<Portfolio />} />
-					<Route path='/about' element={<About />} />
-					<Route path='/articles' element={<Articles />} />
-				</Routes>
-			</main>
-		</div>
-	);
+  return (
+    <div id="app">
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/article" element={<Articles />} />
+        <Route path="/study" element={<Studies />} />
+      </Routes>
+    </div>
+  );
 };
 
 export default App;
