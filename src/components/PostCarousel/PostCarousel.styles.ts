@@ -1,0 +1,14 @@
+export const carouselContainer = 'w-full py-8';
+export const carouselTitle = 'text-2xl font-bold mb-6';
+export const carouselWrapper = 'relative overflow-hidden';
+export const carouselTrack = 'flex transition-transform duration-300 ease-in-out';
+export const postCard = 'px-2 flex-shrink-0 transition-all duration-300';
+export const cardContent = 'h-full border rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow';
+export const cardImageWrapper = 'relative aspect-video overflow-hidden';
+export const cardTextWrapper = 'p-4';
+export const postMeta = 'text-sm text-muted-foreground mb-2';
+export const postTitle = 'font-semibold text-lg mb-2 line-clamp-2';
+export const postExcerpt = 'text-muted-foreground line-clamp-3';
+export const navigationWrapper = 'flex items-center justify-between mt-6';
+export const buttonGroup = 'flex gap-2';
+export const navButton = 'p-2 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700';
