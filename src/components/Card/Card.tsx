@@ -53,7 +53,7 @@ export const Card: React.FC<BaseCardProps> = ({ className, coverImage, badge, me
         </div>
 
         {/* Title */}
-        <Heading level={'h3'}>{title}</Heading>
+        <Heading level={3}>{title}</Heading>
         {/* Description */}
         {description && <Paragraph>{description}</Paragraph>}
       </div>
