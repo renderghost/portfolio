@@ -5,10 +5,10 @@ import React from 'react';
 
 const About: React.FC = () => {
   return (
-    <main className="flex flex-col gap-16 min-h-screen">
+    <main className="flex flex-col min-h-screen gap-16">
       {/* Introduction */}
       <section className="bg-neutral-100 text-neutral-0 dark:bg-neutral-0 dark:text-neutral-100 ">
-        <div className="container mx-auto flex flex-col gap-8">
+        <div className="container flex flex-col gap-8 mx-auto">
           <Heading level={2}>About Me</Heading>
           <Paragraph>
             I&apos;m Barry Prendergast, a product and service designer with nearly 15 years of experience shaping
@@ -18,17 +18,15 @@ const About: React.FC = () => {
           <Paragraph>
             I&apos;ve led multidisciplinary teams to build scalable products that solve complex problems, drive growth,
             and optimise operational efficiency. My approach combines human-centred design with strategic business
-            insight, ensuring that each product aligns with user needs and business objectives.
-          </Paragraph>
-          <Paragraph>
-            I&apos;m passionate about nurturing creative teams and building design systems that empower cross-functional
-            collaboration. I thrive in environments where curiosity, creativity, and strategic thinking intersect.
+            insight, ensuring that each product aligns with user needs and business objectives. I&apos;m passionate
+            about nurturing creative teams and building design systems that empower cross-functional collaboration. I
+            thrive in environments where curiosity, creativity, and strategic thinking intersect.
           </Paragraph>
         </div>
       </section>
       {/* Leadership and Strategic Design */}
       <section className="bg-neutral-100 text-neutral-0 dark:bg-neutral-0 dark:text-neutral-100 ">
-        <div className="container mx-auto flex flex-col gap-8">
+        <div className="container flex flex-col gap-8 mx-auto">
           <Heading level={2}>Leadership and Strategic Design</Heading>
           <Paragraph>
             Over the years, I&apos;ve held leadership roles where I&apos;ve built and mentored high-performing design
@@ -45,7 +43,7 @@ const About: React.FC = () => {
       </section>
       {/* Core Values */}
       <section className="bg-neutral-100 text-neutral-0 dark:bg-neutral-0 dark:text-neutral-100 ">
-        <div className="container mx-auto flex flex-col gap-8">
+        <div className="container flex flex-col gap-8 mx-auto">
           <Heading level={2}>Core Values</Heading>
           <ul className="grid grid-cols-2 gap-4">
             <li className="flex flex-col">
@@ -71,7 +69,7 @@ const About: React.FC = () => {
       </section>
       {/* Key Competencies */}
       <section className="bg-neutral-100 text-neutral-0 dark:bg-neutral-0 dark:text-neutral-100 ">
-        <div className="container mx-auto flex flex-col gap-8">
+        <div className="container flex flex-col gap-8 mx-auto">
           <Heading level={2}>Key Competencies</Heading>
           <Tags
             items={[
