@@ -5,7 +5,7 @@ export const ButtonStyles = {
   },
   themes: {
     mono: 'bg-bones-white dark:bg-bones-black text-bones-black dark:text-bones-white border-bones-black dark:border-bones-white',
-    grey: 'bg-bones-whitesmoke dark:bg-bones-dimgrey text-bones-black border-bones-black',
+    gray: 'bg-bones-whitesmoke dark:bg-bones-dimgray text-bones-black border-bones-black',
     yellow:
       'bg-bones-yellow hover:bg-bones-gold dark:bg-bones-gold hover:dark:bg-bones-yellow text-bones-black border-bones-black',
     blue: 'bg-bones-blue hover:bg-bones-mediumblue dark:bg-bones-mediumblue hover:dark:bg-bones-blue text-bones-white border-bones-white',

@@ -114,7 +114,7 @@ const eventsData = [
 
 export const HistorySection: React.FC = () => {
   return (
-    <Section theme="grey" id="history">
+    <Section theme="gray" id="history">
       <Divider />
       <div className="flex flex-col gap-2">
         <Heading level={2} style="section-title">

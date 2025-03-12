@@ -7,7 +7,7 @@ import React from 'react';
 
 const WorkHistorySection: React.FC = () => {
   return (
-    <Section theme="grey" id="work-history">
+    <Section theme="gray" id="work-history">
       <Divider />
       {/* Section Header */}
       <div className="flex flex-col gap-1">

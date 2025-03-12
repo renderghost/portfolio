@@ -1,6 +1,6 @@
 import { ReactNode } from 'react';
 
-export type SectionTheme = 'mono' | 'grey' | 'yellow' | 'blue' | 'red' | 'purple';
+export type SectionTheme = 'mono' | 'gray' | 'yellow' | 'blue' | 'red' | 'purple';
 
 export interface SectionProps {
   children: ReactNode;
