@@ -13,7 +13,7 @@ const Home: React.FC = () => {
   return (
     <div id="main" className="flex flex-col w-full">
       <Banner
-        message="This site is under construction. Check out"
+        message="This site is under construction. Expect Lorem Ipsum. Try "
         linkText="links.renderg.host"
         linkUrl="https://links.renderg.host"
       />
