@@ -7,9 +7,12 @@ export default {
       colors: {
         bones: {
           // Monos
-          black: 'black',
           white: 'white',
           whitesmoke: 'whitesmoke',
+          gray: 'gray',
+          dimgray: 'dimgray',
+          slategray: 'slategray',
+          black: 'black',
           // Yellows
           yellow: 'yellow',
           gold: 'gold',
@@ -18,6 +21,7 @@ export default {
           cyan: 'cyan',
           blue: 'blue',
           mediumblue: 'mediumblue',
+          midnightblue: 'midnightblue',
           // Reds
           red: 'red',
           firebrick: 'firebrick',
