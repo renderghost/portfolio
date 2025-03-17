@@ -3,6 +3,7 @@ import { Heading } from '@/components/Typography/Heading/Heading';
 import { Paragraph } from '@/components/Typography/Paragraph/Paragraph';
 import { cn } from '@/lib/utils';
 import React from 'react';
+import { Tags } from '../Tags/Tags';
 import { skillStyles } from './Skill.styles';
 import { SkillProps } from './Skill.types';
 
@@ -11,6 +12,7 @@ export const Skill: React.FC<SkillProps> = ({
   skillDescription,
   skillApproach,
   skillArtwork,
+  skillTags,
   className = '',
 }) => (
   <div className={cn(skillStyles.wrapper, className)}>
@@ -22,6 +24,7 @@ export const Skill: React.FC<SkillProps> = ({
         </Heading>
         <Paragraph size="byline">{skillDescription}</Paragraph>
         <Paragraph size="body">{skillApproach}</Paragraph>
+        <Tags tags={skillTags} />
       </div>
     </div>
   </div>

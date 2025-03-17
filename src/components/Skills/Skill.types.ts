@@ -5,5 +5,6 @@ export interface SkillProps {
   skillTitle: string;
   skillDescription: string;
   skillApproach: string;
+  skillTags: string; //NEW
   className?: string;
 }

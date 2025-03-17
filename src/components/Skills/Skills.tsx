@@ -13,6 +13,7 @@ export const Skills: React.FC<SkillsProps> = ({ items, className = '' }) => (
         skillTitle={item.skillTitle}
         skillDescription={item.skillDescription}
         skillApproach={item.skillApproach}
+        skillTags={item.skillTags}
       />
     ))}
   </div>

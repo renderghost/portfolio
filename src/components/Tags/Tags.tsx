@@ -1,48 +1,30 @@
+import { cn } from '@/lib/utils';
 import React from 'react';
+import { Paragraph } from '../Typography/Paragraph/Paragraph';
 
-// TypeScript Types
 interface TagProps {
-	label: string;
-	emphasis?: 'low' | 'med' | 'high';
+  label: string;
 }
+
+export const Tag: React.FC<TagProps> = ({ label }) => (
+  <span className="px-2 py-1 text-sm font-medium bg-gray-200 rounded">{label}</span>
+);
 
 interface TagsProps {
-	items: string[];
-	emphasis?: 'low' | 'med' | 'high';
+  tags?: string;
+  className?: string;
 }
 
-// Tailwind Styles
-const getEmphasisClasses = (emphasis: 'low' | 'med' | 'high') => {
-	switch (emphasis) {
-		case 'low':
-			return 'text-gray-500 bg-gray-100 dark:text-gray-400 dark:bg-gray-800';
-		case 'high':
-			return 'text-white bg-blue-600 dark:bg-blue-500';
-		case 'med':
-		default:
-			return 'text-gray-800 bg-gray-200 dark:text-gray-300 dark:bg-gray-700';
-	}
-};
+export const Tags: React.FC<TagsProps> = ({ tags = '', className = '' }) => {
+  const tagArray = tags ? tags.split(',').map((tag) => tag.trim()) : [];
 
-// Tag Component
-const Tag: React.FC<TagProps> = ({ label, emphasis = 'med' }) => {
-	return (
-		<span
-			className={`inline-block px-3 py-1 rounded-2xl text-sm font-medium ${getEmphasisClasses(emphasis)}`}>
-			{label}
-		</span>
-	);
+  return (
+    <div className={cn('flex flex-wrap gap-2', className)}>
+      {tagArray.length > 0 ? (
+        tagArray.map((tag, index) => <Tag key={`${tag}-${index}`} label={tag} />)
+      ) : (
+        <Paragraph size="label">No tags available</Paragraph>
+      )}
+    </div>
+  );
 };
-
-// Tags Component
-const Tags: React.FC<TagsProps> = ({ items, emphasis = 'med' }) => {
-	return (
-		<div className='flex flex-wrap gap-2'>
-			{items.map((item, index) => (
-				<Tag key={index} label={item} emphasis={emphasis} />
-			))}
-		</div>
-	);
-};
-
-export { Tag, Tags };
