@@ -29,6 +29,7 @@ const SkillsSection: React.FC = () => {
             skillDescription: 'Aligning key business metrics with unmet user needs.',
             skillApproach:
               'I translate business goals into actionable product and design objectives, ensuring every design decision drives meaningful success.',
+            skillTags: 'Product Strategy, Design Thinking, Business Model Innovation, Design Leadership', //NEW
           },
           {
             skillArtwork: 'design', //this is the Artwork name
@@ -36,6 +37,7 @@ const SkillsSection: React.FC = () => {
             skillDescription: 'Hands-on design and prototyping to validate bets and improve user experiences.',
             skillApproach:
               'I combine research, usability, and rapid prototyping to de-risk product decisions and refine solutions over time through continuous iteration.',
+            skillTags: 'User Research, Interface Design, Visual Design, Prototyping', //NEW
           },
           {
             skillArtwork: 'operations', //this is the Artwork name
@@ -43,6 +45,7 @@ const SkillsSection: React.FC = () => {
             skillDescription: 'Optimising the tools, rituals, and metrics that nurture great design culture.',
             skillApproach:
               'I streamline workflows, remove friction, and embed scalable design practices that empower teams to move fast without compromising quality.',
+            skillTags: 'Design Systems, Design Tools, Design Culture, Design Leadership', //NEW
           },
         ]}
       />
