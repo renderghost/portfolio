@@ -1,30 +1,21 @@
 /** @type {import('tailwindcss').Config} */
-export default {
-  content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
-  darkMode: 'media', // Matches system preferences
+module.exports = {
+  darkMode: 'class',
+  content: [
+    './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/components/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/app/**/*.{js,ts,jsx,tsx,mdx}',
+  ],
   theme: {
     extend: {
+      fontFamily: {
+        sans: ['var(--font-dm-sans)'],
+        serif: ['var(--font-dm-serif)'],
+      },
       colors: {
         bones: {
-          // Monos
-          white: 'white',
-          whitesmoke: 'whitesmoke',
-          gray: 'gray',
-          dimgray: 'dimgray',
-          slategray: 'slategray',
-          black: 'black',
-          // Yellows
-          yellow: 'yellow',
-          gold: 'gold',
-          goldenrod: 'goldenrod',
-          // Blues
-          cyan: 'cyan',
-          blue: 'blue',
-          mediumblue: 'mediumblue',
-          midnightblue: 'midnightblue',
-          // Reds
-          red: 'red',
-          firebrick: 'firebrick',
+          white: '#FFFFFF',
+          black: '#000
           darkred: 'darkred',
           // Purples
           magenta: 'magenta',
@@ -40,5 +31,7 @@ export default {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/typography'),
+  ],
 };
