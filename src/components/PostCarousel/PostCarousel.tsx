@@ -1,12 +1,10 @@
-'use client';
-
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { useEffect, useRef, useState } from 'react';
 // Components
 import { Button } from '../Button/Button';
 import { CardArticle } from '../Card/CardArticle';
-import { Heading } from '../Typography/Heading/Heading';
-import { Paragraph } from '../Typography/Paragraph/Paragraph';
+import { Heading } from '../Heading/Heading';
+import { Paragraph } from '../Paragraph/Paragraph';
 // Styles & Types
 import * as styles from './PostCarousel.styles';
 import { PostCarouselProps } from './PostCarousel.types';

@@ -22,6 +22,7 @@
     "skipLibCheck": true,
     "strict": true,
     "target": "ES2020",
+    "types": ["react"],
     "useDefineForClassFields": true
   },
   "include": ["src", "src/components/Sidebar/.Sidebar.tsx.off"],

@@ -1,8 +1,8 @@
 import { Divider } from '@/components/Divider/Divider';
+import { Heading } from '@/components/Heading/Heading';
+import { Paragraph } from '@/components/Paragraph/Paragraph';
 import { Section } from '@/components/Section/Section';
 import { Skills } from '@/components/Skills/Skills';
-import { Heading } from '@/components/Typography/Heading/Heading';
-import { Paragraph } from '@/components/Typography/Paragraph/Paragraph';
 import React from 'react';
 
 const SkillsSection: React.FC = () => {

@@ -1,8 +1,8 @@
 import { Divider } from '@/components/Divider/Divider';
 import { Facts } from '@/components/Facts/Facts';
+import { Heading } from '@/components/Heading/Heading';
+import { Paragraph } from '@/components/Paragraph/Paragraph';
 import { Section } from '@/components/Section/Section';
-import { Heading } from '@/components/Typography/Heading/Heading';
-import { Paragraph } from '@/components/Typography/Paragraph/Paragraph';
 import React from 'react';
 
 const WorkHistorySection: React.FC = () => {

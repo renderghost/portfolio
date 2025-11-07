@@ -1,6 +1,6 @@
 import { Artwork } from '@/components/Artwork/Artwork';
-import { Heading } from '@/components/Typography/Heading/Heading';
-import { Paragraph } from '@/components/Typography/Paragraph/Paragraph';
+import { Heading } from '@/components/Heading/Heading';
+import { Paragraph } from '@/components/Paragraph/Paragraph';
 import { cn } from '@/lib/utils';
 import React from 'react';
 import { Tags } from '../Tags/Tags';

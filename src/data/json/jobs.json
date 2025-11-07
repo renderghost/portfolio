@@ -1,14 +1,14 @@
 [
   {
-    "title": "Design Director (Consulting)",
-    "slug": "design-director-mgp",
-    "published": "Sun Jul 02 2023 00:47:22 GMT+0000 (Coordinated Universal Time)",
-    "description": "As interim design director at MyGoodPlanet, I helped set the company's design strategy, grow and guide the product design team, and establish scalable UX practices and operations as they pivoted from news publishing to e-commerce.",
-    "summary": "Supporting environmentally conscious shoppers to make informed and sustainable shopping decisions.",
-    "startDate": "Sat Jul 07 2018 00:00:00 GMT+0000 (Coordinated Universal Time)",
-    "endDate": "Sun Jul 07 2019 00:00:00 GMT+0000 (Coordinated Universal Time)",
-    "employmentType": "Contract",
+    "caseStudies": [
+      "defining-the-product-strategy-for-eco-shopping"
+    ],
+    "client": "MyGoodPlanet",
     "company": "mygoodplanet",
+    "description": "As interim design director at MyGoodPlanet, I helped set the company's design strategy, grow and guide the product design team, and establish scalable UX practices and operations as they pivoted from news publishing to e-commerce.",
+    "employmentType": "Contract",
+    "endDate": "Sun Jul 07 2019 00:00:00 GMT+0000 (Coordinated Universal Time)",
+    "published": "Sun Jul 02 2023 00:47:22 GMT+0000 (Coordinated Universal Time)",
     "skills": [
       "team-management",
       "design-leadership",
@@ -24,21 +24,23 @@
       "digital-transformation",
       "design-thinking"
     ],
-    "caseStudies": [
-      "defining-the-product-strategy-for-eco-shopping"
-    ],
-    "client": "MyGoodPlanet"
+    "slug": "design-director-mgp",
+    "startDate": "Sat Jul 07 2018 00:00:00 GMT+0000 (Coordinated Universal Time)",
+    "summary": "Supporting environmentally conscious shoppers to make informed and sustainable shopping decisions.",
+    "title": "Design Director (Consulting)"
   },
   {
-    "title": "Lead Product Designer",
-    "slug": "lead-product-designer-morressier",
-    "published": "Sun Jul 02 2023 00:47:22 GMT+0000 (Coordinated Universal Time)",
-    "description": "As the lead designer, I worked with product managers, engineers, data scientists and customer stakeholders to research and design new features for attending hybrid academic events, publishing conference proceedings, networking with peers and discovering the latest research. I also supported product design strategy, led and scaled the design team, supported professional development, matured UX design practices and improved agile development processes.",
-    "summary": "Enabling scientific communities, institutions and publishers to better create, discover and share research.",
-    "startDate": "Thu Oct 10 2019 00:00:00 GMT+0000 (Coordinated Universal Time)",
-    "endDate": "Fri Sep 09 2022 00:00:00 GMT+0000 (Coordinated Universal Time)",
-    "employmentType": "Full-time",
+    "caseStudies": [
+      "scaling-morressier-design-system",
+      "scaling-design-feedback",
+      "improving-the-recruitment-experience-for-design-candidates"
+    ],
+    "client": "Morressier",
     "company": "morressier",
+    "description": "As the lead designer, I worked with product managers, engineers, data scientists and customer stakeholders to research and design new features for attending hybrid academic events, publishing conference proceedings, networking with peers and discovering the latest research. I also supported product design strategy, led and scaled the design team, supported professional development, matured UX design practices and improved agile development processes.",
+    "employmentType": "Full-time",
+    "endDate": "Fri Sep 09 2022 00:00:00 GMT+0000 (Coordinated Universal Time)",
+    "published": "Sun Jul 02 2023 00:47:22 GMT+0000 (Coordinated Universal Time)",
     "skills": [
       "agile-methodologies",
       "team-management",
@@ -64,23 +66,21 @@
       "ux-research",
       "accessibility"
     ],
-    "caseStudies": [
-      "scaling-morressier-design-system",
-      "scaling-design-feedback",
-      "improving-the-recruitment-experience-for-design-candidates"
-    ],
-    "client": "Morressier"
+    "slug": "lead-product-designer-morressier",
+    "startDate": "Thu Oct 10 2019 00:00:00 GMT+0000 (Coordinated Universal Time)",
+    "summary": "Enabling scientific communities, institutions and publishers to better create, discover and share research.",
+    "title": "Lead Product Designer"
   },
   {
-    "title": "Principal Product Designer",
-    "slug": "principal-product-designer-edf",
-    "published": "Sun Jul 02 2023 00:47:22 GMT+0000 (Coordinated Universal Time)",
-    "description": "As principal product designer for EDF Energy's innovation lab working on the Smart Energy initiative, I worked with engineers, business development managers and startup founders to research, design and launch experimental web, mobile and hardware products for energy usage monitoring, disambiguation, waste reduction and automation for residential bill-payers.",
-    "summary": "Helping residential bill-payers better understand and manage their energy consumption.",
-    "startDate": "Sat Sep 09 2017 00:00:00 GMT+0000 (Coordinated Universal Time)",
-    "endDate": "Sat Feb 02 2019 00:00:00 GMT+0000 (Coordinated Universal Time)",
-    "employmentType": "Contract",
+    "caseStudies": [
+      "smarter-energy"
+    ],
+    "client": "XXXXXXXX",
     "company": "edf-energy",
+    "description": "As principal product designer for EDF Energy's innovation lab working on the Smart Energy initiative, I worked with engineers, business development managers and startup founders to research, design and launch experimental web, mobile and hardware products for energy usage monitoring, disambiguation, waste reduction and automation for residential bill-payers.",
+    "employmentType": "Contract",
+    "endDate": "Sat Feb 02 2019 00:00:00 GMT+0000 (Coordinated Universal Time)",
+    "published": "Sun Jul 02 2023 00:47:22 GMT+0000 (Coordinated Universal Time)",
     "skills": [
       "agile-methodologies",
       "data-visualization",
@@ -96,21 +96,21 @@
       "usability-testing",
       "ux-research"
     ],
-    "caseStudies": [
-      "smarter-energy"
-    ],
-    "client": "XXXXXXXX"
+    "slug": "principal-product-designer-edf",
+    "startDate": "Sat Sep 09 2017 00:00:00 GMT+0000 (Coordinated Universal Time)",
+    "summary": "Helping residential bill-payers better understand and manage their energy consumption.",
+    "title": "Principal Product Designer"
   },
   {
-    "title": "Principal Product Designer",
-    "slug": "principal-product-designer-leo",
-    "published": "Sun Jun 25 2023 06:48:40 GMT+0000 (Coordinated Universal Time)",
-    "description": "As Principal Product Designer at LEO Pharma's Innovation Lab, I collaborated with dermatologists, ethnographers, data scientists and patients to research and design experimental medical devices that use computer vision and machine learning technologies to diagnose skin conditions and provide timely, relevant and actionable treatment advice.",
-    "summary": "Enabling people living with a skin condition to get a diagnosis, communicate with their healthcare providers and receive clear personalised treatments more easily.",
-    "startDate": "Sat Feb 02 2019 00:00:00 GMT+0000 (Coordinated Universal Time)",
-    "endDate": "Thu Oct 10 2019 00:00:00 GMT+0000 (Coordinated Universal Time)",
-    "employmentType": "Contract",
+    "caseStudies": [
+      "ohmu"
+    ],
+    "client": "XXXXXXXX",
     "company": "leo-pharma",
+    "description": "As Principal Product Designer at LEO Pharma's Innovation Lab, I collaborated with dermatologists, ethnographers, data scientists and patients to research and design experimental medical devices that use computer vision and machine learning technologies to diagnose skin conditions and provide timely, relevant and actionable treatment advice.",
+    "employmentType": "Contract",
+    "endDate": "Thu Oct 10 2019 00:00:00 GMT+0000 (Coordinated Universal Time)",
+    "published": "Sun Jun 25 2023 06:48:40 GMT+0000 (Coordinated Universal Time)",
     "skills": [
       "accessibility",
       "agile-methodologies",
@@ -127,21 +127,21 @@
       "usability-testing",
       "ux-research"
     ],
-    "caseStudies": [
-      "ohmu"
-    ],
-    "client": "XXXXXXXX"
+    "slug": "principal-product-designer-leo",
+    "startDate": "Sat Feb 02 2019 00:00:00 GMT+0000 (Coordinated Universal Time)",
+    "summary": "Enabling people living with a skin condition to get a diagnosis, communicate with their healthcare providers and receive clear personalised treatments more easily.",
+    "title": "Principal Product Designer"
   },
   {
-    "title": "Senior UX Designer",
-    "slug": "senior-ux-designer-brandwatch",
-    "published": "Sun Jul 02 2023 00:47:22 GMT+0000 (Coordinated Universal Time)",
-    "description": "As a Senior Designer at Vizia, I lead the design from discovery to launch for new product experiences and experimental features for C-level, market research, analyst, business development and content marketing users. My team's work had a direct and positive impact on the digital transformation initiatives of clients such as American Airlines, Bank of America, British Red Cross, Samsung, Twitter, Walmart and Unilever.",
-    "summary": "Helping enterprise companies become more data-driven by better integrating, visualising and sharing timely relevant actionable insights, alerts and reports.",
-    "startDate": "Tue Mar 03 2015 00:00:00 GMT+0000 (Coordinated Universal Time)",
-    "endDate": "Mon Oct 10 2016 00:00:00 GMT+0000 (Coordinated Universal Time)",
-    "employmentType": "Full-time",
+    "caseStudies": [
+      "brandwatch-vizia"
+    ],
+    "client": "XXXXXXXX",
     "company": "brandwatch",
+    "description": "As a Senior Designer at Vizia, I lead the design from discovery to launch for new product experiences and experimental features for C-level, market research, analyst, business development and content marketing users. My team's work had a direct and positive impact on the digital transformation initiatives of clients such as American Airlines, Bank of America, British Red Cross, Samsung, Twitter, Walmart and Unilever.",
+    "employmentType": "Full-time",
+    "endDate": "Mon Oct 10 2016 00:00:00 GMT+0000 (Coordinated Universal Time)",
+    "published": "Sun Jul 02 2023 00:47:22 GMT+0000 (Coordinated Universal Time)",
     "skills": [
       "accessibility",
       "agile-methodologies",
@@ -160,21 +160,21 @@
       "usability-testing",
       "ux-research"
     ],
-    "caseStudies": [
-      "brandwatch-vizia"
-    ],
-    "client": "XXXXXXXX"
+    "slug": "senior-ux-designer-brandwatch",
+    "startDate": "Tue Mar 03 2015 00:00:00 GMT+0000 (Coordinated Universal Time)",
+    "summary": "Helping enterprise companies become more data-driven by better integrating, visualising and sharing timely relevant actionable insights, alerts and reports.",
+    "title": "Senior UX Designer"
   },
   {
-    "title": "Service Designer",
-    "slug": "service-designer-ukgov",
-    "published": "Sun Jun 25 2023 06:48:40 GMT+0000 (Coordinated Universal Time)",
-    "description": "As a Service Designer on the UK visas and immigration digital transformation team, I collaborated with user researchers, interaction designers, engineers and civil servants to improve caseworker decision-making capabilities with secure, efficient and effective tools, processes and realtime data assets, through an agile participatory design process, compliant with UK government's digital service standards. This was a hybrid role that also involved significant hands-on interaction design, prototyping and testing with service users.",
-    "summary": "Supporting foreign nationals to access more efficient, ethical and humane visa and immigration services when seeking to live and work in the UK.",
-    "startDate": "Mon Oct 10 2016 00:00:00 GMT+0000 (Coordinated Universal Time)",
-    "endDate": "Fri Mar 03 2017 00:00:00 GMT+0000 (Coordinated Universal Time)",
-    "employmentType": "Contract",
+    "caseStudies": [
+      ""
+    ],
+    "client": "XXXXXXXX",
     "company": "home-office",
+    "description": "As a Service Designer on the UK visas and immigration digital transformation team, I collaborated with user researchers, interaction designers, engineers and civil servants to improve caseworker decision-making capabilities with secure, efficient and effective tools, processes and realtime data assets, through an agile participatory design process, compliant with UK government's digital service standards. This was a hybrid role that also involved significant hands-on interaction design, prototyping and testing with service users.",
+    "employmentType": "Contract",
+    "endDate": "Fri Mar 03 2017 00:00:00 GMT+0000 (Coordinated Universal Time)",
+    "published": "Sun Jun 25 2023 06:48:40 GMT+0000 (Coordinated Universal Time)",
     "skills": [
       "accessibility",
       "agile-methodologies",
@@ -190,22 +190,24 @@
       "stakeholder-engagement",
       "usability-testing"
     ],
-    "caseStudies": [
-      ""
-    ],
-    "client": "XXXXXXXX"
+    "slug": "service-designer-ukgov",
+    "startDate": "Mon Oct 10 2016 00:00:00 GMT+0000 (Coordinated Universal Time)",
+    "summary": "Supporting foreign nationals to access more efficient, ethical and humane visa and immigration services when seeking to live and work in the UK.",
+    "title": "Service Designer"
   },
   {
-    "title": "Staff Product Designer",
-    "slug": "staff-product-designer-morressier",
-    "published": "Sun Jul 02 2023 00:47:22 GMT+0000 (Coordinated Universal Time)",
+    "caseStudies": [
+      "morressier-discovery",
+      "scaling-morressier-design-system",
+      "scaling-design-feedback"
+    ],
+    "client": "Morressier",
+    "company": "morressier",
     "cover": "https://uploads-ssl.webflow.com/63020a6ad41103e186d7416a/64933918d8f1b775db892710_product-school-nOvIa_x_tfo-unsplash.jpeg",
     "description": "In this role, I collaborate with product managers, engineers, data scientists and stakeholders to research and develop new and improved products that help scientists to publish and discover scientific research, and network with peers - all in a fast-paced, agile and fully remote environment. I also drive product design strategy, support and nurture the design team, mature and operationalise participatory UX design practices, improve cross-functional agile product development processes, and own scaling the design system.",
-    "summary": "Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.",
-    "startDate": "Mon Nov 01 2021 00:00:00 GMT+0000 (Coordinated Universal Time)",
-    "endDate": "",
     "employmentType": "Full-time",
-    "company": "morressier",
+    "endDate": "",
+    "published": "Sun Jul 02 2023 00:47:22 GMT+0000 (Coordinated Universal Time)",
     "skills": [
       "accessibility",
       "agile-methodologies",
@@ -231,23 +233,21 @@
       "usability-testing",
       "ux-research"
     ],
-    "caseStudies": [
-      "morressier-discovery",
-      "scaling-morressier-design-system",
-      "scaling-design-feedback"
-    ],
-    "client": "Morressier"
+    "slug": "staff-product-designer-morressier",
+    "startDate": "Mon Nov 01 2021 00:00:00 GMT+0000 (Coordinated Universal Time)",
+    "summary": "Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.",
+    "title": "Staff Product Designer"
   },
   {
-    "title": "Staff Service Designer",
-    "slug": "staff-service-designer-edf",
-    "published": "Sun Jul 02 2023 00:47:22 GMT+0000 (Coordinated Universal Time)",
-    "description": "As staff service designer, I collaboarted with senior stakeholders, engineers, ux designers, customer service managers and OFGEM regulators to enhance the residential bill-payer's experience buying energy, understanding their usage, resolving billing issues, and staying out of debt. This was a strategic role working at a strategic level in the Customer division to support the national Smart Meter roll-out.",
-    "summary": "Helping residential bill-payers better understand and manage their energy consumption. ",
-    "startDate": "Fri Mar 03 2017 00:00:00 GMT+0000 (Coordinated Universal Time)",
-    "endDate": "Fri Sep 01 2017 00:00:00 GMT+0000 (Coordinated Universal Time)",
-    "employmentType": "Contract",
+    "caseStudies": [
+      "smarter-energy"
+    ],
+    "client": "EDF Energy",
     "company": "edf-energy",
+    "description": "As staff service designer, I collaboarted with senior stakeholders, engineers, ux designers, customer service managers and OFGEM regulators to enhance the residential bill-payer's experience buying energy, understanding their usage, resolving billing issues, and staying out of debt. This was a strategic role working at a strategic level in the Customer division to support the national Smart Meter roll-out.",
+    "employmentType": "Contract",
+    "endDate": "Fri Sep 01 2017 00:00:00 GMT+0000 (Coordinated Universal Time)",
+    "published": "Sun Jul 02 2023 00:47:22 GMT+0000 (Coordinated Universal Time)",
     "skills": [
       "accessibility",
       "agile-methodologies",
@@ -270,42 +270,42 @@
       "usability-testing",
       "ux-research"
     ],
-    "caseStudies": [
-      "smarter-energy"
-    ],
-    "client": "EDF Energy"
+    "slug": "staff-service-designer-edf",
+    "startDate": "Fri Mar 03 2017 00:00:00 GMT+0000 (Coordinated Universal Time)",
+    "summary": "Helping residential bill-payers better understand and manage their energy consumption. ",
+    "title": "Staff Service Designer"
   },
   {
-    "title": "User Interface Designer",
-    "slug": "user-interface-designer-relentless",
-    "published": "Sun Jun 25 2023 06:48:40 GMT+0000 (Coordinated Universal Time)",
-    "description": "",
-    "summary": "",
-    "startDate": "Tue Jan 01 2008 00:00:00 GMT+0000 (Coordinated Universal Time)",
-    "endDate": "Sat Dec 12 2009 00:00:00 GMT+0000 (Coordinated Universal Time)",
-    "employmentType": "Full-time",
+    "caseStudies": [
+      ""
+    ],
+    "client": "XXXXXXXX",
     "company": "relentless-software",
+    "description": "",
+    "employmentType": "Full-time",
+    "endDate": "Sat Dec 12 2009 00:00:00 GMT+0000 (Coordinated Universal Time)",
+    "published": "Sun Jun 25 2023 06:48:40 GMT+0000 (Coordinated Universal Time)",
     "skills": [
       "design-systems",
       "interaction-design",
       "interface-design",
       "stakeholder-engagement"
     ],
+    "slug": "user-interface-designer-relentless",
+    "startDate": "Tue Jan 01 2008 00:00:00 GMT+0000 (Coordinated Universal Time)",
+    "summary": "",
+    "title": "User Interface Designer"
+  },
+  {
     "caseStudies": [
       ""
     ],
-    "client": "XXXXXXXX"
-  },
-  {
-    "title": "UX Design Manager",
-    "slug": "ux-design-manager-pure360",
-    "published": "Sun Jul 02 2023 00:47:22 GMT+0000 (Coordinated Universal Time)",
-    "description": "As design team lead, I set product design strategy, led and grew the design team, matured design practices and career development paths. I worked with product managers and engineers to redesign and launch the Pure360 Campaign product. I also collaborated with designers and engineers to design and implement the company's first design system initiative.",
-    "summary": "Helping organisations acquire and retain new customers, increase revenue and deepen customer loyalty through targeted content marketing.",
-    "startDate": "Mon Mar 03 2014 00:00:00 GMT+0000 (Coordinated Universal Time)",
-    "endDate": "Tue Mar 03 2015 00:00:00 GMT+0000 (Coordinated Universal Time)",
-    "employmentType": "Full-time",
+    "client": "XXXXXXXX",
     "company": "spotler",
+    "description": "As design team lead, I set product design strategy, led and grew the design team, matured design practices and career development paths. I worked with product managers and engineers to redesign and launch the Pure360 Campaign product. I also collaborated with designers and engineers to design and implement the company's first design system initiative.",
+    "employmentType": "Full-time",
+    "endDate": "Tue Mar 03 2015 00:00:00 GMT+0000 (Coordinated Universal Time)",
+    "published": "Sun Jul 02 2023 00:47:22 GMT+0000 (Coordinated Universal Time)",
     "skills": [
       "agile-methodologies",
       "design-leadership",
@@ -323,42 +323,42 @@
       "ux-research",
       "accessibility"
     ],
+    "slug": "ux-design-manager-pure360",
+    "startDate": "Mon Mar 03 2014 00:00:00 GMT+0000 (Coordinated Universal Time)",
+    "summary": "Helping organisations acquire and retain new customers, increase revenue and deepen customer loyalty through targeted content marketing.",
+    "title": "UX Design Manager"
+  },
+  {
     "caseStudies": [
       ""
     ],
-    "client": "XXXXXXXX"
-  },
-  {
-    "title": "UX Designer",
-    "slug": "ux-designer-mediatonic",
-    "published": "Sun Jun 25 2023 06:48:40 GMT+0000 (Coordinated Universal Time)",
-    "description": "I worked with product owners, game designers, artists and developers to create award-winning games for clients such as AdultSwim, Namco, SquareEnix and Ubisoft, as well as Mediatonic's own IP for mobile and console platforms. I researched, designed and tested new gaming experiences that attracted audiences, removed usability barriers to play, provided simple and clear feedback, and connected players on the couch and online. As the first UX designer at Mediatonic, I also promoted and coached better design principles and practices, and matured cross-functional collaboration rituals.",
-    "summary": "Enabling gamers to play more inclusive, approachable, fair and fun games.",
-    "startDate": "Wed Oct 10 2012 00:00:00 GMT+0000 (Coordinated Universal Time)",
-    "endDate": "Mon Mar 03 2014 00:00:00 GMT+0000 (Coordinated Universal Time)",
-    "employmentType": "Full-time",
+    "client": "XXXXXXXX",
     "company": "mediatonic",
+    "description": "I worked with product owners, game designers, artists and developers to create award-winning games for clients such as AdultSwim, Namco, SquareEnix and Ubisoft, as well as Mediatonic's own IP for mobile and console platforms. I researched, designed and tested new gaming experiences that attracted audiences, removed usability barriers to play, provided simple and clear feedback, and connected players on the couch and online. As the first UX designer at Mediatonic, I also promoted and coached better design principles and practices, and matured cross-functional collaboration rituals.",
+    "employmentType": "Full-time",
+    "endDate": "Mon Mar 03 2014 00:00:00 GMT+0000 (Coordinated Universal Time)",
+    "published": "Sun Jun 25 2023 06:48:40 GMT+0000 (Coordinated Universal Time)",
     "skills": [
       "design-systems",
       "interaction-design",
       "interface-design",
       "usability-testing"
     ],
+    "slug": "ux-designer-mediatonic",
+    "startDate": "Wed Oct 10 2012 00:00:00 GMT+0000 (Coordinated Universal Time)",
+    "summary": "Enabling gamers to play more inclusive, approachable, fair and fun games.",
+    "title": "UX Designer"
+  },
+  {
     "caseStudies": [
       ""
     ],
-    "client": "XXXXXXXX"
-  },
-  {
-    "title": "UX Designer",
-    "slug": "ux-designer-scenestealer",
-    "published": "Sat Jun 24 2023 05:33:18 GMT+0000 (Coordinated Universal Time)",
-    "description": "",
-    "summary": "",
-    "startDate": "Wed Apr 04 2012 00:00:00 GMT+0000 (Coordinated Universal Time)",
-    "endDate": "Sun Sep 09 2012 00:00:00 GMT+0000 (Coordinated Universal Time)",
-    "employmentType": "Contract",
+    "client": "Scenestealer",
     "company": "scenestealer",
+    "description": "",
+    "employmentType": "Contract",
+    "endDate": "Sun Sep 09 2012 00:00:00 GMT+0000 (Coordinated Universal Time)",
+    "published": "Sat Jun 24 2023 05:33:18 GMT+0000 (Coordinated Universal Time)",
     "skills": [
       "design-strategy",
       "design-systems",
@@ -368,21 +368,21 @@
       "usability-testing",
       "ux-research"
     ],
+    "slug": "ux-designer-scenestealer",
+    "startDate": "Wed Apr 04 2012 00:00:00 GMT+0000 (Coordinated Universal Time)",
+    "summary": "",
+    "title": "UX Designer"
+  },
+  {
     "caseStudies": [
       ""
     ],
-    "client": "Scenestealer"
-  },
-  {
-    "title": "UX Designer",
-    "slug": "ux-designer-slb",
-    "published": "Sun Jun 25 2023 06:48:40 GMT+0000 (Coordinated Universal Time)",
-    "description": "",
-    "summary": "",
-    "startDate": "Fri Jan 01 2010 00:00:00 GMT+0000 (Coordinated Universal Time)",
-    "endDate": "Wed Apr 04 2012 00:00:00 GMT+0000 (Coordinated Universal Time)",
-    "employmentType": "Contract",
+    "client": "XXXXXXXX",
     "company": "schlumberger",
+    "description": "",
+    "employmentType": "Contract",
+    "endDate": "Wed Apr 04 2012 00:00:00 GMT+0000 (Coordinated Universal Time)",
+    "published": "Sun Jun 25 2023 06:48:40 GMT+0000 (Coordinated Universal Time)",
     "skills": [
       "design-leadership",
       "interface-design",
@@ -391,9 +391,9 @@
       "stakeholder-engagement",
       "usability-testing"
     ],
-    "caseStudies": [
-      ""
-    ],
-    "client": "XXXXXXXX"
+    "slug": "ux-designer-slb",
+    "startDate": "Fri Jan 01 2010 00:00:00 GMT+0000 (Coordinated Universal Time)",
+    "summary": "",
+    "title": "UX Designer"
   }
 ]

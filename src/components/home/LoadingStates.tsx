@@ -1,4 +1,4 @@
-import { Motion, Card, CardContent, Badge } from '@/components/ui'
+import { Card, CardContent, Motion } from '@/components/ui';
 
 export function LoadingCard() {
   return (
@@ -16,7 +16,7 @@ export function LoadingCard() {
         </div>
       </CardContent>
     </Card>
-  )
+  );
 }
 
 export function LoadingArticle() {
@@ -26,10 +26,18 @@ export function LoadingArticle() {
       <div className="h-4 w-full bg-bones-blue/10 dark:bg-bones-cyan/10 rounded mb-2" />
       <div className="h-4 w-1/2 bg-bones-blue/10 dark:bg-bones-cyan/10 rounded" />
     </div>
-  )
+  );
 }
 
-export function LoadingGrid({ count, Component, className }: { count: number; Component: React.ComponentType; className?: string }) {
+export function LoadingGrid({
+  count,
+  Component,
+  className,
+}: {
+  count: number;
+  Component: React.ComponentType;
+  className?: string;
+}) {
   return (
     <div className={`animate-fade-in ${className}`}>
       {[...Array(count)].map((_, i) => (
@@ -38,6 +46,5 @@ export function LoadingGrid({ count, Component, className }: { count: number; Co
         </Motion>
       ))}
     </div>
-  )
+  );
 }
-

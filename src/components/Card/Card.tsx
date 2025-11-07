@@ -1,7 +1,7 @@
 import { cn } from '@/lib/utils';
 import React from 'react';
-import { Heading } from '../Typography/Heading/Heading';
-import { Paragraph } from '../Typography/Paragraph/Paragraph';
+import { Heading } from '../Heading/Heading';
+import { Paragraph } from '../Paragraph/Paragraph';
 import { BaseCardProps } from './types';
 
 export const Card: React.FC<BaseCardProps> = ({ className, coverImage, badge, meta, title, description, onClick }) => {

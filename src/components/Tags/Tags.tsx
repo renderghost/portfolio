@@ -1,6 +1,6 @@
 import { cn } from '@/lib/utils';
 import React from 'react';
-import { Paragraph } from '../Typography/Paragraph/Paragraph';
+import { Paragraph } from '../Paragraph/Paragraph';
 
 interface TagProps {
   label: string;
