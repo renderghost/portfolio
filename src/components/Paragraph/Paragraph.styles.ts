@@ -12,5 +12,6 @@ export const paragraphStyles = {
     label:
       'font-medium text-1xl sm:text-1xl md:text-1xl lg:text-2xl xl:text-2xl leading-snug sm:leading-snug md:leading-normal lg:leading-normal xl:leading-normal',
     lede: 'italic text-2xl sm:text-2xl md:text-2xl lg:text-3xl xl:text-4xl leading-snug sm:leading-snug md:leading-normal lg:leading-normal xl:leading-relaxed',
+    billboard: 'font-medium text-6xl leading-tight',
   },
 } as const;

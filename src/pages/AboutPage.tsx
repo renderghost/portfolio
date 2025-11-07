@@ -1,4 +1,6 @@
 import TLDRProfile from '@/components/TLDRProfile/TLDRProfile';
+import { Heading } from '@/components/Heading/Heading';
+import { Paragraph } from '@/components/Paragraph/Paragraph';
 import { Link } from '@/components/Link/Link';
 import type { JSX } from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -38,7 +40,7 @@ export default function AboutPage(): JSX.Element {
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       </Helmet>
 
-      <main className="min-h-screen bg-bones-blue text-bones-white">
+      <main className="min-h-screen bg-white text-bones-black">
         <div className="grid gap-12 p-12 md:grid-cols-3">
           {/* TL;DR Profile - First on small screens (row 1), second on md+ (right column) */}
           <aside className="order-1 md:order-2 md:col-span-1">
@@ -48,54 +50,54 @@ export default function AboutPage(): JSX.Element {
           {/* About Content - Second on small screens (row 2), first on md+ (left column) */}
           <section className="order-2 md:order-1 md:col-span-2 md:h-screen md:overflow-y-auto">
             <div className="flex flex-col gap-12 text-left md:pr-8">
-              <h1 className="text-6xl font-medium">
+              <Paragraph size="billboard">
                 I help ambitious organisations get better products to market faster by focusing on the metrics that
                 matter.
-              </h1>
+              </Paragraph>
 
-              <p className="text-6xl font-medium">
+              <Paragraph size="billboard">
                 I believe that great design comes from <em>bold ideas</em>, timely conversations with the right people,
                 and rigorous testing against the right metrics in lean, iterative cycles.
-              </p>
+              </Paragraph>
 
-              <p className="text-6xl font-medium">
+              <Paragraph size="billboard">
                 I try to tackle the hardest problems by listening closely, communicating clearly and collaborating
                 openly by default.
-              </p>
+              </Paragraph>
 
-              <p className="text-6xl font-medium">
+              <Paragraph size="billboard">
                 My design approach balances <em>strategic clarity</em> with research and design excellence, while
                 responding to the everchanging needs of an agile product team.
-              </p>
+              </Paragraph>
 
-              <p className="text-6xl font-medium">
+              <Paragraph size="billboard">
                 I help teams to cut through distractions, to adapt when things don&apos;t go to plan, and to stay
                 focused on what matters most—to the teams and their customers alike.
-              </p>
+              </Paragraph>
 
-              <h2 className="text-6xl font-medium">
+              <Heading level={2} style="section-title">
                 I <Link href="#">specialise</Link> in three areas.
-              </h2>
+              </Heading>
 
-              <p className="text-6xl font-medium">
+              <Paragraph size="billboard">
                 <em>Design Strategy</em>: Aligning key business metrics with unmet user needs. I translate business
                 goals into actionable product and design objectives, ensuring every design decision drives meaningful
                 success.
-              </p>
+              </Paragraph>
 
-              <p className="text-6xl font-medium">
+              <Paragraph size="billboard">
                 <em>Product Design</em>: Hands-on design and prototyping to validate bets and improve user experiences.
                 I combine research, usability, and rapid prototyping to de-risk product decisions and refine solutions
                 over time through continuous iteration.
-              </p>
+              </Paragraph>
 
-              <p className="text-6xl font-medium">
+              <Paragraph size="billboard">
                 <em>Design Operations</em>: Optimising the tools, rituals, and metrics that nurture great design
                 culture. I streamline workflows, remove friction, and embed scalable design practices that empower teams
                 to move fast without compromising quality.
-              </p>
+              </Paragraph>
 
-              <p className="text-6xl font-medium">
+              <Paragraph size="billboard">
                 Since 2008, I&apos;ve worked with organisations including{' '}
                 <Link href="https://www.morressier.com/" target="_blank">
                   Morressier
@@ -121,9 +123,9 @@ export default function AboutPage(): JSX.Element {
                   Mediatonic
                 </Link>
                 —from scientific publishing to pharmaceuticals, energy to government, consumer intelligence to gaming.
-              </p>
+              </Paragraph>
 
-              <p className="text-6xl font-medium">
+              <Paragraph size="billboard">
                 <Link href="https://calendar.app.google/cuYkSrDLca1Wxfqo9" target="_blank" rel="noopener noreferrer">
                   Book our first meeting
                 </Link>
@@ -140,11 +142,11 @@ export default function AboutPage(): JSX.Element {
                   Signal
                 </Link>
                 .
-              </p>
+              </Paragraph>
 
-              <p className="text-6xl font-medium">
+              <Paragraph size="billboard">
                 <Link href="/">← Back to Home</Link>
-              </p>
+              </Paragraph>
             </div>
           </section>
         </div>
