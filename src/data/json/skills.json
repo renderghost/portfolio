@@ -1,142 +1,142 @@
 [
   {
     "name": "Accessibility",
-    "slug": "accessibility",
-    "published": "Tue Jul 18 2023 05:51:50 GMT+0000 (Coordinated Universal Time)"
+    "published": "Tue Jul 18 2023 05:51:50 GMT+0000 (Coordinated Universal Time)",
+    "slug": "accessibility"
   },
   {
     "name": "Agile Methodologies",
-    "slug": "agile-methodologies",
-    "published": "Wed Jun 21 2023 10:12:05 GMT+0000 (Coordinated Universal Time)"
+    "published": "Wed Jun 21 2023 10:12:05 GMT+0000 (Coordinated Universal Time)",
+    "slug": "agile-methodologies"
   },
   {
     "name": "HTML, CSS & JS",
-    "slug": "code",
-    "published": "Tue Jul 18 2023 05:51:50 GMT+0000 (Coordinated Universal Time)"
+    "published": "Tue Jul 18 2023 05:51:50 GMT+0000 (Coordinated Universal Time)",
+    "slug": "code"
   },
   {
     "name": "Content Design",
-    "slug": "content-design",
-    "published": "Sun Jun 25 2023 10:13:32 GMT+0000 (Coordinated Universal Time)"
+    "published": "Sun Jun 25 2023 10:13:32 GMT+0000 (Coordinated Universal Time)",
+    "slug": "content-design"
   },
   {
     "name": "Data Visualisation",
-    "slug": "data-visualisation",
-    "published": ""
+    "published": "",
+    "slug": "data-visualisation"
   },
   {
     "name": "Data Visualization",
-    "slug": "data-visualization",
-    "published": ""
+    "published": "",
+    "slug": "data-visualization"
   },
   {
     "name": "Design Leadership",
-    "slug": "design-leadership",
-    "published": "Wed Jun 21 2023 10:12:05 GMT+0000 (Coordinated Universal Time)"
+    "published": "Wed Jun 21 2023 10:12:05 GMT+0000 (Coordinated Universal Time)",
+    "slug": "design-leadership"
   },
   {
     "name": "Design Methodologies",
-    "slug": "design-methodologies",
-    "published": "Wed Jun 21 2023 10:12:05 GMT+0000 (Coordinated Universal Time)"
+    "published": "Wed Jun 21 2023 10:12:05 GMT+0000 (Coordinated Universal Time)",
+    "slug": "design-methodologies"
   },
   {
     "name": "Design Operations",
-    "slug": "design-operations",
-    "published": "Wed Jun 21 2023 10:12:05 GMT+0000 (Coordinated Universal Time)"
+    "published": "Wed Jun 21 2023 10:12:05 GMT+0000 (Coordinated Universal Time)",
+    "slug": "design-operations"
   },
   {
     "name": "Design Strategy",
-    "slug": "design-strategy",
-    "published": "Wed Jun 21 2023 10:12:05 GMT+0000 (Coordinated Universal Time)"
+    "published": "Wed Jun 21 2023 10:12:05 GMT+0000 (Coordinated Universal Time)",
+    "slug": "design-strategy"
   },
   {
     "name": "Design Systems",
-    "slug": "design-systems",
-    "published": "Wed Jun 21 2023 10:12:05 GMT+0000 (Coordinated Universal Time)"
+    "published": "Wed Jun 21 2023 10:12:05 GMT+0000 (Coordinated Universal Time)",
+    "slug": "design-systems"
   },
   {
     "name": "Design Thinking",
-    "slug": "design-thinking",
-    "published": "Sun Jun 25 2023 10:13:32 GMT+0000 (Coordinated Universal Time)"
+    "published": "Sun Jun 25 2023 10:13:32 GMT+0000 (Coordinated Universal Time)",
+    "slug": "design-thinking"
   },
   {
     "name": "Digital Transformation",
-    "slug": "digital-transformation",
-    "published": ""
+    "published": "",
+    "slug": "digital-transformation"
   },
   {
     "name": "Information Architecture",
-    "slug": "information-architecture",
-    "published": "Wed Jun 21 2023 10:12:05 GMT+0000 (Coordinated Universal Time)"
+    "published": "Wed Jun 21 2023 10:12:05 GMT+0000 (Coordinated Universal Time)",
+    "slug": "information-architecture"
   },
   {
     "name": "Interaction Design",
-    "slug": "interaction-design",
-    "published": "Wed Jun 21 2023 10:12:05 GMT+0000 (Coordinated Universal Time)"
+    "published": "Wed Jun 21 2023 10:12:05 GMT+0000 (Coordinated Universal Time)",
+    "slug": "interaction-design"
   },
   {
     "name": "Interface Design",
-    "slug": "interface-design",
-    "published": "Wed Jun 21 2023 10:12:05 GMT+0000 (Coordinated Universal Time)"
+    "published": "Wed Jun 21 2023 10:12:05 GMT+0000 (Coordinated Universal Time)",
+    "slug": "interface-design"
   },
   {
     "name": "Internet of Things (IoT)",
-    "slug": "internet-of-things",
-    "published": ""
+    "published": "",
+    "slug": "internet-of-things"
   },
   {
     "name": "Journey Mapping",
-    "slug": "journey-mapping",
-    "published": "Wed Jun 21 2023 10:12:05 GMT+0000 (Coordinated Universal Time)"
+    "published": "Wed Jun 21 2023 10:12:05 GMT+0000 (Coordinated Universal Time)",
+    "slug": "journey-mapping"
   },
   {
     "name": "Lean UX",
-    "slug": "lean-ux",
-    "published": "Sun Jun 25 2023 10:13:32 GMT+0000 (Coordinated Universal Time)"
+    "published": "Sun Jun 25 2023 10:13:32 GMT+0000 (Coordinated Universal Time)",
+    "slug": "lean-ux"
   },
   {
     "name": "People Management",
-    "slug": "people-management",
-    "published": "Sun Jun 25 2023 10:43:48 GMT+0000 (Coordinated Universal Time)"
+    "published": "Sun Jun 25 2023 10:43:48 GMT+0000 (Coordinated Universal Time)",
+    "slug": "people-management"
   },
   {
     "name": "Persuasive Communication",
-    "slug": "persuasive-communication",
-    "published": "Sun Jun 25 2023 10:13:32 GMT+0000 (Coordinated Universal Time)"
+    "published": "Sun Jun 25 2023 10:13:32 GMT+0000 (Coordinated Universal Time)",
+    "slug": "persuasive-communication"
   },
   {
     "name": "Product Design",
-    "slug": "product-design",
-    "published": "Wed Jun 21 2023 10:12:05 GMT+0000 (Coordinated Universal Time)"
+    "published": "Wed Jun 21 2023 10:12:05 GMT+0000 (Coordinated Universal Time)",
+    "slug": "product-design"
   },
   {
     "name": "Rapid Prototyping",
-    "slug": "rapid-prototyping",
-    "published": "Wed Jun 21 2023 10:12:05 GMT+0000 (Coordinated Universal Time)"
+    "published": "Wed Jun 21 2023 10:12:05 GMT+0000 (Coordinated Universal Time)",
+    "slug": "rapid-prototyping"
   },
   {
     "name": "Service Design",
-    "slug": "service-design",
-    "published": "Wed Jun 21 2023 10:12:05 GMT+0000 (Coordinated Universal Time)"
+    "published": "Wed Jun 21 2023 10:12:05 GMT+0000 (Coordinated Universal Time)",
+    "slug": "service-design"
   },
   {
     "name": "Stakeholder Engagement",
-    "slug": "stakeholder-engagement",
-    "published": "Wed Jun 21 2023 10:12:05 GMT+0000 (Coordinated Universal Time)"
+    "published": "Wed Jun 21 2023 10:12:05 GMT+0000 (Coordinated Universal Time)",
+    "slug": "stakeholder-engagement"
   },
   {
     "name": "Career Development",
-    "slug": "team-management",
-    "published": "Sun Jun 25 2023 10:43:48 GMT+0000 (Coordinated Universal Time)"
+    "published": "Sun Jun 25 2023 10:43:48 GMT+0000 (Coordinated Universal Time)",
+    "slug": "team-management"
   },
   {
     "name": "Usability Testing",
-    "slug": "usability-testing",
-    "published": "Wed Jun 21 2023 10:12:05 GMT+0000 (Coordinated Universal Time)"
+    "published": "Wed Jun 21 2023 10:12:05 GMT+0000 (Coordinated Universal Time)",
+    "slug": "usability-testing"
   },
   {
     "name": "UX Research",
-    "slug": "ux-research",
-    "published": "Wed Jun 21 2023 10:12:05 GMT+0000 (Coordinated Universal Time)"
+    "published": "Wed Jun 21 2023 10:12:05 GMT+0000 (Coordinated Universal Time)",
+    "slug": "ux-research"
   }
 ]

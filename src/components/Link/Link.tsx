@@ -1,6 +1,7 @@
 import { cn } from '@/lib/utils';
 import React from 'react';
-import { linkBaseStyles, underlinePositionStyles, underlineStyles } from './Link.styles';
+import { Link as RouterLink } from 'react-router-dom';
+import { colorVariantStyles, linkBaseStyles, underlinePositionStyles, underlineStyles } from './Link.styles';
 import { LinkProps } from './Link.types';
 
 export const Link: React.FC<LinkProps> = ({
@@ -9,6 +10,7 @@ export const Link: React.FC<LinkProps> = ({
   children,
   underline = 'always',
   underlinePosition = 'center',
+  color = 'current',
   className,
   ...props
 }) => {
@@ -17,9 +19,25 @@ export const Link: React.FC<LinkProps> = ({
 
   const underlineClass = underlineStyles[underline];
   const positionClass = underlinePositionStyles[underlinePosition];
+  const colorClass = colorVariantStyles[color];
 
+  // Check if this is an internal link (starts with / and no protocol)
+  const isInternal = linkHref?.startsWith('/') && !linkHref.startsWith('//');
+
+  const linkClasses = cn(linkBaseStyles, underlineClass, positionClass, colorClass, className);
+
+  // Use React Router Link for internal navigation
+  if (isInternal && linkHref) {
+    return (
+      <RouterLink to={linkHref} className={linkClasses} {...props}>
+        {children}
+      </RouterLink>
+    );
+  }
+
+  // Use regular anchor for external links
   return (
-    <a href={linkHref} className={cn(linkBaseStyles, underlineClass, positionClass, className)} {...props}>
+    <a href={linkHref} className={linkClasses} {...props}>
       {children}
     </a>
   );

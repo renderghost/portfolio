@@ -1,28 +1,33 @@
-
-import { Heading, Text, Button, Motion } from '@/components/ui'
-
-export default function HeroSection() {
+/**
+ * Hero section component for the home page.
+ *
+ * @returns JSX element with hero content
+ */
+export default function HeroSection(): JSX.Element {
   return (
     <section className="mb-16">
-      <Motion>
-        <div className="max-w-3xl">
-          <Heading level={1}>
-            UX Designer & Frontend Developer
-          </Heading>
-          <Text variant="lead" className="mb-8">
-            Creating intuitive digital experiences through thoughtful design and clean code.
-          </Text>
-          <div className="flex gap-4">
-            <Button href="/studies" size="lg">
-              View Portfolio
-            </Button>
-            <Button href="/about" variant="outline" size="lg">
-              Learn More
-            </Button>
-          </div>
+      <div className="max-w-3xl">
+        <h1 className="text-4xl md:text-6xl font-bold text-bones-black dark:text-bones-white mb-6">
+          UX Designer & Frontend Developer
+        </h1>
+        <p className="text-xl text-bones-gray dark:text-bones-gainsboro mb-8 leading-relaxed">
+          Creating intuitive digital experiences through thoughtful design and clean code.
+        </p>
+        <div className="flex gap-4">
+          <a
+            href="/studies"
+            className="px-6 py-3 bg-bones-blue text-bones-white rounded-lg hover:bg-bones-mediumblue transition-colors font-medium"
+          >
+            View Portfolio
+          </a>
+          <a
+            href="/about"
+            className="px-6 py-3 border border-bones-blue text-bones-blue rounded-lg hover:bg-bones-blue hover:text-bones-white transition-colors font-medium"
+          >
+            Learn More
+          </a>
         </div>
-      </Motion>
+      </div>
     </section>
-  )
+  );
 }
-

@@ -2317,32 +2317,32 @@ p {
   font-size: 1em;
 }
 
-a {
+/* a {
   color: var(--act-1);
   font-size: 1em;
   font-weight: 400;
   text-decoration: none;
-}
+} */
 
-a:hover {
+/* a:hover {
   text-decoration: underline;
-}
+} */
 
-a:focus-visible {
+/* a:focus-visible {
   outline-color: var(--hi-1);
   outline-offset: 4px;
   border-radius: 2px;
   outline-width: 4px;
   outline-style: solid;
-}
+} */
 
-a[data-wf-focus-visible] {
+/* a[data-wf-focus-visible] {
   outline-color: var(--hi-1);
   outline-offset: 4px;
   border-radius: 2px;
   outline-width: 4px;
   outline-style: solid;
-}
+} */
 
 ul,
 ol {
@@ -2938,6 +2938,23 @@ figcaption {
   border-radius: 0.25rem;
   outline-width: 4px;
   text-decoration: underline;
+}
+
+.homepage-link {
+  text-decoration: underline;
+  transition: all 0.2s ease;
+}
+
+.homepage-link:hover {
+  text-decoration: none;
+}
+
+.homepage-link:focus-visible {
+  outline-color: var(--bones-yellow, #fb0);
+  outline-offset: 4px;
+  outline-width: 4px;
+  outline-style: solid;
+  border-radius: 2px;
 }
 
 .bp-type--link.icon {

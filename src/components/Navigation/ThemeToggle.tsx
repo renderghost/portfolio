@@ -1,28 +1,42 @@
-'use client'
-
-import { useEffect, useState } from 'react'
-import { useTheme } from 'next-themes'
+import { useEffect, useState } from 'react';
 
 export default function ThemeToggle() {
-  const [mounted, setMounted] = useState(false)
-  const { theme, setTheme } = useTheme()
+  const [isDark, setIsDark] = useState(false);
 
-  // Wait for mounting to avoid hydration mismatch
+  // Initialize theme from localStorage or system preference
   useEffect(() => {
-    setMounted(true)
-  }, [])
+    const savedTheme = localStorage.getItem('theme');
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
 
-  if (!mounted) {
-    return null
-  }
+    if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+      setIsDark(true);
+      document.documentElement.classList.add('dark');
+    } else {
+      setIsDark(false);
+      document.documentElement.classList.remove('dark');
+    }
+  }, []);
+
+  const toggleTheme = () => {
+    const newIsDark = !isDark;
+    setIsDark(newIsDark);
+
+    if (newIsDark) {
+      document.documentElement.classList.add('dark');
+      localStorage.setItem('theme', 'dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+      localStorage.setItem('theme', 'light');
+    }
+  };
 
   return (
     <button
-      onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+      onClick={toggleTheme}
       className="p-2 rounded-full bg-bones-whitesmoke dark:bg-bones-dimgray text-bones-dimgray dark:text-bones-whitesmoke hover:bg-bones-blue/10 hover:text-bones-blue dark:hover:bg-bones-blue/20 dark:hover:text-bones-cyan transition-colors"
       aria-label="Toggle theme"
     >
-      {theme === 'dark' ? (
+      {isDark ? (
         <svg
           className="w-5 h-5"
           fill="none"
@@ -54,6 +68,5 @@ export default function ThemeToggle() {
         </svg>
       )}
     </button>
-  )
+  );
 }
-
