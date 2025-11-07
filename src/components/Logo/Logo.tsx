@@ -1,28 +1,26 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import * as styles from './Logo.styles';
+import { ARIA_LABEL, LOGO_ARIA_LABEL, RECT_DIMENSIONS, STROKE_WIDTH, SVG_VIEWBOX } from './Logo.constants';
 
 const Logo: React.FC = () => {
   const navigate = useNavigate();
 
   return (
-    <button
-      onClick={() => navigate('/')}
-      aria-label="Go to Home"
-      className="group flex items-center space-x-3 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yellow-500 dark:focus:ring-yellow-400"
-    >
+    <button onClick={() => navigate('/')} aria-label={ARIA_LABEL} className={styles.button}>
       {/* Placeholder Square Logo */}
-      <div className="w-10 h-10 border-2 border-current group-hover:scale-105 transition-transform duration-200 ease-in-out">
+      <div className={styles.iconContainer}>
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 100 100"
+          viewBox={SVG_VIEWBOX}
           fill="none"
           stroke="currentColor"
-          strokeWidth="10"
-          className="w-full h-full"
+          strokeWidth={STROKE_WIDTH}
+          className={styles.svg}
           role="img"
-          aria-label="Logo"
+          aria-label={LOGO_ARIA_LABEL}
         >
-          <rect x="10" y="10" width="80" height="80" />
+          <rect x={RECT_DIMENSIONS.x} y={RECT_DIMENSIONS.y} width={RECT_DIMENSIONS.width} height={RECT_DIMENSIONS.height} />
         </svg>
       </div>
     </button>

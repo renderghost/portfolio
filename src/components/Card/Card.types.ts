@@ -1,5 +1,3 @@
-// src/components/common/Card/types.ts
-
 export interface BaseCardProps {
   className?: string;
   coverImage?: string;

@@ -2,7 +2,7 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { useEffect, useRef, useState } from 'react';
 // Components
 import { Button } from '../Button/Button';
-import { CardArticle } from '../Card/CardArticle';
+import { CardArticle } from '../CardArticle/CardArticle';
 import { Heading } from '../Heading/Heading';
 import { Paragraph } from '../Paragraph/Paragraph';
 // Styles & Types

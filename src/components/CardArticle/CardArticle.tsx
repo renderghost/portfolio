@@ -1,16 +1,8 @@
 import { Card } from '@/components/Card/Card';
 import React from 'react';
-
-interface CardArticleProps {
-  article: {
-    title: string;
-    subtitle: string;
-    coverImage: string;
-    articleUrl: string;
-    publication: string;
-    published: string;
-  };
-}
+import * as styles from './CardArticle.styles';
+import { BADGE_VARIANT, DATE_FORMAT_OPTIONS } from './CardArticle.constants';
+import { CardArticleProps } from './CardArticle.types';
 
 export const CardArticle: React.FC<CardArticleProps> = ({ article }) => {
   return (
@@ -19,19 +11,15 @@ export const CardArticle: React.FC<CardArticleProps> = ({ article }) => {
         coverImage={article.coverImage}
         badge={{
           label: article.publication,
-          variant: 'primary',
+          variant: BADGE_VARIANT,
         }}
         meta={{
           company: article.publication,
-          date: new Date(article.published).toLocaleDateString('en-US', {
-            year: 'numeric',
-            month: 'short',
-            day: 'numeric',
-          }),
+          date: new Date(article.published).toLocaleDateString('en-US', DATE_FORMAT_OPTIONS),
         }}
         title={article.title}
         description={article.subtitle}
-        className="group cursor-pointer transition-all hover:-translate-y-1"
+        className={styles.cardWrapper}
       />
     </a>
   );

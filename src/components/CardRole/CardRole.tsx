@@ -1,19 +1,8 @@
-// src/components/roles/CardRole.tsx
-
 import { Card } from '@/components/Card/Card';
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-
-interface CardRoleProps {
-  role: {
-    title: string;
-    company: string;
-    subtitle: string;
-    date: string;
-    coverImage?: string;
-    slug: string;
-  };
-}
+import { ROLES_BASE_PATH } from './CardRole.constants';
+import { CardRoleProps } from './CardRole.types';
 
 export const CardRole: React.FC<CardRoleProps> = ({ role }) => {
   const navigate = useNavigate();
@@ -26,7 +15,7 @@ export const CardRole: React.FC<CardRoleProps> = ({ role }) => {
       }}
       title={role.title}
       description={`${role.company} | ${role.subtitle}`}
-      onClick={() => navigate(`/roles/${role.slug}`)}
+      onClick={() => navigate(`${ROLES_BASE_PATH}/${role.slug}`)}
     />
   );
 };
