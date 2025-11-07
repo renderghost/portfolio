@@ -19,7 +19,7 @@ export const Skill: React.FC<SkillProps> = ({
     <div className="flex flex-col gap-8">
       <Artwork name={skillArtwork} />
       <div className="flex flex-col gap-2">
-        <Heading level={3} style="body-title">
+        <Heading level={3} style="body">
           {skillTitle}
         </Heading>
         <Paragraph size="byline">{skillDescription}</Paragraph>

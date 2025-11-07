@@ -15,7 +15,7 @@ export const Timeline: React.FC<TimelineProps> = ({ items, className }) => {
             <span className={timelineStyles.date}>{item.date}</span>
           </div>
           <div className={timelineStyles.contentWrapper}>
-            <Heading level={4} style="footnote-title" className={timelineStyles.title}>
+            <Heading level={4} style="footnote" className={timelineStyles.title}>
               {item.title}
             </Heading>
             <Paragraph size="footnote" className={timelineStyles.description}>

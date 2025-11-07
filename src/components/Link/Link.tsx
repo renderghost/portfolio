@@ -1,8 +1,9 @@
 import { cn } from '@/lib/utils';
 import React from 'react';
 import { Link as RouterLink } from 'react-router-dom';
-import { colorVariantStyles, linkBaseStyles, underlinePositionStyles, underlineStyles } from './Link.styles';
+import { linkBaseStyles, underlinePositionStyles, underlineStyles } from './Link.styles';
 import { LinkProps } from './Link.types';
+import { usePageTheme } from '@/components/Layout/Layout';
 
 export const Link: React.FC<LinkProps> = ({
   to,
@@ -10,21 +11,29 @@ export const Link: React.FC<LinkProps> = ({
   children,
   underline = 'always',
   underlinePosition = 'center',
-  color = 'current',
   className,
   ...props
 }) => {
   // Convert `to` to `href` if `to` is provided
   const linkHref = to || href;
 
+  // Get page theme from context
+  const pageTheme = usePageTheme();
+
   const underlineClass = underlineStyles[underline];
   const positionClass = underlinePositionStyles[underlinePosition];
-  const colorClass = colorVariantStyles[color];
+
+  // Theme-based link colors:
+  // Accent: white text (inherits from parent)
+  // Default: blue text in light mode, white in dark mode
+  const themeColorClass = pageTheme === 'accent'
+    ? 'text-bones-white'
+    : 'text-bones-blue dark:text-bones-white';
 
   // Check if this is an internal link (starts with / and no protocol)
   const isInternal = linkHref?.startsWith('/') && !linkHref.startsWith('//');
 
-  const linkClasses = cn(linkBaseStyles, underlineClass, positionClass, colorClass, className);
+  const linkClasses = cn(linkBaseStyles, underlineClass, positionClass, themeColorClass, className);
 
   // Use React Router Link for internal navigation
   if (isInternal && linkHref) {

@@ -22,7 +22,7 @@ export const Event: React.FC<EventProps> = ({
       </Paragraph>
     </div>
     <div className="flex flex-col gap-2">
-      <Heading level={3} style="body-title">
+      <Heading level={3} style="body">
         {eventTitle}
       </Heading>
       <Paragraph size="body">{eventDescription}</Paragraph>

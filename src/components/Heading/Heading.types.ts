@@ -1,7 +1,7 @@
 import { ReactNode } from 'react';
 
 export type HeadingLevel = 1 | 2 | 3 | 4;
-export type HeadingStyle = 'page-title' | 'section-title' | 'body-title' | 'footnote-title';
+export type HeadingStyle = 'page' | 'section' | 'body' | 'billboard' | 'footnote';
 
 export interface HeadingProps {
   children: ReactNode;

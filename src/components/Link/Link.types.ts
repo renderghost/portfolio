@@ -5,5 +5,4 @@ export interface LinkProps extends AnchorHTMLAttributes<HTMLAnchorElement> {
   children: ReactNode;
   underline?: 'none' | 'hover' | 'always';
   underlinePosition?: 'left' | 'center' | 'right';
-  color?: 'current' | 'blue';
 }

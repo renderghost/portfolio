@@ -1,8 +1,8 @@
-import TLDRProfile from '@/components/TLDRProfile/TLDRProfile';
 import { Heading } from '@/components/Heading/Heading';
-import { Paragraph } from '@/components/Paragraph/Paragraph';
+import { Aside, Layout, Main } from '@/components/Layout/Layout';
 import { Link } from '@/components/Link/Link';
-import { Layout, Main, Aside } from '@/components/Layout/Layout';
+import { Paragraph } from '@/components/Paragraph/Paragraph';
+import TLDRProfile from '@/components/TLDRProfile/TLDRProfile';
 import type { JSX } from 'react';
 import { Helmet } from 'react-helmet-async';
 
@@ -41,9 +41,12 @@ export default function AboutPage(): JSX.Element {
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       </Helmet>
 
-      <Layout>
+      <Layout theme="default">
         <Main>
           <div className="flex flex-col gap-12">
+            <Heading level={1} style="page">
+              About Me
+            </Heading>
             <Paragraph size="billboard">
               I help ambitious organisations get better products to market faster by focusing on the metrics that
               matter.
@@ -52,6 +55,14 @@ export default function AboutPage(): JSX.Element {
             <Paragraph size="billboard">
               I believe that great design comes from <em>bold ideas</em>, timely conversations with the right people,
               and rigorous testing against the right metrics in lean, iterative cycles.
+            </Paragraph>
+
+            <Paragraph size="billboard">
+              I&apos;m a fellow of the{' '}
+              <Link href="https://thomaskuhnfoundation.org/" target="_blank">
+                Thomas Kuhn Foundation
+              </Link>
+              , supporting new ways to understand scientific knowledge.
             </Paragraph>
 
             <Paragraph size="billboard">
@@ -69,7 +80,7 @@ export default function AboutPage(): JSX.Element {
               on what matters most—to the teams and their customers alike.
             </Paragraph>
 
-            <Heading level={2} style="section-title">
+            <Heading level={2} style="section">
               I <Link href="#">specialise</Link> in three areas.
             </Heading>
 

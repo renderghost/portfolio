@@ -19,14 +19,14 @@ const getHeadingTag = (level: HeadingLevel) => {
 };
 
 export const Heading = React.forwardRef<HTMLHeadingElement, HeadingProps>(
-  ({ children, level = 3, style = 'body-title', className = '', ...props }, ref) => {
+  ({ children, level = 3, style = 'body', className = '', ...props }, ref) => {
     const Component = getHeadingTag(level);
 
     return React.createElement(
       Component,
       {
         ref,
-        className: cn(HeadingStyles.base, HeadingStyles.styles[style], className),
+        className: cn(HeadingStyles.base, HeadingStyles.sizes[style], className),
         ...props,
       },
       children,

@@ -1,11 +1,2 @@
-export const sectionStyles = {
-  base: 'w-full pt-32 pb-48 h-min-screen',
-  themes: {
-    mono: 'bg-bones-white dark:bg-bones-black text-bones-black dark:text-bones-white',
-    gray: 'bg-bones-whitesmoke dark:bg-bones-black text-bones-black dark:text-bones-white',
-    yellow: 'bg-bones-yellow dark:bg-bones-gold text-bones-black',
-    blue: 'bg-bones-blue dark:bg-bones-mediumblue text-bones-white',
-    red: 'bg-bones-red dark:bg-bones-darkred text-bones-white',
-    purple: 'bg-bones-rebeccapurple dark:bg-bones-indigo text-bones-white',
-  },
-} as const;
+// Section inherits colors from page theme context
+export const section = 'w-full pt-32 pb-48 h-min-screen';

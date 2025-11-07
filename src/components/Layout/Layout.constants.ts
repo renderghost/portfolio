@@ -1,1 +1,1 @@
-// No constants needed for Layout component
+export const DEFAULT_THEME = 'default' as const;
