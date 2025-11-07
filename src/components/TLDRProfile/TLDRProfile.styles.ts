@@ -1,4 +1,4 @@
-export const container = 'flex flex-col gap-6 bg-white text-bones-black border-l border-bones-gainsboro sticky top-0 md:h-screen md:py-12 md:pl-8';
+export const container = 'flex flex-col gap-6 bg-white text-bones-black sticky top-0';
 
 export const innerContainer = 'flex flex-col gap-6';
 
