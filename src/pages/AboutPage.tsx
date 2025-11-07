@@ -1,4 +1,4 @@
-import TLDRProfile from '@/components/About/TLDRProfile';
+import TLDRProfile from '@/components/TLDRProfile/TLDRProfile';
 import { Link } from '@/components/Link/Link';
 import type { JSX } from 'react';
 import { Helmet } from 'react-helmet-async';
