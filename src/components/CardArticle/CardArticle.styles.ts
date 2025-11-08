@@ -1,0 +1,10 @@
+export const cardWrapper = 'group relative flex flex-col h-full bg-bones-white dark:bg-bones-black';
+export const contentContainer = 'flex flex-col flex-grow gap-4 p-8 justify-between';
+export const coverImage = 'object-cover w-full h-full transition-transform group-hover:scale-105';
+export const coverImageContainer = 'relative aspect-[16/9] w-full overflow-hidden bg-neutral-100 dark:bg-neutral-700';
+export const date = 'text-neutral-600 dark:text-neutral-400';
+export const detailContainer = 'flex flex-col gap-1';
+export const metaContainer = 'flex items-center justify-between';
+export const publicationContainer = 'flex items-center gap-2';
+export const publicationIcon = 'h-8 w-8 object-contain';
+export const publicationName = 'font-medium text-neutral-900 dark:text-neutral-100';
