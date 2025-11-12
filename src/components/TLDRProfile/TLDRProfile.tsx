@@ -2,8 +2,10 @@ import { Link } from '@/components/Link/Link';
 import { Tags } from '@/components/Tags/Tags';
 import { specializations } from '@/data/specializations';
 import type { JSX } from 'react';
-import * as styles from './TLDRProfile.styles';
+import { Heading } from '../Heading/Heading';
+import { Paragraph } from '../Paragraph/Paragraph';
 import { CONNECT_LINKS, PROFILE, SECTIONS } from './TLDRProfile.constants';
+import * as styles from './TLDRProfile.styles';
 
 /**
  * TL;DR Profile sidebar component
@@ -17,19 +19,23 @@ export default function TLDRProfile(): JSX.Element {
         <img src={PROFILE.avatarSrc} alt={PROFILE.name} className={styles.avatar} />
 
         <div className={styles.infoSection}>
-          <h1 className={styles.name}>{PROFILE.name}</h1>
-          <p className={styles.detail}>{PROFILE.title}</p>
-          <p className={styles.detail}>{PROFILE.location}</p>
-          <p className={styles.detail}>{PROFILE.experience}</p>
+          <Heading level={3} size="md">
+            {PROFILE.name}
+          </Heading>
+          <Paragraph size="sm">{PROFILE.title}</Paragraph>
+          <Paragraph size="sm">{PROFILE.location}</Paragraph>
+          <Paragraph size="sm">{PROFILE.experience}</Paragraph>
         </div>
 
         <div className={styles.section}>
-          <p className={styles.sectionTitle}>{SECTIONS.specializations}</p>
+          <Paragraph size="md">{SECTIONS.specializations}</Paragraph>
           <Tags tags={specializations} className="flex-wrap" />
         </div>
 
         <div className={styles.section}>
-          <p className={styles.sectionTitle}>{SECTIONS.connect}</p>
+          <Paragraph size="md">{SECTIONS.connect}</Paragraph>
+
+          <Paragraph className={styles.sectionTitle}>{SECTIONS.connect}</Paragraph>
           <div className={styles.connectLinks}>
             {CONNECT_LINKS.map((link) => (
               <Link key={link.href} href={link.href} target="_blank" rel="noopener noreferrer">

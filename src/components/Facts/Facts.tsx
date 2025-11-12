@@ -1,6 +1,6 @@
 import { cn } from '@/lib/utils';
 import React from 'react';
-import { Fact } from './Fact';
+import { Fact } from '@/components/Fact/Fact';
 import { factsStyles } from './Facts.styles';
 import { FactsProps } from './Facts.types';
 

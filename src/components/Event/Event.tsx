@@ -16,17 +16,17 @@ export const Event: React.FC<EventProps> = ({
 }) => (
   <div className={cn(eventStyles.wrapper, className)}>
     <div className="flex items-center justify-between">
-      <Paragraph size="footnote">{eventAffiliation}</Paragraph>
-      <Paragraph size="footnote">
+      <Paragraph size="sm">{eventAffiliation}</Paragraph>
+      <Paragraph size="sm">
         {eventStartYear} &ndash; {eventEndYear}
       </Paragraph>
     </div>
     <div className="flex flex-col gap-2">
-      <Heading level={3} style="body">
+      <Heading level={3} size="md">
         {eventTitle}
       </Heading>
-      <Paragraph size="body">{eventDescription}</Paragraph>
+      <Paragraph size="md">{eventDescription}</Paragraph>
     </div>
-    <Paragraph size="footnote">{eventType}</Paragraph>
+    <Paragraph size="sm">{eventType}</Paragraph>
   </div>
 );

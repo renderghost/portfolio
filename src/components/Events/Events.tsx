@@ -1,6 +1,6 @@
 import { cn } from '@/lib/utils';
 import React from 'react';
-import { Event } from './Event';
+import { Event } from '@/components/Event/Event';
 import { eventsStyles } from './Events.styles';
 import { EventsProps } from './Events.types';
 

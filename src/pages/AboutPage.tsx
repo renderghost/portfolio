@@ -1,8 +1,14 @@
+import { CardRole } from '@/components/CardRole/CardRole';
+import { Divider } from '@/components/Divider/Divider';
 import { Heading } from '@/components/Heading/Heading';
 import { Aside, Layout, Main } from '@/components/Layout/Layout';
 import { Link } from '@/components/Link/Link';
+import { ListItem } from '@/components/ListItem/ListItem';
 import { Paragraph } from '@/components/Paragraph/Paragraph';
+import Section from '@/components/Section/Section';
 import TLDRProfile from '@/components/TLDRProfile/TLDRProfile';
+import { UnorderedList } from '@/components/UnorderedList/UnorderedList';
+import jobsData from '@/data/json/jobs.json';
 import type { JSX } from 'react';
 import { Helmet } from 'react-helmet-async';
 
@@ -12,15 +18,24 @@ import { Helmet } from 'react-helmet-async';
  * @returns JSX element with about page content
  */
 export default function AboutPage(): JSX.Element {
+  // Get latest 5 jobs sorted by end date
+  const latestJobs = jobsData
+    .sort((a, b) => {
+      const dateA = b.endDate ? new Date(b.endDate).getTime() : Date.now();
+      const dateB = a.endDate ? new Date(a.endDate).getTime() : Date.now();
+      return dateA - dateB;
+    })
+    .slice(0, 5);
+
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'AboutPage',
     mainEntity: {
       '@type': 'Person',
       name: 'Barry Prendergast',
-      jobTitle: 'Consulting Design Strategist',
+      jobTitle: 'Product Designer',
       description:
-        'Design strategist helping ambitious organisations get better products to market faster by focusing on the metrics that matter.',
+        'Independent product designer helping organisations deliver better products through clear thinking, practical design, and meaningful collaboration.',
       url: 'https://renderg.host/about',
       sameAs: [
         'https://bsky.app/profile/renderg.host',
@@ -36,120 +51,200 @@ export default function AboutPage(): JSX.Element {
         <title>About | Barry Prendergast</title>
         <meta
           name="description"
-          content="Design strategist helping ambitious organisations get better products to market faster through outcome-driven design."
+          content="Independent product designer helping organisations deliver better products through clear thinking, practical design, and meaningful collaboration."
         />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       </Helmet>
 
       <Layout theme="default">
         <Main>
-          <div className="flex flex-col gap-12">
-            <Heading level={1} style="page">
-              About Me
-            </Heading>
-            <Paragraph size="billboard">
-              I help ambitious organisations get better products to market faster by focusing on the metrics that
-              matter.
-            </Paragraph>
-
-            <Paragraph size="billboard">
-              I believe that great design comes from <em>bold ideas</em>, timely conversations with the right people,
-              and rigorous testing against the right metrics in lean, iterative cycles.
-            </Paragraph>
-
-            <Paragraph size="billboard">
-              I&apos;m a fellow of the{' '}
-              <Link href="https://thomaskuhnfoundation.org/" target="_blank">
-                Thomas Kuhn Foundation
-              </Link>
-              , supporting new ways to understand scientific knowledge.
-            </Paragraph>
-
-            <Paragraph size="billboard">
-              I try to tackle the hardest problems by listening closely, communicating clearly and collaborating openly
-              by default.
-            </Paragraph>
-
-            <Paragraph size="billboard">
-              My design approach balances <em>strategic clarity</em> with research and design excellence, while
-              responding to the everchanging needs of an agile product team.
-            </Paragraph>
-
-            <Paragraph size="billboard">
-              I help teams to cut through distractions, to adapt when things don&apos;t go to plan, and to stay focused
-              on what matters most—to the teams and their customers alike.
-            </Paragraph>
-
-            <Heading level={2} style="section">
-              I <Link href="#">specialise</Link> in three areas.
+          <div className="flex flex-col gap-16">
+            {/* Heading */}
+            <Heading level={2} size="md">
+              about / <Link href="/">renderg.host</Link>
             </Heading>
 
-            <Paragraph size="billboard">
-              <em>Design Strategy</em>: Aligning key business metrics with unmet user needs. I translate business goals
-              into actionable product and design objectives, ensuring every design decision drives meaningful success.
-            </Paragraph>
+            {/* Hero Section*/}
+            <Section className="flex flex-col">
+              <Paragraph size="2xl">
+                I&apos;m an independent designer helping organisations deliver better products and services through
+                clear thinking, practical design, and meaningful collaboration.
+              </Paragraph>
+              <Paragraph size="xl">
+                I&apos;ve spent over 15 years building measurably successful things in complex domains, from scientific
+                publishing and medical devices, to energy infrastructure and government services, and more.
+              </Paragraph>
+            </Section>
 
-            <Paragraph size="billboard">
-              <em>Product Design</em>: Hands-on design and prototyping to validate bets and improve user experiences. I
-              combine research, usability, and rapid prototyping to de-risk product decisions and refine solutions over
-              time through continuous iteration.
-            </Paragraph>
+            {/* What I Do Section*/}
+            <Section className="flex flex-col">
+              <Heading level={2} size="xl">
+                What I do...
+              </Heading>
 
-            <Paragraph size="billboard">
-              <em>Design Operations</em>: Optimising the tools, rituals, and metrics that nurture great design culture.
-              I streamline workflows, remove friction, and embed scalable design practices that empower teams to move
-              fast without compromising quality.
-            </Paragraph>
+              <Heading level={3} size="md">
+                For Customers & Users
+              </Heading>
 
-            <Paragraph size="billboard">
-              Since 2008, I&apos;ve worked with organisations including{' '}
-              <Link href="https://www.morressier.com/" target="_blank">
-                Morressier
-              </Link>
-              ,{' '}
-              <Link href="https://www.leo-pharma.com/" target="_blank">
-                LEO Pharma
-              </Link>
-              ,{' '}
-              <Link href="https://www.edfenergy.com/" target="_blank">
-                EDF Energy
-              </Link>
-              ,{' '}
-              <Link href="https://www.gov.uk/government/organisations/home-office" target="_blank">
-                UK Home Office
-              </Link>
-              ,{' '}
-              <Link href="https://www.brandwatch.com/" target="_blank">
-                Brandwatch
-              </Link>
-              , and{' '}
-              <Link href="https://mediatonicgames.com/" target="_blank">
-                Mediatonic
-              </Link>
-              —from scientific publishing to pharmaceuticals, energy to government, consumer intelligence to gaming.
-            </Paragraph>
+              <UnorderedList bullet="angle">
+                <ListItem>Build autonomy-driven products that people can easily master</ListItem>
+                <ListItem>Connect people to help them work better, together</ListItem>
+                <ListItem>Create interactions that feel obvious and reassuring</ListItem>
+                <ListItem>Design efficient usable interfaces that respect people&apos;s time</ListItem>
+                <ListItem>Simplify complexity so users can get things done, faster</ListItem>
+              </UnorderedList>
 
-            <Paragraph size="billboard">
-              <Link href="https://calendar.app.google/cuYkSrDLca1Wxfqo9" target="_blank" rel="noopener noreferrer">
-                Book our first meeting
-              </Link>
-              , connect on{' '}
-              <Link href="https://linkedin.com/in/barryprendergast" target="_blank" rel="noopener noreferrer">
-                LinkedIn
-              </Link>
-              , or message me on{' '}
-              <Link
-                href="https://signal.me/#eu/XO_aKC1aE1GZYWdMx7WK7HKGSCfrlpNhlxLGNi774dhiL7qr32BAMrH1BqgChaiM"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Signal
-              </Link>
-              .
-            </Paragraph>
+              <Heading level={3} size="md">
+                For Business
+              </Heading>
 
-            <Paragraph size="billboard">
-              <Link href="/">← Back to Home</Link>
+              <UnorderedList bullet="angle">
+                <ListItem>Connect design decisions to leading metrics that drive growth</ListItem>
+                <ListItem>Get to market faster by testing risky product assumptions early</ListItem>
+                <ListItem>Increase adoption and retention by simplifying complexity</ListItem>
+                <ListItem>Reduce support costs with self-service user experiences</ListItem>
+                <ListItem>Streamline engineering overheads with lean iteration</ListItem>
+              </UnorderedList>
+
+              <Heading level={3} size="md">
+                For Products & Services
+              </Heading>
+
+              <UnorderedList bullet="angle">
+                <ListItem>Build prototypes that answer key questions before development</ListItem>
+                <ListItem>Create scalable, maintainable design systems</ListItem>
+                <ListItem>Test designs with real users to guide confident decisions</ListItem>
+                <ListItem>Translate business goals into measurable design outcomes</ListItem>
+                <ListItem>Turn complex workflows into clear, usable interfaces</ListItem>
+              </UnorderedList>
+
+              <Heading level={3} size="md">
+                For Stakeholders & Teams
+              </Heading>
+
+              <UnorderedList bullet="angle">
+                <ListItem>Coach teams to make confident, informed design choices</ListItem>
+                <ListItem>Create healthy feedback loops that strengthen outcomes</ListItem>
+                <ListItem>Define design processes that support collaboration and progress</ListItem>
+                <ListItem>Establish research practices that directly inform decisions</ListItem>
+                <ListItem>Write lightweight docs teams refer to every day</ListItem>
+              </UnorderedList>
+            </Section>
+
+            <Section>
+              <Heading level={2} size="lg">
+                Currently
+              </Heading>
+
+              <div className="flex flex-col gap-6">
+                <Paragraph size="lg">Freelancing as a ____</Paragraph>
+                {/* TODO: Add CTA to /Contact page when ready */}
+
+                <Paragraph size="lg">
+                  I&apos;m a fellow of the{' '}
+                  <Link href="https://thomaskuhnfoundation.org/" target="_blank" rel="noopener noreferrer">
+                    Thomas Kuhn Foundation
+                  </Link>
+                  , supporting new ways to understand scientific knowledge.
+                </Paragraph>
+
+                <Paragraph size="lg">
+                  <Link href="/writing">Read my Blog</Link>
+                </Paragraph>
+
+                <Paragraph size="lg">I&apos;m building tools for the ATprotocol</Paragraph>
+
+                <Paragraph size="lg">
+                  <Link href="/writing">Read my Blog</Link>
+                </Paragraph>
+              </div>
+            </Section>
+            <Section>
+              <Heading level={2} size="lg">
+                Recent Work
+              </Heading>
+
+              <div className="grid grid-cols-1 border-2 border-bones-white-30">
+                {latestJobs.map((job, index) => {
+                  const startYear = new Date(job.startDate).getFullYear();
+                  const endYear = job.endDate ? new Date(job.endDate).getFullYear() : 'Present';
+                  const dateRange = startYear === endYear ? `${startYear}` : `${startYear}–${endYear}`;
+
+                  return (
+                    <>
+                      <CardRole
+                        key={job.slug}
+                        role={{
+                          title: job.title,
+                          company: job.client,
+                          subtitle: job.summary,
+                          date: dateRange,
+                          // coverImage: job.cover,
+                          slug: job.slug,
+                        }}
+                      />
+                      {index < latestJobs.length - 1 && <Divider />}
+                    </>
+                  );
+                })}
+              </div>
+
+              {/* TODO: Add link to Resume when ready */}
+              {/* TODO: Add CTA to /Contact page when ready */}
+            </Section>
+            <Section>
+              <Heading level={2} size="lg">
+                How I Work
+              </Heading>
+
+              <Paragraph size="lg">My approach is straightforward and outcome-focused.</Paragraph>
+
+              <UnorderedList bullet="disc">
+                <ListItem size="lg">I start by understanding users and the problems they face</ListItem>
+                <ListItem>I design and prototype quickly to validate ideas early</ListItem>
+                <ListItem>I measure results and refine based on evidence</ListItem>
+                <ListItem>I document decisions to help teams move with clarity</ListItem>
+                <ListItem>I build systems that continue to work well beyond my involvement</ListItem>
+              </UnorderedList>
+
+              <Paragraph size="lg">
+                <Link href="/writing">Read my Blog</Link>
+              </Paragraph>
+            </Section>
+            <Section>
+              <Heading level={2} size="lg">
+                What Drives Me
+              </Heading>
+
+              <Paragraph size="lg">
+                <strong>At work:</strong> Designing with purpose. Creating products that respect users&apos; time and
+                intelligence. Collaborating with teams that value clarity, curiosity, and progress.
+              </Paragraph>
+
+              <Paragraph size="lg">
+                <strong>Outside work:</strong> Learning continuously—currently exploring systems thinking and
+                information architecture. Making experimental music when the kids are asleep. Reading everything from
+                technical manuals to science fiction.
+              </Paragraph>
+            </Section>
+            <Section>
+              <Heading level={2} size="lg">
+                Work With Me
+              </Heading>
+
+              <Paragraph size="lg">I collaborate with organisations that:</Paragraph>
+
+              <UnorderedList bullet="disc">
+                <ListItem>Are tackling meaningful challenges</ListItem>
+                <ListItem>Value clarity, purpose, and long-term impact</ListItem>
+                <ListItem>See design as a driver of business value</ListItem>
+                <ListItem>Want to build better ways of working, not just better interfaces</ListItem>
+              </UnorderedList>
+
+              {/* TODO: Add CTA to /Contact page when ready */}
+            </Section>
+            <Paragraph size="lg">
+              <Link href="/">← Back to home</Link>
             </Paragraph>
           </div>
         </Main>

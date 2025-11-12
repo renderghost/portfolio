@@ -29,7 +29,7 @@ export const CardArticle: React.FC<CardArticleProps> = ({ article }) => {
         </div>
         <div className={styles.detailContainer}>
           {/* Title */}
-          <Heading level={3} style="title">
+          <Heading level={3} size="lg">
             {article.title}
           </Heading>
 

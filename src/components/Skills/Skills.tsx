@@ -1,6 +1,6 @@
 import { cn } from '@/lib/utils';
 import React from 'react';
-import { Skill } from './Skill';
+import { Skill } from '@/components/Skill/Skill';
 import { skillsStyles } from './Skills.styles';
 import { SkillsProps } from './Skills.types';
 

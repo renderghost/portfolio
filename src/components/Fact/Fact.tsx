@@ -7,9 +7,9 @@ import { FactProps } from './Fact.types';
 
 export const Fact: React.FC<FactProps> = ({ title, subtitle, className = '' }) => (
   <div className={cn(factStyles.wrapper, className)}>
-    <Heading level={3} style="body">
+    <Heading level={3} size="md">
       {title}
     </Heading>
-    <Paragraph size="body">{subtitle}</Paragraph>
+    <Paragraph size="md">{subtitle}</Paragraph>
   </div>
 );

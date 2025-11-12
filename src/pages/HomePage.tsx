@@ -52,17 +52,17 @@ export default function HomePage(): JSX.Element {
 
       <Layout theme="accent">
         <Main>
-          <div className="flex flex-col gap-12">
-            <Heading level={1} style="billboard">
+          <div className="flex flex-col gap-16">
+            <Heading level={1} size="2xl">
               Hi! 👋 I&apos;m Barry Prendergast, a design strategist living in Berlin, Germany.
             </Heading>
 
-            <Paragraph size="billboard">
+            <Paragraph size="2xl">
               I <Link href="/about">specialise</Link> in <em>outcome</em>-driven design strategy, practice, and systems
               for digital products and services.
             </Paragraph>
 
-            <Paragraph size="billboard">
+            <Paragraph size="2xl">
               I{' '}
               <Link href="https://www.linkedin.com/in/barrymprendergast/details/experience/" target="_blank">
                 work
@@ -70,12 +70,12 @@ export default function HomePage(): JSX.Element {
               with nonprofits and startups to ease their growing pains, and to market faster.
             </Paragraph>
 
-            <Paragraph size="billboard">
+            <Paragraph size="2xl">
               I <Link href="/writing">write</Link> about about academia, design, product, science, systems, technology &
               the messy in-betweens.
             </Paragraph>
 
-            <Paragraph size="billboard">
+            <Paragraph size="2xl">
               <Link href="https://cal.com/renderghost" target="_blank" rel="noopener noreferrer">
                 Book a meeting
               </Link>{' '}

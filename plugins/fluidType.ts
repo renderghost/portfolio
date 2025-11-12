@@ -15,7 +15,7 @@ import plugin from 'tailwindcss/plugin';
  * - Guards with clamp() to cap at the ends.
  */
 export default function fluidType() {
-  return plugin(function ({ matchUtilities, theme }) {
+  return plugin(function ({ matchUtilities }) {
     const toNum = (s: string) => Number(s.trim());
 
     const parse = (raw: string) => {
@@ -76,8 +76,46 @@ export default function fluidType() {
       { values: {}, type: 'any' },
     );
 
-    // Optional presets for common typography scales
+    // Typography scale presets
+    // Format: [minPx, maxPx, viewportMinPx, viewportMaxPx]
+    // Scales from mobile (360px) to desktop (1200px) viewports
     const fsPresets: Record<string, [number, number, number, number]> = {
+      // sm: Small text (captions, footnotes, labels)
+      sm: [
+        14,
+        16,
+        360,
+        1200,
+      ],
+      // md: Medium text (body copy, paragraphs)
+      md: [
+        16,
+        24,
+        360,
+        1200,
+      ],
+      // lg: Large text (subheadings, lead paragraphs)
+      lg: [
+        24,
+        48,
+        360,
+        1200,
+      ],
+      // xl: Extra large text (headings)
+      xl: [
+        32,
+        56,
+        360,
+        1200,
+      ],
+      // 2xl: Display text (hero headings, page titles)
+      '2xl': [
+        48,
+        64,
+        360,
+        1200,
+      ],
+      // Legacy presets for backward compatibility
       h1: [
         28,
         88,
@@ -98,7 +136,7 @@ export default function fluidType() {
       ],
       body: [
         16,
-        18,
+        24,
         360,
         1200,
       ],
@@ -108,7 +146,7 @@ export default function fluidType() {
       {
         'fluid-preset': (key: string) => {
           const p = fsPresets[key];
-          if (!p) return {};
+          if (!p) return null;
           const [
             min,
             max,

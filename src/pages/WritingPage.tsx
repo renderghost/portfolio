@@ -14,6 +14,7 @@ import { Helmet } from 'react-helmet-async';
  *
  * @returns JSX element with writing page content
  */
+
 export default function WritingPage(): JSX.Element {
   const { data: documents, loading, error } = fetchPublications();
 
@@ -44,20 +45,21 @@ export default function WritingPage(): JSX.Element {
       <Layout theme="default">
         <Main>
           <div className="flex flex-col gap-12">
-            <Heading level={1} style="page">
-              Writing
+            <Paragraph size="md">
+              <Link href="/">←Home </Link>
+            </Paragraph>
+            <Heading level={1} size="md">
+              My Writing
             </Heading>
 
-            <Paragraph size="billboard">
-              Thoughts on design strategy, product design, and building better products.
-            </Paragraph>
+            <Paragraph size="lg">Thoughts on design strategy, product design, and building better products.</Paragraph>
 
-            {loading && <Paragraph size="billboard">Loading posts...</Paragraph>}
+            {loading && <Paragraph size="lg">Loading posts...</Paragraph>}
 
-            {error && <Paragraph size="billboard">Error loading posts: {error}</Paragraph>}
+            {error && <Paragraph size="lg">Error loading posts: {error}</Paragraph>}
 
             {!loading && !error && (!documents || documents.length === 0) && (
-              <Paragraph size="billboard">No posts found.</Paragraph>
+              <Paragraph size="lg">No posts found.</Paragraph>
             )}
 
             {!loading && !error && documents && documents.length > 0 && (
@@ -82,7 +84,7 @@ export default function WritingPage(): JSX.Element {
               </div>
             )}
 
-            <Paragraph size="billboard">
+            <Paragraph size="lg">
               <Link href="/">← Back to Home</Link>
             </Paragraph>
           </div>

@@ -6,7 +6,7 @@ import { SectionProps } from './Section.types';
 export const Section: React.FC<SectionProps> = ({ children, className = '', ...props }) => {
   return (
     <section className={cn(section, className)} {...props}>
-      <div className="container flex flex-col gap-16 mx-auto">{children}</div>
+      <div className="container flex flex-col gap-8 mx-auto">{children}</div>
     </section>
   );
 };

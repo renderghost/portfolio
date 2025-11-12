@@ -2,7 +2,7 @@ import { promises as fs } from 'fs';
 import path from 'path';
 import type { Article, CaseStudy, Company, ContentData, Job, Skill } from '@/types/content';
 
-const dataDirectory = path.join(process.cwd(), 'src', 'lib', 'data', 'json');
+const dataDirectory = path.join(process.cwd(), 'src', 'data', 'json');
 
 export async function getContent(): Promise<ContentData> {
   const filePath = path.join(dataDirectory, 'content.json');
@@ -56,5 +56,17 @@ export async function getLatestCaseStudies(limit: number = 3): Promise<CaseStudy
   const caseStudies = await getCaseStudies();
   return caseStudies
     .sort((a, b) => new Date(b.publishedOn).getTime() - new Date(a.publishedOn).getTime())
+    .slice(0, limit);
+}
+
+// Helper function to get latest jobs
+export async function getLatestJobs(limit: number = 5): Promise<Job[]> {
+  const jobs = await getJobs();
+  return jobs
+    .sort((a, b) => {
+      const dateA = b.endDate ? new Date(b.endDate).getTime() : Date.now();
+      const dateB = a.endDate ? new Date(a.endDate).getTime() : Date.now();
+      return dateA - dateB;
+    })
     .slice(0, limit);
 }

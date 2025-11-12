@@ -1,11 +1,259 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=DM+Serif+Display:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=DM+Serif+Display:ital@0;1&family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+html {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  font-family: sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+/**
+ * Typography System
+ *
+ * A modular, responsive typography system using fluid type scaling.
+ * All typography components use these base classes for consistency.
+ *
+ * Design principles:
+ * - Fluid scaling from mobile (360px) to desktop (1200px)
+ * - Semantic sizing (sm, md, lg, xl, 2xl)
+ * - Optical adjustments for readability
+ * - Consistent vertical rhythm
+ */
+
+@layer base {
+  /* Typography base reset */
+  body {
+    @apply font-sans antialiased;
+    font-weight: 400;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Prevent layout shift during font load */
+  html {
+    font-feature-settings:
+      'kern' 1,
+      'liga' 1,
+      'calt' 1;
+  }
+}
+
+@layer components {
+  /**
+   * Typography Scale Classes
+   * Base sizing classes with optimized line heights
+   */
+
+  /* sm: Captions, footnotes, labels (14px → 16px) */
+  .type-sm {
+    @apply fluid-preset-sm;
+    line-height: 1.62;
+  }
+
+  /* md: Body copy, paragraphs (16px → 18px) */
+  .type-md {
+    @apply fluid-preset-md;
+    line-height: 1.38;
+  }
+
+  /* lg: Subheadings, lead paragraphs (18px → 24px) */
+  .type-lg {
+    @apply fluid-preset-lg;
+    line-height: 1.24;
+  }
+
+  /* xl: Headings (24px → 36px) */
+  .type-xl {
+    @apply fluid-preset-xl;
+    line-height: 1.16;
+  }
+
+  /* 2xl: Display text, hero headings (36px → 64px) */
+  .type-2xl {
+    @apply fluid-preset-2xl;
+    line-height: 1;
+  }
+
+  /**
+   * Heading Presets
+   * Always bold, uses Tailwind's native font-sans
+   */
+
+  .heading-display {
+    @apply type-2xl font-semibold font-sans;
+  }
+
+  .heading-2xl {
+    @apply type-2xl font-semibold font-sans;
+  }
+
+  .heading-xl {
+    @apply type-xl font-semibold font-sans;
+  }
+
+  .heading-lg {
+    @apply type-lg font-extrabold font-sans;
+  }
+
+  .heading-md {
+    @apply type-md font-extrabold font-sans;
+  }
+
+  .heading-sm {
+    @apply type-sm font-semibold font-sans;
+  }
+
+  /**
+   * Paragraph Presets
+   * Normal weight (400), uses Tailwind's native font-sans
+   */
+
+  .paragraph-2xl {
+    @apply type-2xl font-semibold font-sans;
+  }
+
+  .paragraph-xl {
+    @apply type-xl font-normal font-sans;
+  }
+
+  .paragraph-lg {
+    @apply type-lg font-normal font-sans;
+  }
+
+  .paragraph-md {
+    @apply type-md font-normal font-sans;
+  }
+
+  .paragraph-sm {
+    @apply type-sm font-normal font-sans;
+  }
+
+  /**
+   * Quote Presets
+   * Uses Tailwind's native font-serif, italic
+   */
+
+  .quote-xl {
+    @apply type-2xl font-normal font-sans italic;
+  }
+
+  .quote-lg {
+    @apply type-xl font-normal font-serif italic;
+  }
+
+  .quote-md {
+    @apply type-lg font-normal font-serif italic;
+  }
+
+  /**
+   * Code Presets
+   * Uses Tailwind's native font-mono
+   */
+
+  .code-inline {
+    @apply type-sm font-normal font-mono;
+  }
+
+  .code-block {
+    @apply type-sm font-normal font-mono;
+    line-height: 1.75;
+  }
+
+  /**
+   * Caption Preset
+   * Small text for image/media captions
+   */
+
+  .caption {
+    @apply type-sm font-normal font-sans;
+  }
+}
+
 @layer utilities {
+  /* Text selection */
   ::selection {
     @apply bg-bones-yellow text-bones-black;
   }
+
+  /* Prevent orphans in headings (last word alone on a line) */
+  .balance-text {
+    text-wrap: balance;
+  }
+
+  /* Optimize for readability */
+  .optimize-legibility {
+    text-rendering: optimizeLegibility;
+  }
+}
+
+/**
+ * Icon System - FontAwesome 6
+ */
+
+@font-face {
+  font-family: 'FontAwesome 6';
+  src:
+    url('https://uploads-ssl.webflow.com/63020a6ad41103c31cd7414e/63020a6ad41103330ed7417a_fa-regular-400.woff2')
+      format('woff2'),
+    url('https://uploads-ssl.webflow.com/63020a6ad41103c31cd7414e/63020a6ad41103db67d7417e_fa-regular-400.ttf')
+      format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: auto;
+}
+
+@font-face {
+  font-family: 'FontAwesome 6';
+  src:
+    url('https://uploads-ssl.webflow.com/63020a6ad41103c31cd7414e/63020a6ad41103794bd7418c_fa-solid-900.woff2')
+      format('woff2'),
+    url('https://uploads-ssl.webflow.com/63020a6ad41103c31cd7414e/63020a6ad411033fc7d7417d_fa-solid-900.ttf')
+      format('truetype');
+  font-weight: 900;
+  font-style: normal;
+  font-display: auto;
+}
+
+@font-face {
+  font-family: 'FontAwesome Brands 6';
+  src:
+    url('https://uploads-ssl.webflow.com/63020a6ad41103c31cd7414e/63020a6ad41103fe94d74178_fa-brands-400.woff2')
+      format('woff2'),
+    url('https://uploads-ssl.webflow.com/63020a6ad41103c31cd7414e/63020a6ad411037fcdd7417c_fa-brands-400.ttf')
+      format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: auto;
+}
+
+@font-face {
+  font-family: 'FontAwesome 6';
+  src:
+    url('https://uploads-ssl.webflow.com/63020a6ad41103c31cd7414e/63020a6ad411039933d74179_fa-thin-100.woff2')
+      format('woff2'),
+    url('https://uploads-ssl.webflow.com/63020a6ad41103c31cd7414e/63020a6ad411038365d7418e_fa-thin-100.ttf')
+      format('truetype');
+  font-weight: 100;
+  font-style: normal;
+  font-display: auto;
+}
+
+@font-face {
+  font-family: 'FontAwesome 6';
+  src:
+    url('https://uploads-ssl.webflow.com/63020a6ad41103c31cd7414e/63020a6ad411031febd7417b_fa-light-300.woff2')
+      format('woff2'),
+    url('https://uploads-ssl.webflow.com/63020a6ad41103c31cd7414e/63020a6ad41103530ed7418d_fa-light-300.ttf')
+      format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: auto;
 }

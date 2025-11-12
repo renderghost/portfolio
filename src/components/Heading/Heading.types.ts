@@ -1,11 +1,11 @@
 import { ReactNode } from 'react';
 
-export type HeadingLevel = 1 | 2 | 3 | 4;
-export type HeadingStyle = 'page' | 'section' | 'body' | 'billboard' | 'footnote' | `title`;
+export type HeadingLevel = 1 | 2 | 3 | 4 | 5 | 6;
+export type HeadingSize = 'sm' | 'md' | 'lg' | 'xl' | '2xl';
 
 export interface HeadingProps {
   children: ReactNode;
-  level?: HeadingLevel; // Semantic HTML tag
-  style?: HeadingStyle; // Visual style class
+  level?: HeadingLevel; // Semantic HTML tag (h1-h6)
+  size?: HeadingSize; // Visual size (sm, md, lg, xl, 2xl)
   className?: string;
 }
