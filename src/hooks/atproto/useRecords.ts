@@ -11,18 +11,18 @@ import type { ATProtocolRecord, FetchResult, ListRecordsResponse } from '@/types
  *
  * @example
  * ```tsx
- * const { data: publications, loading, error } = fetchRecords<PublicationValue>(
+ * const { data: publications, loading, error } = useRecords<PublicationValue>(
  *   'pub.leaflet.publication'
  * );
  * ```
  */
-export function fetchRecords<T = unknown>(collection: string, repo?: string): FetchResult<ATProtocolRecord<T>[]> {
+export function useRecords<T = unknown>(collection: string, repo?: string): FetchResult<ATProtocolRecord<T>[]> {
   const [data, setData] = useState<ATProtocolRecord<T>[] | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    const fetchRecords = async () => {
+    const loadRecords = async () => {
       try {
         setLoading(true);
         setError(null);
@@ -44,7 +44,7 @@ export function fetchRecords<T = unknown>(collection: string, repo?: string): Fe
       }
     };
 
-    fetchRecords();
+    loadRecords();
   }, [collection, repo]);
 
   return { data, loading, error };

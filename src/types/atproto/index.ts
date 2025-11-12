@@ -2,14 +2,16 @@
  * AT Protocol type exports
  */
 
-export type {
-  ATProtocolBlob,
-  ATProtocolDocument,
-  ATProtocolPublication,
-  ATProtocolRecord,
-  DocumentValue,
-  ListRecordsResponse,
-  PublicationValue,
-} from './defineRecords';
+// Base types
+export type { ATProtocolBlob, ATProtocolRecord, FetchResult, ListRecordsResponse } from './defineBase';
 
-export type { FetchResult } from './defineResults';
+// Leaflet types
+export type { ATProtocolDocument, ATProtocolPublication, DocumentValue, PublicationValue } from './defineLeaflet';
+
+// Protopro types
+export type {
+  ATProtocolProfile,
+  JobHistoryEntry,
+  LanguageProficiency,
+  ProfileValue,
+} from './defineProtopro';

@@ -87,23 +87,30 @@ export default function fluidType() {
         360,
         1200,
       ],
+      // base: default text (body copy, paragraphs)
+      base: [
+        16,
+        32,
+        360,
+        1200,
+      ],
       // md: Medium text (body copy, paragraphs)
       md: [
-        16,
         24,
+        40,
         360,
         1200,
       ],
       // lg: Large text (subheadings, lead paragraphs)
       lg: [
-        24,
+        32,
         48,
         360,
         1200,
       ],
       // xl: Extra large text (headings)
       xl: [
-        32,
+        40,
         56,
         360,
         1200,
@@ -115,31 +122,7 @@ export default function fluidType() {
         360,
         1200,
       ],
-      // Legacy presets for backward compatibility
-      h1: [
-        28,
-        88,
-        360,
-        1200,
-      ],
-      h2: [
-        22,
-        48,
-        360,
-        1200,
-      ],
-      h3: [
-        18,
-        32,
-        360,
-        1200,
-      ],
-      body: [
-        16,
-        24,
-        360,
-        1200,
-      ],
+
     };
 
     matchUtilities(

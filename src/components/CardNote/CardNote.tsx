@@ -32,7 +32,7 @@ export const CardNote: React.FC<BaseCardNoteProps> = ({ className, coverImage, b
         </div>
 
         {/* Title */}
-        <Heading level={3}>{title}</Heading>
+        <Heading level={3} size="lg">{title}</Heading>
         {/* Description */}
         {description && <Paragraph>{description}</Paragraph>}
       </div>

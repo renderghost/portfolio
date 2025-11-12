@@ -1,40 +1,46 @@
 import { Heading } from '@/components/Heading/Heading';
 import { Paragraph } from '@/components/Paragraph/Paragraph';
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
-import { ROLES_BASE_PATH } from './CardRole.constants';
 import * as styles from './CardRole.styles';
 import { CardRoleProps } from './CardRole.types';
 
+/**
+ * Format date string to readable format
+ */
+function formatDate(dateString: string): string {
+  const date = new Date(dateString);
+  if (isNaN(date.getTime())) return dateString;
+
+  return date.toLocaleDateString('en-US', {
+    year: 'numeric',
+    month: 'short',
+  });
+}
+
 export const CardRole: React.FC<CardRoleProps> = ({ role }) => {
-  const navigate = useNavigate();
+  const startDate = formatDate(role.startDate);
+  const endDate = role.endDate ? formatDate(role.endDate) : 'Present';
+  const dateRange = `${startDate} — ${endDate}`;
 
   return (
-    <button onClick={() => navigate(`${ROLES_BASE_PATH}/${role.slug}`)} className={styles.cardWrapper}>
-      {/* Cover Image (if available) */}
-      {role.coverImage && (
-        <div className={styles.coverImageContainer}>
-          <img src={role.coverImage} alt="" className={styles.coverImage} />
-        </div>
-      )}
-
+    <div className={styles.cardWrapper}>
       {/* Content */}
       <div className={styles.contentContainer}>
         {/* Company Name (left) and Date (right) */}
         <div className={styles.metaContainer}>
           <span className={styles.companyName}>{role.company}</span>
-          <span className={styles.date}>{role.date}</span>
+          <span className={styles.date}>{dateRange}</span>
         </div>
         <div className={styles.detailContainer}>
-          {/* Title */}
-          <Heading level={3} size="lg">
-            {role.title}
+          {/* Position Title */}
+          <Heading level={3} size="md">
+            {role.position}
           </Heading>
 
-          {/* Subtitle/Description */}
-          {role.subtitle && <Paragraph>{role.subtitle}</Paragraph>}
+          {/* Description */}
+          {role.description && <Paragraph size="base">{role.description}</Paragraph>}
         </div>
       </div>
-    </button>
+    </div>
   );
 };

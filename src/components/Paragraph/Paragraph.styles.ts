@@ -7,6 +7,7 @@ export const paragraphStyles = {
   base: 'font-dm-sans',
   sizes: {
     sm: 'paragraph-sm',
+    base: 'paragraph-base',
     md: 'paragraph-md',
     lg: 'paragraph-lg',
     xl: 'paragraph-xl',

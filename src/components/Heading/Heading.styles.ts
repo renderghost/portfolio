@@ -10,6 +10,7 @@ export const HeadingStyles = {
   base: 'font-dm-sans',
   sizes: {
     sm: 'heading-sm',
+    base: 'heading-base',
     md: 'heading-md',
     lg: 'heading-lg',
     xl: 'heading-xl',

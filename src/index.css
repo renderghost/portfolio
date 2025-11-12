@@ -58,7 +58,13 @@ body {
     line-height: 1.62;
   }
 
-  /* md: Body copy, paragraphs (16px → 18px) */
+  /* base: Default text (16px → 32px) */
+  .type-base {
+    @apply fluid-preset-base;
+    line-height: 1.5;
+  }
+
+  /* md: Body copy, paragraphs (24px → 40px) */
   .type-md {
     @apply fluid-preset-md;
     line-height: 1.38;
@@ -88,7 +94,7 @@ body {
    */
 
   .heading-display {
-    @apply type-2xl font-semibold font-sans;
+    @apply type-2xl font-bold font-sans;
   }
 
   .heading-2xl {
@@ -107,8 +113,12 @@ body {
     @apply type-md font-extrabold font-sans;
   }
 
+    .heading-base {
+    @apply type-base font-black font-sans;
+  }
+
   .heading-sm {
-    @apply type-sm font-semibold font-sans;
+    @apply type-sm font-black font-sans;
   }
 
   /**
@@ -132,6 +142,10 @@ body {
     @apply type-md font-normal font-sans;
   }
 
+    .paragraph-base {
+    @apply type-base font-normal font-sans;
+  }
+
   .paragraph-sm {
     @apply type-sm font-normal font-sans;
   }
@@ -141,16 +155,20 @@ body {
    * Uses Tailwind's native font-serif, italic
    */
 
-  .quote-xl {
+     .quote-2xl {
     @apply type-2xl font-normal font-sans italic;
   }
 
+  .quote-xl {
+    @apply type-xl font-normal font-sans italic;
+  }
+
   .quote-lg {
-    @apply type-xl font-normal font-serif italic;
+    @apply type-lg font-normal font-serif italic;
   }
 
   .quote-md {
-    @apply type-lg font-normal font-serif italic;
+    @apply type-md font-normal font-serif italic;
   }
 
   /**
@@ -159,11 +177,11 @@ body {
    */
 
   .code-inline {
-    @apply type-sm font-normal font-mono;
+    @apply type-base font-normal font-mono;
   }
 
   .code-block {
-    @apply type-sm font-normal font-mono;
+    @apply type-base font-normal font-mono;
     line-height: 1.75;
   }
 

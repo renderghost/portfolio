@@ -25,6 +25,10 @@
     "types": ["react"],
     "useDefineForClassFields": true
   },
-  "include": ["src", "src/components/Sidebar/.Sidebar.tsx.off"],
+  "include": [
+    "src",
+    "src/components/Sidebar/.Sidebar.tsx.off",
+    "src/components/CardArticle/CardArticle.tsx"
+  ],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

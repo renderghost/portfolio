@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { ATPROTO_COLLECTIONS, buildBlobUrl } from '@/config/atproto';
 import type { ATProtocolDocument, ATProtocolPublication, FetchResult } from '@/types/atproto';
-import { fetchRecords } from './fetchRecords';
+import { useRecords } from './useRecords';
 
 /**
  * Publication data with resolved metadata
@@ -28,14 +28,15 @@ export interface Document {
 }
 
 /**
- * Hook for fetching publications and their associated documents
+ * Hook for fetching Leaflet publications and their associated documents
+ * Fetches from pub.leaflet.publication and pub.leaflet.document collections
  * Automatically resolves publication references in documents
  *
  * @returns FetchResult with combined documents and publications data
  *
  * @example
  * ```tsx
- * const { data: posts, loading, error } = fetchPublications();
+ * const { data: posts, loading, error } = useLeaflet();
  *
  * if (loading) return <div>Loading...</div>;
  * if (error) return <div>Error: {error}</div>;
@@ -48,18 +49,18 @@ export interface Document {
  * ));
  * ```
  */
-export function fetchPublications(): FetchResult<Document[]> {
+export function useLeaflet(): FetchResult<Document[]> {
   const {
     data: publicationsData,
     loading: publicationsLoading,
     error: publicationsError,
-  } = fetchRecords<ATProtocolPublication['value']>(ATPROTO_COLLECTIONS.PUBLICATION);
+  } = useRecords<ATProtocolPublication['value']>(ATPROTO_COLLECTIONS.PUBLICATION);
 
   const {
     data: documentsData,
     loading: documentsLoading,
     error: documentsError,
-  } = fetchRecords<ATProtocolDocument['value']>(ATPROTO_COLLECTIONS.DOCUMENT);
+  } = useRecords<ATProtocolDocument['value']>(ATPROTO_COLLECTIONS.DOCUMENT);
 
   const [data, setData] = useState<Document[] | null>(null);
   const [loading, setLoading] = useState(true);
@@ -119,7 +120,7 @@ export function fetchPublications(): FetchResult<Document[]> {
             publishedAt: record.value.publishedAt,
             articleUrl: `https://${publication.basePath}/${slug}`,
             publication,
-          };
+          } as Document;
         })
         .filter((doc): doc is Document => doc !== null)
         // Sort by published date, newest first

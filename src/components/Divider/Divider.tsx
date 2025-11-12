@@ -11,7 +11,7 @@ export const Divider: React.FC<DividerProps> = ({ className = '', orientation = 
   // Accent: white border
   // Default: black border in light mode, white in dark
   const themeClasses =
-    pageTheme === 'accent' ? 'border-bones-white' : 'border-bones-black-30 dark:border-bones-white-30';
+    pageTheme === 'accent' ? 'border-bones-white' : 'border-bones-black-20 dark:border-bones-white-20';
 
   const orientationStyles = orientation === 'vertical' ? dividerVertical : dividerHorizontal;
 

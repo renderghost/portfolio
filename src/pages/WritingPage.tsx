@@ -5,7 +5,7 @@ import { Aside, Layout, Main } from '@/components/Layout/Layout';
 import { Link } from '@/components/Link/Link';
 import { Paragraph } from '@/components/Paragraph/Paragraph';
 import TLDRProfile from '@/components/TLDRProfile/TLDRProfile';
-import { fetchPublications } from '@/hooks/atproto';
+import { useLeaflet } from '@/hooks/atproto';
 import type { JSX } from 'react';
 import { Helmet } from 'react-helmet-async';
 
@@ -16,7 +16,7 @@ import { Helmet } from 'react-helmet-async';
  */
 
 export default function WritingPage(): JSX.Element {
-  const { data: documents, loading, error } = fetchPublications();
+  const { data: documents, loading, error } = useLeaflet();
 
   const jsonLd = {
     '@context': 'https://schema.org',
@@ -45,11 +45,8 @@ export default function WritingPage(): JSX.Element {
       <Layout theme="default">
         <Main>
           <div className="flex flex-col gap-12">
-            <Paragraph size="md">
-              <Link href="/">←Home </Link>
-            </Paragraph>
-            <Heading level={1} size="md">
-              My Writing
+            <Heading level={2} size="md">
+              writing / <Link href="/">renderg.host</Link>
             </Heading>
 
             <Paragraph size="lg">Thoughts on design strategy, product design, and building better products.</Paragraph>
@@ -63,7 +60,7 @@ export default function WritingPage(): JSX.Element {
             )}
 
             {!loading && !error && documents && documents.length > 0 && (
-              <div className="grid grid-cols-1 border-2 border-bones-white-30">
+              <div className="grid grid-cols-1 border-2 border-bones-black-20 dark:border-bones-white-20">
                 {documents.map((doc, index) => (
                   <>
                     <CardArticle

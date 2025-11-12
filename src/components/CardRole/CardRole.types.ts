@@ -1,10 +1,5 @@
+import type { JobHistoryEntry } from '@/types/atproto';
+
 export interface CardRoleProps {
-  role: {
-    title: string;
-    company: string;
-    subtitle: string;
-    date: string;
-    coverImage?: string;
-    slug: string;
-  };
+  role: JobHistoryEntry;
 }

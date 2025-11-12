@@ -1,6 +1,6 @@
-import { EventProps } from './Event.types';
+import { CardEventProps } from '@/components/CardEvent/CardEvent.types';
 
 export interface EventsProps {
-  items: EventProps[];
+  items: CardEventProps[];
   className?: string;
 }

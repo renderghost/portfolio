@@ -63,11 +63,8 @@ export default function HomePage(): JSX.Element {
             </Paragraph>
 
             <Paragraph size="2xl">
-              I{' '}
-              <Link href="https://www.linkedin.com/in/barrymprendergast/details/experience/" target="_blank">
-                work
-              </Link>{' '}
-              with nonprofits and startups to ease their growing pains, and to market faster.
+              I <Link href="/work">work</Link> with nonprofits and startups to ease their growing pains, and to market
+              faster.
             </Paragraph>
 
             <Paragraph size="2xl">

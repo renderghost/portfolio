@@ -19,6 +19,15 @@ export const CardArticle: React.FC<CardArticleProps> = ({ article }) => {
 
       {/* Content */}
       <div className={styles.contentContainer}>
+        <div className={styles.detailContainer}>
+          {/* Title */}
+          <Heading level={3} size="md">
+            {article.title}
+          </Heading>
+
+          {/* Description */}
+          {article.subtitle && <Paragraph size="base">{article.subtitle}</Paragraph>}
+        </div>
         {/* Publication Name (left) and Date (right) */}
         <div className={styles.metaContainer}>
           <div className={styles.publicationContainer}>
@@ -26,15 +35,6 @@ export const CardArticle: React.FC<CardArticleProps> = ({ article }) => {
             <span className={styles.publicationName}>{article.publication}</span>
           </div>
           <span className={styles.date}>{formattedDate}</span>
-        </div>
-        <div className={styles.detailContainer}>
-          {/* Title */}
-          <Heading level={3} size="lg">
-            {article.title}
-          </Heading>
-
-          {/* Description */}
-          {article.subtitle && <Paragraph>{article.subtitle}</Paragraph>}
         </div>
       </div>
     </a>

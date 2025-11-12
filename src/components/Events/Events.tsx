@@ -1,13 +1,13 @@
 import { cn } from '@/lib/utils';
 import React from 'react';
-import { Event } from '@/components/Event/Event';
+import { CardEvent } from '@/components/CardEvent/CardEvent';
 import { eventsStyles } from './Events.styles';
 import { EventsProps } from './Events.types';
 
 export const Events: React.FC<EventsProps> = ({ items, className = '' }) => (
   <div className={cn(eventsStyles.wrapper, className)}>
     {items.map((item) => (
-      <Event
+      <CardEvent
         key={item.eventTitle}
         eventType={item.eventType}
         eventTitle={item.eventTitle}

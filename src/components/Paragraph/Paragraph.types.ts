@@ -1,6 +1,6 @@
 import { ReactNode } from 'react';
 
-export type ParagraphSize = 'sm' | 'md' | 'lg' | 'xl' | '2xl';
+export type ParagraphSize = 'sm' | 'base' | 'md' | 'lg' | 'xl' | '2xl';
 
 export interface ParagraphProps {
   children: ReactNode;

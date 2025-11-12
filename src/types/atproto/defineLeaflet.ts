@@ -1,29 +1,9 @@
 /**
- * AT Protocol record type definitions
- * Type-safe interfaces for AT Protocol data structures
+ * Leaflet collection type definitions
+ * Types for pub.leaflet.publication and pub.leaflet.document
  */
 
-/**
- * AT Protocol Blob reference
- * Used for binary data like images
- */
-export interface ATProtocolBlob {
-  $type: 'blob';
-  ref: {
-    $link: string;
-  };
-  mimeType: string;
-  size: number;
-}
-
-/**
- * Base AT Protocol record structure
- */
-export interface ATProtocolRecord<T = unknown> {
-  uri: string;
-  cid: string;
-  value: T;
-}
+import type { ATProtocolBlob, ATProtocolRecord } from './defineBase';
 
 /**
  * Publication record value structure
@@ -56,11 +36,3 @@ export type ATProtocolPublication = ATProtocolRecord<PublicationValue>;
  * Full Document record
  */
 export type ATProtocolDocument = ATProtocolRecord<DocumentValue>;
-
-/**
- * Response from listRecords XRPC endpoint
- */
-export interface ListRecordsResponse<T = unknown> {
-  records: ATProtocolRecord<T>[];
-  cursor?: string;
-}

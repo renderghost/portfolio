@@ -1,6 +1,6 @@
-import { FactProps } from './Fact.types';
+import { CardFactProps } from '@/components/CardFact/CardFact.types';
 
 export interface FactsProps {
-  items: FactProps[];
+  items: CardFactProps[];
   className?: string;
 }

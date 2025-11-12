@@ -7,7 +7,8 @@ export const PROFILE = {
 } as const;
 
 export const SECTIONS = {
-  specializations: 'Specializations',
+  skills: 'Skills',
+  languages: 'Languages',
   connect: 'Connect',
 } as const;
 

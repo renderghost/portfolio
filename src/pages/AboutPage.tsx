@@ -164,7 +164,7 @@ export default function AboutPage(): JSX.Element {
                 Recent Work
               </Heading>
 
-              <div className="grid grid-cols-1 border-2 border-bones-white-30">
+              <div className="grid grid-cols-1 border-2 border-bones-black-20 dark:border-bones-white-20">
                 {latestJobs.map((job, index) => {
                   const startYear = new Date(job.startDate).getFullYear();
                   const endYear = job.endDate ? new Date(job.endDate).getFullYear() : 'Present';
@@ -200,7 +200,7 @@ export default function AboutPage(): JSX.Element {
               <Paragraph size="lg">My approach is straightforward and outcome-focused.</Paragraph>
 
               <UnorderedList bullet="disc">
-                <ListItem size="lg">I start by understanding users and the problems they face</ListItem>
+                <ListItem>I start by understanding users and the problems they face</ListItem>
                 <ListItem>I design and prototype quickly to validate ideas early</ListItem>
                 <ListItem>I measure results and refine based on evidence</ListItem>
                 <ListItem>I document decisions to help teams move with clarity</ListItem>
