@@ -7,21 +7,36 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
+# Dependencies
 node_modules
+
+# Build output
 dist
 dist-ssr
-*.local
 
-# Editor directories and files
+# Vite cache
+.vite
+
+# Environment
+*.local
+.env
+.env.*
+!.env.example
+
+# Editor
+.DS_Store
+.idea
+.vscode
 .vscode/*
 !.vscode/extensions.json
-.idea
-.DS_Store
-*.suo
-*.ntvs*
 *.njsproj
+*.ntvs*
 *.sln
+*.suo
 *.sw?
 
-# Project Management BS
+# Project management
 .documentation/
+
+# Claude Code
+.claude/
