@@ -1,8 +1,14 @@
-import { AnchorHTMLAttributes, ReactNode } from 'react';
+export type LinkSize = 'base' | 'medium';
+export type LinkUsecase = 'default' | 'mono' | 'on contrast';
 
-export interface LinkProps extends AnchorHTMLAttributes<HTMLAnchorElement> {
-  to?: string;
-  children: ReactNode;
-  underline?: 'none' | 'hover' | 'always';
-  underlinePosition?: 'left' | 'center' | 'right';
+export interface LinkProps {
+  href: string;
+  label: string;
+  size?: LinkSize;
+  usecase?: LinkUsecase;
+  hasLeftIcon?: boolean;
+  hasRightIcon?: boolean;
+  iconLeft?: string;
+  iconRight?: string;
+  className?: string;
 }
