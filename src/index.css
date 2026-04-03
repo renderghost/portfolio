@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=DM+Serif+Display:ital@0;1&family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=DM+Serif+Display:ital@0;1&family=DM+Serif+Text:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -131,23 +131,23 @@ body {
   }
 
   .paragraph-xl {
-    @apply type-xl font-normal font-sans;
+    @apply type-xl font-regular font-sans;
   }
 
   .paragraph-lg {
-    @apply type-lg font-normal font-sans;
+    @apply type-lg font-regular font-sans;
   }
 
   .paragraph-md {
-    @apply type-md font-normal font-sans;
+    @apply type-md font-regular font-sans;
   }
 
     .paragraph-base {
-    @apply type-base font-normal font-sans;
+    @apply type-base font-regular font-sans;
   }
 
   .paragraph-sm {
-    @apply type-sm font-normal font-sans;
+    @apply type-sm font-regular font-sans;
   }
 
   /**
@@ -156,19 +156,19 @@ body {
    */
 
      .quote-2xl {
-    @apply type-2xl font-normal font-sans italic;
+    @apply type-2xl font-regular font-sans italic;
   }
 
   .quote-xl {
-    @apply type-xl font-normal font-sans italic;
+    @apply type-xl font-regular font-sans italic;
   }
 
   .quote-lg {
-    @apply type-lg font-normal font-serif italic;
+    @apply type-lg font-regular font-serif italic;
   }
 
   .quote-md {
-    @apply type-md font-normal font-serif italic;
+    @apply type-md font-regular font-serif italic;
   }
 
   /**
@@ -177,11 +177,11 @@ body {
    */
 
   .code-inline {
-    @apply type-base font-normal font-mono;
+    @apply type-base font-regular font-mono;
   }
 
   .code-block {
-    @apply type-base font-normal font-mono;
+    @apply type-base font-regular font-mono;
     line-height: 1.75;
   }
 
@@ -191,14 +191,14 @@ body {
    */
 
   .caption {
-    @apply type-sm font-normal font-sans;
+    @apply type-sm font-regular font-sans;
   }
 }
 
 @layer utilities {
   /* Text selection */
   ::selection {
-    @apply bg-bones-yellow text-bones-black;
+    @apply bg-yellow text-black;
   }
 
   /* Prevent orphans in headings (last word alone on a line) */
