@@ -1,52 +1,57 @@
 import { CardGrid } from '@/components/CardGrid/CardGrid';
 import type { CardHomeProps } from '@/components/CardHome/CardHome.types';
-import { HomeHeader } from '@/components/HomeHeader/HomeHeader';
 import { HomeFooter } from '@/components/HomeFooter/HomeFooter';
+import { HomeHeader } from '@/components/HomeHeader/HomeHeader';
 import type { JSX } from 'react';
 import { Helmet } from 'react-helmet-async';
 
 const CARDS: CardHomeProps[] = [
   {
-    overline: 'About Me',
-    title: "Hi! 👋 I'm Barry, an Irish product strategist and UX designer living in Berlin, Germany.",
-    description: "I've been working in design for a little over 20 years.",
-    linkLabel: 'Learn more About Me',
+    overline: 'My Background',
+    title: "Hi! 👋 I'm Barry, an Irish UX strategist and designer living in Berlin, Germany.",
+    description:
+      "For 20 years, I've been helping ambitious organisations to ease their growing pains, solve hard problems through clear conversation, rapid prototyping, and rigorous testing against the right metrics",
+    linkLabel: 'Learn about me',
     linkHref: '/about',
     isHero: true,
   },
   {
-    overline: 'My Writing',
-    title: 'I write about academia, design, product, science, systems, technology & the messy stuff in between.',
-    description: 'Essays, notes, and half-formed thoughts on the things I care about.',
-    linkLabel: 'Read my Writing',
-    linkHref: '/writing',
-  },
-  {
     overline: 'My Career',
-    title: 'I work with nonprofits and startups to ease their growing pains, and get to market faster.',
-    description: 'I previously worked with Morressier, LEO Pharma, EDF Energy, UK Government, Brandwatch and more.',
-    linkLabel: 'Read my Resume',
+    title: 'I help companies to achieve focus, collaborate better, and get to market faster.',
+    description:
+      'I have led teams and shipped products across academic publishing, energy, government, pharma, and more, from early-stage startups to multinationals.', //
+    linkLabel: 'Check my resume',
     linkHref: '/work',
   },
   {
     overline: 'My Work',
-    title: 'I specialise in outcome-driven design for complex digital products and services.',
+    title: 'I specialise in outcome-driven experience and interface design for digital products and services.',
     description:
-      'I practice lean product management, user research, and UX design. I build strategies, teams, brands and design systems that work as intended.',
-    linkLabel: 'Explore my portfolio',
+      'I practice lean product management, user research, and UX design. I build the strategies, teams, and design systems to help teams to achieve their goals.',
+    linkLabel: 'Browse my portfolio',
     linkHref: '/portfolio',
   },
-    {
-    overline: 'My Interests',
-    title: 'I like tinkering with code to make cool things for friends and family.',
-    description: 'Side projects, experiments, and things I build just because I can.',
+  {
+    overline: 'My Writing',
+    title: 'I write about design, product, processes, systems, technology & the messy people stuff in between.',
+    description:
+      'Field notes, opinions, and lessons learned for designers, founders, and product leaders navigating complexity.',
+    linkLabel: 'Read my writing',
+    linkHref: '/writing',
+  },
+  {
+    overline: 'My Side Projects',
+    title: 'I bring the same drive and curiosity to personal projects that I bring to my design work.',
+    description:
+      'Experiments and side projects spanning music, visual art, writing, and code. No brief, no deadline, and no client but myself. Just curiosity and whatever tools and toys are within reach.',
     linkLabel: 'Explore my projects',
     linkHref: '/portfolio',
   },
   {
-    overline: 'My Contact Details',
-    title: "Let's talk.",
-    description: 'Book a meeting, message me on Bluesky or LinkedIn, or drop me an email.',
+    overline: 'My Contacts',
+    title:
+      "Let's talk about working together to build the right things, in the right way, for the best possible outcomes.",
+    description: 'We can talk via Bluesky, LinkedIn, or Mail.',
     linkLabel: 'Get in touch',
     linkHref: 'mailto:barry@renderg.host',
   },
@@ -56,7 +61,7 @@ const JSON_LD = {
   '@context': 'https://schema.org',
   '@type': 'Person',
   name: 'Barry Prendergast',
-  jobTitle: 'Consulting Design Strategist',
+  jobTitle: 'UX Strategist and Designer',
   url: 'https://renderg.host',
   address: {
     '@type': 'PostalAddress',
@@ -65,22 +70,32 @@ const JSON_LD = {
   },
   sameAs: [
     'https://bsky.app/profile/renderg.host',
-    'https://linkedin.com/in/barryprendergast',
+    'https://linkedin.com/in/barrymprendergast',
     'https://signal.me/#eu/XO_aKC1aE1GZYWdMx7WK7HKGSCfrlpNhlxLGNi774dhiL7qr32BAMrH1BqgChaiM',
+    `https://calendly.com/barry-prendergast`
   ],
-  worksFor: {
-    '@type': 'Organization',
-    name: 'Thomas Kuhn Foundation',
-    url: 'https://thomaskuhnfoundation.org/',
-  },
+  // worksFor: {
+  //   '@type': 'Organization',
+  //   name: 'Thomas Kuhn Foundation',
+  //   url: 'https://thomaskuhnfoundation.org/',
+  // },
   knowsAbout: [
+    'Content Design',
+    'Design Operations',
     'Design Strategy',
-    'Service Design',
-    'Product Design',
-    'Systems Thinking',
+    'Design Systems',
+    'DesignOps',
     'Human-Centred Design',
-    'Technology',
-    'Science Communication',
+    'Information Architecture',
+    'Interaction Design',
+    'Lean UX',
+    'Product Design',
+    'Service Design',
+    'Systems Thinking',
+    'UI Design',
+    'User Experience Design',
+    'User Interface Design',
+    'UX Design',
   ],
 };
 
