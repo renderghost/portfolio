@@ -1,5 +1,5 @@
-import type { Config } from 'tailwindcss';
 import typography from '@tailwindcss/typography';
+import type { Config } from 'tailwindcss';
 import fluidType from './plugins/fluidType';
 
 export default {
@@ -80,14 +80,12 @@ export default {
       'white-83': '#ffffffd4',
       'white-90': '#ffffffe5',
     },
-
     fontFamily: {
       display: ['DM Serif Display', 'serif'],
       mono: ['DM Mono', 'monospace'],
       sans: ['DM Sans', 'sans-serif'],
       serif: ['DM Serif Text', 'serif'],
     },
-
     fontWeight: {
       thin: '100',
       extralight: '200',
@@ -99,7 +97,6 @@ export default {
       extrabold: '800',
       black: '900',
     },
-
     spacing: {
       '0': '0px',
       '1': '1px',
@@ -121,7 +118,6 @@ export default {
       '96': '96px',
       '128': '128px',
     },
-
     borderRadius: {
       sharp: '0px',
       softest: '2px',
