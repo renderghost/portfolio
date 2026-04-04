@@ -68,11 +68,13 @@ const JSON_LD = {
     addressLocality: 'Berlin',
     addressCountry: 'Germany',
   },
+  description:
+    'Independent product designer helping organisations deliver better products through clear thinking, practical design, and meaningful collaboration.',
   sameAs: [
     'https://bsky.app/profile/renderg.host',
     'https://linkedin.com/in/barrymprendergast',
     'https://signal.me/#eu/XO_aKC1aE1GZYWdMx7WK7HKGSCfrlpNhlxLGNi774dhiL7qr32BAMrH1BqgChaiM',
-    `https://calendly.com/barry-prendergast`
+    `https://calendly.com/barry-prendergast`,
   ],
   // worksFor: {
   //   '@type': 'Organization',
