@@ -1,5 +1,5 @@
 export interface PageHeaderProps {
-  overline?: string;
   pageTitle?: string;
+  overline?: string;
   className?: string;
 }

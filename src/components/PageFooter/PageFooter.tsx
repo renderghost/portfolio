@@ -1,11 +1,16 @@
 import React from 'react';
 import { Link } from '@/components/Link/Link';
-import { DEFAULT_COPYRIGHT, FOOTER_LINKS } from './PageFooter.constants';
 import {
+  DEFAULT_COPYRIGHT,
+  LEGAL_LINKS,
+  SOCIAL_LINKS,
+} from './PageFooter.constants';
+import {
+  copyrightBlock,
   copyrightStyles,
-  creditBlock,
   getWrapperStyles,
   legalBlock,
+  socialBlock,
 } from './PageFooter.styles';
 import type { PageFooterProps } from './PageFooter.types';
 
@@ -15,11 +20,28 @@ export const PageFooter: React.FC<PageFooterProps> = ({
 }) => {
   return (
     <footer className={getWrapperStyles(className)}>
-      <div className={creditBlock}>
+      {/* Copyright: order-3 mobile (bottom) → order-1 desktop (left) */}
+      <div className={copyrightBlock}>
         <p className={copyrightStyles}>{copyright}</p>
       </div>
+
+      {/* Legal links: order-2 on both */}
       <div className={legalBlock}>
-        {FOOTER_LINKS.map((link) => (
+        {LEGAL_LINKS.map((link) => (
+          <Link
+            key={link.label}
+            href={link.href}
+            label={link.label}
+            usecase='default'
+            hasLeftIcon={false}
+            hasRightIcon={false}
+          />
+        ))}
+      </div>
+
+      {/* Social links: order-1 mobile (top) → order-3 desktop (right) */}
+      <div className={socialBlock}>
+        {SOCIAL_LINKS.map((link) => (
           <Link
             key={link.label}
             href={link.href}

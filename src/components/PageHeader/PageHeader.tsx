@@ -2,24 +2,25 @@ import React from 'react';
 import { Link } from '@/components/Link/Link';
 import { NAV_LINKS } from './PageHeader.constants';
 import {
+  exitRow,
   getWrapperStyles,
-  navLinksGroup,
-  navRow,
+  navColumn,
+  navGroup,
   overlineStyles,
   pageTitleStyles,
   titleBlock,
-  titleColumn,
 } from './PageHeader.styles';
 import type { PageHeaderProps } from './PageHeader.types';
 
 export const PageHeader: React.FC<PageHeaderProps> = ({
-  overline,
   pageTitle,
+  overline,
   className,
 }) => {
   return (
     <header className={getWrapperStyles(className)}>
-      <div className={navRow}>
+      {/* Mobile only: EXIT link sits above the title */}
+      <div className={exitRow}>
         <Link
           href='/'
           label='EXIT'
@@ -27,7 +28,17 @@ export const PageHeader: React.FC<PageHeaderProps> = ({
           hasLeftIcon={true}
           hasRightIcon={false}
         />
-        <nav className={navLinksGroup}>
+      </div>
+
+      {/* Title block: order-2 mobile → order-1 desktop */}
+      <div className={titleBlock}>
+        {overline && <p className={overlineStyles}>{overline}</p>}
+        {pageTitle && <p className={pageTitleStyles}>{pageTitle}</p>}
+      </div>
+
+      {/* Desktop only: full page nav sits to the right of title */}
+      <div className={navColumn}>
+        <nav className={navGroup}>
           {NAV_LINKS.map((link) => (
             <Link
               key={link.label}
@@ -39,12 +50,6 @@ export const PageHeader: React.FC<PageHeaderProps> = ({
             />
           ))}
         </nav>
-      </div>
-      <div className={titleBlock}>
-        <div className={titleColumn}>
-          {overline && <p className={overlineStyles}>{overline}</p>}
-          {pageTitle && <p className={pageTitleStyles}>{pageTitle}</p>}
-        </div>
       </div>
     </header>
   );
