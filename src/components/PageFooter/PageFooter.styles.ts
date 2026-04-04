@@ -1,18 +1,25 @@
 import { mergeClasses } from '@/lib/utils/mergeClasses';
 
 export const wrapperBase =
-  'grid grid-cols-1 w-full max-w-[1920px] ' +
-  'md:grid-cols-[1fr_1fr] md:h-[60px]';
-
-export const creditBlock =
-  'flex items-start px-24 py-16 w-full order-2 ' + 'md:h-full md:order-1';
+  'flex flex-col lg:flex-row w-full max-w-[1920px]';
 
 export const copyrightStyles =
   'font-sans font-medium text-base leading-[28px] text-black whitespace-nowrap';
 
+// Copyright: bottom on mobile (order-3), left on desktop (order-1)
+export const copyrightBlock =
+  'flex items-center lg:items-end px-24 py-16 w-full lg:flex-1 lg:self-stretch ' +
+  'order-3 lg:order-1';
+
+// Legal links: middle on both (order-2)
 export const legalBlock =
-  'flex flex-wrap gap-16 items-start justify-start px-24 py-16 w-full order-1 ' +
-  'md:h-full md:order-2 md:justify-end';
+  'flex gap-16 items-center lg:items-start px-24 py-16 w-full lg:flex-1 lg:self-stretch ' +
+  'order-2 lg:order-2';
+
+// Social links: top on mobile (order-1), right on desktop (order-3)
+export const socialBlock =
+  'flex gap-16 flex-wrap items-center px-24 py-16 w-full lg:flex-1 lg:justify-end ' +
+  'order-1 lg:order-3';
 
 export function getWrapperStyles(className?: string): string {
   return mergeClasses(wrapperBase, className);

@@ -1,4 +1,4 @@
-import type { NavLink } from '@/components/PageHeader/PageHeader.types';
+import type { NavLink } from '@/components/PageHeader/PageHeader.constants';
 
 export const FOOTER_LINKS: NavLink[] = [
   { label: 'Impressum', href: '/impressum' },
