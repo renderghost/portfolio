@@ -1,130 +1,116 @@
-import { CardRole } from '@/components/CardRole/CardRole';
-import { Divider } from '@/components/Divider/Divider';
-import { Heading } from '@/components/Heading/Heading';
-import { Aside, Layout, Main } from '@/components/Layout/Layout';
-import { Link } from '@/components/Link/Link';
-import { Paragraph } from '@/components/Paragraph/Paragraph';
-import Section from '@/components/Section/Section';
-import TLDRProfile from '@/components/TLDRProfile/TLDRProfile';
-import { useProtopro } from '@/hooks/atproto';
+import { BadgeLanguage } from '@/components/BadgeLanguage/BadgeLanguage';
+import { PageFooter } from '@/components/PageFooter/PageFooter';
+import { PageHeader } from '@/components/PageHeader/PageHeader';
+import { SectionPosition } from '@/components/SectionPosition/SectionPosition';
+import { SectionSkillCategory } from '@/components/SectionSkillCategory/SectionSkillCategory';
+import { useSifaLanguages, useSifaPositions, useSifaSkills } from '@/hooks/atproto';
 import type { JSX } from 'react';
 import { Helmet } from 'react-helmet-async';
 
-/**
- * Work page component - displays CV/work history from AT Protocol PDS
- *
- * @returns JSX element with work page content
- */
+const JSON_LD = {
+  '@context': 'https://schema.org',
+  '@type': 'ProfilePage',
+  mainEntity: {
+    '@type': 'Person',
+    name: 'Barry Prendergast',
+    jobTitle: 'UX Strategist and Designer',
+    url: 'https://renderg.host/work',
+  },
+};
+
+const sectionLabel = 'font-sans font-semibold text-base leading-[24px] text-dimgray ' + 'tracking-[1px] uppercase';
+
 export default function WorkPage(): JSX.Element {
-  const { data: profile, loading, error } = useProtopro();
+  const { data: positions, loading: positionsLoading, error: positionsError } = useSifaPositions();
+  const { data: skillCategories, loading: skillsLoading, error: skillsError } = useSifaSkills();
+  const { data: languages, loading: languagesLoading, error: languagesError } = useSifaLanguages();
 
-  // Split jobs into current and past
-  const currentJobs = profile?.jobHistory.filter((job) => !job.endDate) || [];
-  const pastJobs =
-    profile?.jobHistory
-      .filter((job) => job.endDate)
-      .sort((a, b) => {
-        // Sort by end date, newest first
-        const dateA = a.endDate ? new Date(a.endDate).getTime() : 0;
-        const dateB = b.endDate ? new Date(b.endDate).getTime() : 0;
-        return dateB - dateA;
-      }) || [];
+  const currentPositions = positions?.filter((p) => !p.endedAt) ?? [];
+  const pastPositions = positions?.filter((p) => !!p.endedAt) ?? [];
 
-  const jsonLd = {
-    '@context': 'https://schema.org',
-    '@type': 'ProfilePage',
-    mainEntity: {
-      '@type': 'Person',
-      name: 'Barry Prendergast',
-      jobTitle: currentJobs[0]?.position || 'Product Designer',
-      description: 'Independent product designer and strategist',
-      url: 'https://renderg.host/work',
-    },
-  };
+  const loading = positionsLoading || skillsLoading || languagesLoading;
+  const error = positionsError ?? skillsError ?? languagesError;
 
   return (
     <>
       <Helmet>
-        <title>Work | Barry Prendergast</title>
+        <title>Resume | Barry Prendergast</title>
         <meta
           name="description"
           content="Independent product designer helping organisations deliver better products through clear thinking, practical design, and meaningful collaboration."
         />
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(JSON_LD) }} />
       </Helmet>
 
-      <Layout theme="default">
-        <Main>
-          <div className="flex flex-col gap-16">
-            {/* Heading */}
-            <Section>
-              <Heading level={2} size="base">
-                work / <Link href="/">renderg.host</Link>
-              </Heading>
-            </Section>
+      <div className="flex flex-col items-center w-full bg-whitesmoke">
+        <PageHeader pageTitle="My Resume" />
 
-            {/* Loading/Error States */}
-            {loading && (
-              <Section>
-                <Paragraph size="2xl">Loading profile...</Paragraph>
-              </Section>
-            )}
+        <div className="flex flex-col gap-32 items-start w-full max-w-[1920px] px-24 pt-32 pb-128">
+          {loading && <p className="font-sans font-medium text-base leading-[28px] text-black">Loading...</p>}
 
-            {error && (
-              <Section>
-                <Paragraph size="2xl">Error loading profile: {error}</Paragraph>
-              </Section>
-            )}
+          {error && (
+            <p className="font-sans font-medium text-base leading-[28px] text-black">Error loading data: {error}</p>
+          )}
 
-            {/* Current Work Section */}
-            {!loading && !error && currentJobs.length > 0 && (
-              <Section>
-                <Heading level={2} size="lg">
-                  Current roles
-                </Heading>
+          {!loading && !error && currentPositions.length > 0 && (
+            <>
+              <p className={sectionLabel}>Current Roles</p>
+              {currentPositions.map((position, index) => (
+                <SectionPosition
+                  key={`current-${position.company}-${index}`}
+                  company={position.company}
+                  title={position.title}
+                  description={position.description}
+                  employmentType={position.employmentType}
+                  startedAt={position.startedAt}
+                  endedAt={position.endedAt}
+                  location={position.location}
+                />
+              ))}
+            </>
+          )}
 
-                <div className="grid grid-cols-1 border-2 border-bones-black-20 dark:border-bones-white-20">
-                  {currentJobs.map((job, index) => (
-                    <>
-                      <CardRole key={`current-${job.company}-${index}`} role={job} />
-                      {index < currentJobs.length - 1 && <Divider />}
-                    </>
-                  ))}
-                </div>
-              </Section>
-            )}
+          {!loading && !error && pastPositions.length > 0 && (
+            <>
+              <p className={sectionLabel}>Previous Roles</p>
+              {pastPositions.map((position, index) => (
+                <SectionPosition
+                  key={`past-${position.company}-${index}`}
+                  company={position.company}
+                  title={position.title}
+                  description={position.description}
+                  employmentType={position.employmentType}
+                  startedAt={position.startedAt}
+                  endedAt={position.endedAt}
+                  location={position.location}
+                />
+              ))}
+            </>
+          )}
 
-            {/* Past Work Section */}
-            {!loading && !error && pastJobs.length > 0 && (
-              <Section>
-                <Heading level={2} size="lg">
-                  Previous roles
-                </Heading>
+          {!loading && !error && skillCategories && skillCategories.length > 0 && (
+            <>
+              <p className={sectionLabel}>Skills</p>
+              {skillCategories.map((group) => (
+                <SectionSkillCategory key={group.category} category={group.category} skills={group.skills} />
+              ))}
+            </>
+          )}
 
-                <div className="grid grid-cols-1 border-2 border-bones-black-20 dark:border-bones-white-20">
-                  {pastJobs.map((job, index) => (
-                    <>
-                      <CardRole key={`past-${job.company}-${index}`} role={job} />
-                      {index < pastJobs.length - 1 && <Divider />}
-                    </>
-                  ))}
-                </div>
-              </Section>
-            )}
+          {!loading && !error && languages && languages.length > 0 && (
+            <>
+              <p className={sectionLabel}>Languages</p>
+              <div className="flex gap-8 items-start flex-wrap">
+                {languages.map((lang) => (
+                  <BadgeLanguage key={lang.name} language={lang.name} proficiency={lang.proficiency} />
+                ))}
+              </div>
+            </>
+          )}
+        </div>
 
-            {/* Exit */}
-            <Section>
-              <Paragraph size="md">
-                Return to <Link href="/">renderg.host</Link>
-              </Paragraph>
-            </Section>
-          </div>
-        </Main>
-
-        <Aside>
-          <TLDRProfile />
-        </Aside>
-      </Layout>
+        <PageFooter />
+      </div>
     </>
   );
 }

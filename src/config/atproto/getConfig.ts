@@ -8,7 +8,7 @@ export const ATPROTO_CONFIG = {
   DID: 'did:plc:s2rczyxit2v5vzedxqs326ri',
 
   /** PDS (Personal Data Server) URL */
-  PDS_URL: 'https://rooter.us-west.host.bsky.network',
+  PDS_URL: 'https://eurosky.social',
 
   /** Bluesky CDN URL for blob storage (images, etc.) */
   CDN_URL: 'https://cdn.bsky.app',
@@ -20,4 +20,7 @@ export const ATPROTO_CONFIG = {
 export const ATPROTO_COLLECTIONS = {
   PUBLICATION: 'pub.leaflet.publication',
   DOCUMENT: 'pub.leaflet.document',
+  POSITION: 'id.sifa.profile.position',
+  SKILL: 'id.sifa.profile.skill',
+  LANGUAGE: 'id.sifa.profile.language',
 } as const;

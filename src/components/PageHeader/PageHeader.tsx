@@ -1,5 +1,5 @@
-import React from 'react';
 import { Link } from '@/components/Link/Link';
+import React from 'react';
 import { NAV_LINKS } from './PageHeader.constants';
 import {
   exitRow,
@@ -12,22 +12,12 @@ import {
 } from './PageHeader.styles';
 import type { PageHeaderProps } from './PageHeader.types';
 
-export const PageHeader: React.FC<PageHeaderProps> = ({
-  pageTitle,
-  overline,
-  className,
-}) => {
+export const PageHeader: React.FC<PageHeaderProps> = ({ pageTitle, overline, className }) => {
   return (
     <header className={getWrapperStyles(className)}>
       {/* Mobile only: EXIT link sits above the title */}
       <div className={exitRow}>
-        <Link
-          href='/'
-          label='EXIT'
-          usecase='default'
-          hasLeftIcon={true}
-          hasRightIcon={false}
-        />
+        <Link href="/" label="Back to Home" usecase="default" hasLeftIcon={true} hasRightIcon={false} />
       </div>
 
       {/* Title block: order-2 mobile → order-1 desktop */}
@@ -44,7 +34,7 @@ export const PageHeader: React.FC<PageHeaderProps> = ({
               key={link.label}
               href={link.href}
               label={link.label}
-              usecase='default'
+              usecase="default"
               hasLeftIcon={false}
               hasRightIcon={false}
             />
