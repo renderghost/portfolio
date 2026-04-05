@@ -49,7 +49,7 @@ export const CardArticle: React.FC<CardArticleProps> = ({ article }) => {
           label={`Read on '${article.publication}'`}
           hasLeftIcon={false}
           hasRightIcon={true}
-          iconRight="↗"
+          iconRight="→"
         />
       </div>
     </div>

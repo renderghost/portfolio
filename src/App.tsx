@@ -6,7 +6,7 @@ import WorksPage from '@/pages/PortfolioPage';
 import WorkPage from '@/pages/WorkPage';
 import WritingPage from '@/pages/WritingPage';
 import React, { useEffect } from 'react';
-import { Route, Routes } from 'react-router-dom';
+import { Route, Routes, useLocation } from 'react-router-dom';
 
 /**
  * Main App component with routing.
@@ -14,6 +14,14 @@ import { Route, Routes } from 'react-router-dom';
  * @returns Main application JSX element
  */
 const App: React.FC = () => {
+  const location = useLocation();
+
+  // Sync html background to page background so scrollbar gutter is invisible
+  useEffect(() => {
+    document.documentElement.style.backgroundColor =
+      location.pathname === '/' ? '#0000ff' : '#f2f0f0';
+  }, [location.pathname]);
+
   // Set dark mode based on system preference
   useEffect(() => {
     const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
@@ -41,7 +49,7 @@ const App: React.FC = () => {
         <Route path="/" element={<HomePage />} />
         <Route path="/about" element={<AboutPage />} />
         <Route path="/work" element={<WorkPage />} />
-        <Route path="/works" element={<WorksPage />} />
+        <Route path="/portfolio" element={<WorksPage />} />
         <Route path="/writing" element={<WritingPage />} />
         <Route path="/projects" element={<ProjectsPage />} />
         <Route path="/contact" element={<ContactPage />} />

@@ -16,7 +16,7 @@ export const titleBlock =
 export const navColumn =
   'hidden lg:flex flex-1 items-start justify-end px-24 py-16 order-1 lg:order-2';
 
-export const navGroup = 'flex gap-16 items-start';
+export const navGroup = 'flex gap-24 items-start';
 
 export const overlineStyles =
   'font-sans font-semibold text-base leading-[24px] ' +

@@ -5,7 +5,7 @@ export const wrapperBase = 'grid grid-cols-1 w-full max-w-[1920px] ' + 'md:grid-
 export const identityBlock = 'flex items-start px-24 py-16 w-full ' + 'md:h-full';
 
 export const navBlock =
-  'flex flex-wrap gap-16 items-start justify-start px-24 py-16 w-full ' + 'md:h-full md:justify-end';
+  'flex flex-wrap gap-24 items-start justify-start px-24 py-16 w-full ' + 'md:h-full md:justify-end';
 
 export const identityColumn = 'flex flex-col items-start justify-center ' + 'whitespace-nowrap';
 

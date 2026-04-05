@@ -65,7 +65,7 @@ export default function AboutPage(): JSX.Element {
 
         <div className="flex flex-col gap-32 items-start w-full max-w-[1920px] px-24 pt-32 pb-128">
           <SectionImage
-            src="/avatar-wide.jpeg"
+            src="/art/portrait/art/colour.jpg"
             alt="A photo of Barry Prendergast"
             caption="Photo credit: Johanna Ehrler"
             usecase="2/3"
