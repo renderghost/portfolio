@@ -8,7 +8,7 @@ import { Helmet } from 'react-helmet-async';
 const CARDS: CardHomeProps[] = [
   {
     overline: 'My Background',
-    title: "Hi! 👋 I'm Barry, a strategist, UX designer, mentor and public speaker living in Berlin, Germany.",
+    title: "Hi! 👋 I'm Barry, a strategist, UX designer, and advisor living in Berlin, Germany.",
     description:
       "For nearly 20 years, I've worked with ambitious organisations to ease their growing pains and solve hard problems through clear conversation, rapid prototyping, and rigorous testing against the right metrics",
     linkLabel: 'Learn about me',
@@ -35,7 +35,7 @@ const CARDS: CardHomeProps[] = [
     overline: 'My Writing',
     title: 'I write about design, product, processes, systems, technology & the messy people stuff in between.',
     description:
-      'Field notes, opinions, and lessons learned for designers, founders, and product leaders navigating complexity.',
+      'Sharing field notes, opinions, techniques and experiences to help designers, founders, and leaders navigate complexity and make better decisions.',
     linkLabel: 'Read my writing',
     linkHref: '/writing',
   },
