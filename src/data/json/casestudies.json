@@ -1,6 +1,6 @@
 [
   {
-    "affiliation": "brandwatch",
+    "affiliation": "Brandwatch",
     "affiliationURL": "https://medium.com/@render_ghost/",
     "body": "<p id=\"\">Maecenas faucibus mollis interdum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed posuere consectetur est at lobortis. Etiam porta sem malesuada magna mollis euismod.</p><p id=\"\">Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Etiam porta sem malesuada magna mollis euismod. Curabitur blandit tempus porttitor. Curabitur blandit tempus porttitor.</p>",
     "collectionId": "63020a6ad411031c64d74168",
@@ -22,12 +22,12 @@
     ],
     "role": "senior-ux-designer-brandwatch",
     "slug": "brandwatch-vizia",
-    "summary": "Cras mattis consectetur purus sit amet fermentum.",
-    "title": "Democratising insightful decision making across organisations",
-    "type": "product-design"
+    "summary": "Vizia was Brandwatch's visual analytics command centre. I designed the data visualisation layer that transformed raw social media intelligence into real-time dashboards across organisational screens, making complex insights accessible to non-analyst stakeholders and enabling faster, evidence-based decisions at scale.",
+    "title": "Democratising iintelligence-driven decision making across enterprise organisations",
+    "type": "Product Design"
   },
   {
-    "affiliation": "mygoodplanet",
+    "affiliation": "MyGoodPlanet",
     "affiliationURL": "https://medium.com/@render_ghost/",
     "body": "",
     "collectionId": "63020a6ad411031c64d74168",
@@ -41,12 +41,12 @@
     ],
     "role": "design-director-mgp",
     "slug": "defining-the-product-strategy-for-eco-shopping",
-    "summary": "Sed posuere consectetur est at lobortis. Sed posuere consectetur est at lobortis. Nullam quis risus eget urna mollis ornare vel eu leo. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Donec ullamcorper nulla non metus auctor fringilla.",
+    "summary": "As Design Director, I defined the product strategy for MyGoodPlanet's eco-shopping platform, conducting user research, mapping the competitive landscape, and establishing a north star that balanced consumer convenience with sustainability goals, giving the team a clear foundation to build and invest against.",
     "title": "Defining the product strategy for eco shopping",
-    "type": "design-strategy"
+    "type": "Design Strategy"
   },
   {
-    "affiliation": "morressier",
+    "affiliation": "Morressier",
     "affiliationURL": "https://medium.com/@render_ghost/",
     "body": "",
     "collectionId": "63020a6ad411031c64d74168",
@@ -60,12 +60,12 @@
     ],
     "role": "lead-product-designer-morressier",
     "slug": "improving-the-recruitment-experience-for-design-candidates",
-    "summary": "Sed posuere consectetur est at lobortis. Sed posuere consectetur est at lobortis. Nullam quis risus eget urna mollis ornare vel eu leo. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Donec ullamcorper nulla non metus auctor fringilla.",
-    "title": "Improving the recruitment experience for Design candidates",
-    "type": "design-operations"
+    "summary": "Morressier's rapid growth put pressure on design hiring. I redesigned the candidate experience end-to-end, creating structured interview frameworks, portfolio review guidelines and consistent evaluation criteria, reducing friction for applicants, improving signal quality for the team, and helping attract senior design talent to a scaling B2B platform.",
+    "title": "Improving the recruitment and onboarding experience for design candidates",
+    "type": "Design Operations"
   },
   {
-    "affiliation": "morressier",
+    "affiliation": "Morressier",
     "affiliationURL": "https://medium.com/@render_ghost/",
     "body": "",
     "collectionId": "63020a6ad411031c64d74168",
@@ -79,12 +79,12 @@
     ],
     "role": "lead-product-designer-morressier",
     "slug": "morressier-discovery",
-    "summary": "Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vestibulum id ligula porta felis euismod semper. Sed posuere consectetur est at lobortis. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.",
+    "summary": "Morressier's conference platform excelled at events but offered little in between. I led product design for a persistent professional community layer, enabling researchers to follow peers, share early findings and stay engaged beyond individual conferences, transforming a transactional tool into an ongoing professional home for scientists.",
     "title": "Building a professional community for scientists",
-    "type": "product-design"
+    "type": "Product Design"
   },
   {
-    "affiliation": "leo-pharma",
+    "affiliation": "LEO Pharma",
     "affiliationURL": "https://medium.com/@render_ghost/",
     "body": "",
     "collectionId": "63020a6ad411031c64d74168",
@@ -98,12 +98,12 @@
     ],
     "role": "principal-product-designer-leo",
     "slug": "ohmu",
-    "summary": "Sed posuere consectetur est at lobortis. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Etiam porta sem malesuada magna mollis euismod. Donec id elit non mi porta gravida at eget metus. Cras mattis consectetur purus sit amet fermentum.",
+    "summary": "LEO Pharma's Omhu reimagined dermatological care as a continuous digital service. I designed a mobile platform enabling patients to track symptoms, photograph skin conditions and monitor progression over time, while giving clinicians remote visibility into flare-ups, extending specialist care well beyond the clinic.",
     "title": "Designing dermatology as a digital service",
-    "type": "product-design"
+    "type": "Product Design"
   },
   {
-    "affiliation": "morressier",
+    "affiliation": "Morressier",
     "affiliationURL": "https://medium.com/@render_ghost/",
     "body": "",
     "collectionId": "63020a6ad411031c64d74168",
@@ -117,12 +117,12 @@
     ],
     "role": "lead-product-designer-morressier",
     "slug": "scaling-design-feedback",
-    "summary": "Sed posuere consectetur est at lobortis. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Etiam porta sem malesuada magna mollis euismod. Donec id elit non mi porta gravida at eget metus. Cras mattis consectetur purus sit amet fermentum.",
+    "summary": "As Morressier's design team scaled, informal feedback loops became unreliable. I built a structured critique culture from scratch, introducing regular review rituals, async feedback frameworks and facilitation guides, raising the quality bar and giving teams the shared language to challenge and improve each other's work consistently.",
     "title": "Scaling product design feedback",
-    "type": "design-operations"
+    "type": "Design Operations"
   },
   {
-    "affiliation": "morressier",
+    "affiliation": "Morressier",
     "affiliationURL": "https://medium.com/@render_ghost/",
     "body": "<blockquote id=\"\">Curabitur blandit tempus porttitor. Donec id elit non mi porta gravida at eget metus. Donec ullamcorper nulla non metus auctor fringilla. Etiam porta sem malesuada magna mollis euismod. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper.</blockquote><p id=\"\">‍</p>",
     "collectionId": "63020a6ad411031c64d74168",
@@ -143,12 +143,12 @@
     ],
     "role": "staff-product-designer-morressier",
     "slug": "scaling-morressier-design-system",
-    "summary": "Maecenas faucibus mollis interdum. Nulla vitae elit libero, a pharetra augue. Donec id elit non mi porta gravida at eget metus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed diam eget risus varius blandit sit amet non magna. Nullam quis risus eget urna mollis ornare vel eu leo. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "summary": "Morressier's product complexity had outpaced a fragmented component library. I led the consolidation and extension of the design system into a cohesive, accessible, token-based foundation, adopted across product and engineering, eliminating inconsistency, accelerating feature delivery and giving distributed teams a common language for building at scale.",
     "title": "Scaling a platform design system",
-    "type": "design-operations"
+    "type": "Design Operations"
   },
   {
-    "affiliation": "edf-energy",
+    "affiliation": "EDF Energy",
     "affiliationURL": "https://medium.com/@render_ghost/",
     "body": "<p id=\"\">When EDF Energy, a global leader serving over 3.5 million UK households, approached me to helm the design of Circuits, I knew it was a chance to create something extraordinary. Circuits would become a pioneering omni-channel platform empowering millions of customers to revolutionize their relationship with energy.</p><p>I had just completed 6 months working on some Service Design work for the Customer division, and was excited to join the BlueLab, their internal startup accelerator working with founders and technology partners to support innovation in the energy and connected home space.</p><p>Our insights informed the major investments by Customer division across energy and device sales, billing and customer support.</p><p id=\"\"><em>Incredibly</em>, in just 12 months after the major launch of, we surpased our goals, achieving:</p><p id=\"\">- 15% reduction in cost-to-serve, saving £3m annually <br>- 25% increase in resolved complaints, restoring trust for 150,000+ homes<br>- 12% reduction in bad debt, recovering £15.6m in the first year alone</p><h2 id=\"\">Relentless Customer Focus: Understanding the Human Impact</h2><p id=\"\">To reshape an industry, you must first understand its beating heart: the customers. I led an ambitious research program to map the depths of the customer experience:</p><p id=\"\">- Surveyed 500 households to quantify needs, attitudes and pain points<br>- Conducted 30 in-home ethnographic interviews to intimately understand customer journeys<br>- Analyzed dozens of competitors across energy, finance and home services to uncover opportunities for radical differentiation</p><p id=\"\">Through this rigorous discovery process, we uncovered patterns of human stories behind EDF's challenges: worried families struggling to interpret bills, confused customers dreading impersonal call centers, households craving control over rising costs. These insights fueled our resolve to drive a greater change.</p><h2 id=\"\">Painting an Ambitious Vision</h2><p id=\"\">Armed with deep customer empathy, I worked with Product Management to build out a bold vision and strategyfor Circuits to rally my team and stakeholders:</p><blockquote id=\"\">We will create the experience customers have been dreaming of: empowering them with beautifully simple tools to achieve a new level of confidence and control over their energy. We won't rest until we've transformed energy from a source of stress to an effortless ally in creating better lives.</blockquote><p id=\"\">To paint a vivid path forward, I delivered:<br>- Meticulously redesigned customer journeys across web, mobile, call-center and in-home touchpoints <br>- Comprehensive service blueprints aligning frontend experiences with backend operations<br>- Inspiring product roadmaps balancing customer delight, business value and technical feasibility</p><p id=\"\">### Accelerating Innovation Through Rapid Experimentation</p><p id=\"\">To maintain a blistering pace under towering ambiguity, I pioneered a culture of ruthless experimentation and validated learning cycles:</p><p id=\"\">- Launched unbranded landing pages to test demand for key features, generating a 35% increase in lead conversion<br>- Prototyped energy-saving chatbots on WhatsApp and Alexa, uncovering a 10X increase in customer engagement &nbsp;<br>- Designed and shipped a 3-month trial of physical Energy Tip Cards to 5,000 homes, yielding a 7% reduction in monthly usage</p><p id=\"\">By treating every step forward as a measurable learning opportunity , we could engage safely with riskier propositions and ensure every recommendation delivered to the Customer business was grounded in real customer value.</p><h2 id=\"\">Leading with Resilience and Ingenuity</h2><p id=\"\">Rewiring a legacy organization and industry was never going to be easy. When our initial assumptions failed or constraints changed, I led with poise and creative determination. </p><p id=\"\">I reworked journey maps to close gaps between customer needs and business capabilities. I guided engineers to cleverly phase technical architecture to unblock early customer value. When morale flagged, I evangelized user-centricity, turning skeptics into champions.</p><p id=\"\">### A Platform for Transformation</p><p id=\"\">Circuits has ignited a customer-obsessed revolution within EDF and across the energy industry. My team didn't just craft a groundbreaking product - we equipped an organization to continuously innovate around customer needs.</p><p id=\"\">I'm immensely proud of the design leadership, resilience and vision I brought to this ambitious undertaking. Circuits is so much more than pixels and code - it's a platform for transforming millions of lives. And we're only getting started.</p><p>‍</p>",
     "collectionId": "63020a6ad411031c64d74168",
@@ -162,8 +162,8 @@
     ],
     "role": "staff-service-designer-edf",
     "slug": "smarter-energy",
-    "summary": "Sed posuere consectetur est at lobortis. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Etiam porta sem malesuada magna mollis euismod. Donec id elit non mi porta gravida at eget metus. Cras mattis consectetur purus sit amet fermentum.",
+    "summary": "Within EDF Energy's BlueLab innovation accelerator, I led service and product design for Circuits, an omni-channel platform giving 3.5 million UK households smarter control of their energy. Within 12 months of launch it delivered a 15% reduction in cost-to-serve and recovered £15.6m in bad debt.",
     "title": "Reducing energy waste at home",
-    "type": "product-design"
+    "type": "Product Design"
   }
 ]

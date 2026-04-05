@@ -52,7 +52,7 @@ export const CardProject: React.FC<CardProjectProps> = ({ project }) => {
                 label="View the Project"
                 hasLeftIcon={false}
                 hasRightIcon={true}
-                iconRight="↗"
+                iconRight="→"
               />
             )}
             {project.sourceUrl && (
@@ -61,7 +61,7 @@ export const CardProject: React.FC<CardProjectProps> = ({ project }) => {
                 label="View the Source"
                 hasLeftIcon={false}
                 hasRightIcon={true}
-                iconRight="↗"
+                iconRight="→"
               />
             )}
           </div>

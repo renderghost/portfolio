@@ -43,6 +43,8 @@ body {
       'kern' 1,
       'liga' 1,
       'calt' 1;
+    scrollbar-gutter: stable;
+    background-color: #f2f0f0;
   }
 }
 
