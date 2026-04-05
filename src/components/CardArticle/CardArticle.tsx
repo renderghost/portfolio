@@ -12,7 +12,7 @@ export const CardArticle: React.FC<CardArticleProps> = ({ article }) => {
 
   return (
     <div className={styles.cardWrapper}>
-      {/* Cover image */}
+      {/* Cover image — full width, 16:9 */}
       <div className={styles.coverImageContainer}>
         {article.coverImage && (
           <img src={article.coverImage} alt="" className={styles.coverImage} />
@@ -46,7 +46,7 @@ export const CardArticle: React.FC<CardArticleProps> = ({ article }) => {
         {/* Read link */}
         <Link
           href={article.articleUrl}
-          label="Read"
+          label={`Read on ${article.publication}`}
           hasLeftIcon={false}
           hasRightIcon={true}
           iconRight="↗"

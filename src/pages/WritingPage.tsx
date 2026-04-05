@@ -1,7 +1,7 @@
+import { CardGridArticle } from '@/components/CardGridArticle/CardGridArticle';
 import { PageFooter } from '@/components/PageFooter/PageFooter';
 import { PageHeader } from '@/components/PageHeader/PageHeader';
 import { Paragraph } from '@/components/Paragraph/Paragraph';
-import { SectionArticle } from '@/components/SectionArticle/SectionArticle';
 import { useLeaflet } from '@/hooks/atproto';
 import type { JSX } from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -51,14 +51,10 @@ export default function WritingPage(): JSX.Element {
             <Paragraph size="lg">No posts found.</Paragraph>
           )}
 
-          {!loading &&
-            !error &&
-            documents &&
-            documents.map((doc) => (
-              <SectionArticle
-                key={doc.uri}
-                usecase="2/3"
-                article={{
+          {!loading && !error && documents && (
+            <CardGridArticle
+              cards={documents.map((doc) => ({
+                article: {
                   title: doc.title,
                   subtitle: doc.description || '',
                   coverImage: doc.coverImage || '',
@@ -66,9 +62,10 @@ export default function WritingPage(): JSX.Element {
                   publication: doc.publication.name,
                   publicationIcon: doc.publication.icon,
                   published: doc.publishedAt,
-                }}
-              />
-            ))}
+                },
+              }))}
+            />
+          )}
         </main>
 
         <PageFooter />

@@ -1,14 +1,14 @@
 export const cardWrapper =
-  'flex gap-32 items-start p-24 w-full';
+  'flex flex-col gap-32 items-start w-full';
 
 export const coverImageContainer =
-  'aspect-[16/9] w-[301px] shrink-0 overflow-hidden bg-black-06';
+  'aspect-[16/9] w-full overflow-hidden bg-black-06 shrink-0';
 
 export const coverImage =
   'object-cover w-full h-full';
 
 export const contentContainer =
-  'flex flex-col gap-16 flex-1 min-w-0 items-start';
+  'flex flex-col gap-16 items-start w-full';
 
 export const metaRow =
   'flex gap-8 items-center';
