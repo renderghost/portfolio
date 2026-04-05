@@ -17,6 +17,10 @@ const CONTACT_LINKS = [
     label: 'Book a Meeting',
     href: 'https://calendly.com/barry-prendergast',
   },
+  {
+    label: 'Send a Mail',
+    href: 'mailto:contact@renderg.host',
+  },
 ];
 
 const jsonLd = {
@@ -59,8 +63,7 @@ export default function ContactPage(): JSX.Element {
                 size="medium"
                 usecase="default"
                 hasLeftIcon={false}
-                hasRightIcon={true}
-                iconRight="→"
+                hasRightIcon={false}
               />
             ))}
           </div>
