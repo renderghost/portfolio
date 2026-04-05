@@ -1,42 +1,57 @@
-import { Heading } from '@/components/Heading/Heading';
-import { Paragraph } from '@/components/Paragraph/Paragraph';
+import { Link } from '@/components/Link/Link';
 import React from 'react';
 import { DATE_FORMAT_OPTIONS } from './CardArticle.constants';
 import * as styles from './CardArticle.styles';
-import { CardArticleProps } from './CardArticle.types';
+import type { CardArticleProps } from './CardArticle.types';
 
 export const CardArticle: React.FC<CardArticleProps> = ({ article }) => {
-  const formattedDate = new Date(article.published).toLocaleDateString('en-US', DATE_FORMAT_OPTIONS);
+  const formattedDate = new Date(article.published).toLocaleDateString(
+    'en-US',
+    DATE_FORMAT_OPTIONS,
+  );
 
   return (
-    <a href={article.articleUrl} target="_blank" rel="noopener noreferrer" className={styles.cardWrapper}>
-      {/* Cover Image (if available) */}
-      {article.coverImage && (
-        <div className={styles.coverImageContainer}>
+    <div className={styles.cardWrapper}>
+      {/* Cover image */}
+      <div className={styles.coverImageContainer}>
+        {article.coverImage && (
           <img src={article.coverImage} alt="" className={styles.coverImage} />
-        </div>
-      )}
+        )}
+      </div>
 
       {/* Content */}
       <div className={styles.contentContainer}>
-        <div className={styles.detailContainer}>
-          {/* Title */}
-          <Heading level={3} size="md">
-            {article.title}
-          </Heading>
+        {/* Meta row: publication avatar · name · date */}
+        <div className={styles.metaRow}>
+          {article.publicationIcon && (
+            <img
+              src={article.publicationIcon}
+              alt=""
+              className={styles.publicationAvatar}
+            />
+          )}
+          <span className={styles.metaText}>{article.publication}</span>
+          <span className={styles.metaText}>·</span>
+          <span className={styles.metaText}>{formattedDate}</span>
+        </div>
 
-          {/* Description */}
-          {article.subtitle && <Paragraph size="base">{article.subtitle}</Paragraph>}
-        </div>
-        {/* Publication Name (left) and Date (right) */}
-        <div className={styles.metaContainer}>
-          <div className={styles.publicationContainer}>
-            {article.publicationIcon && <img src={article.publicationIcon} alt="" className={styles.publicationIcon} />}
-            <span className={styles.publicationName}>{article.publication}</span>
-          </div>
-          <span className={styles.date}>{formattedDate}</span>
-        </div>
+        {/* Title */}
+        <p className={styles.title}>{article.title}</p>
+
+        {/* Subtitle */}
+        {article.subtitle && (
+          <p className={styles.subtitle}>{article.subtitle}</p>
+        )}
+
+        {/* Read link */}
+        <Link
+          href={article.articleUrl}
+          label="Read"
+          hasLeftIcon={false}
+          hasRightIcon={true}
+          iconRight="↗"
+        />
       </div>
-    </a>
+    </div>
   );
 };
