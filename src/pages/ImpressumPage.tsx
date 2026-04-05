@@ -16,52 +16,40 @@ export default function ImpressumPage(): JSX.Element {
         <PageHeader pageTitle="Impressum" />
 
         <main className="flex-1 flex flex-col gap-32 px-24 pt-32 pb-128 max-w-[720px]">
-
           <section className="flex flex-col gap-8">
-            <p className="font-sans font-black text-base leading-[24px] text-black">
-              Angaben gemäß § 5 DDG
-            </p>
+            <p className="font-sans font-black text-base leading-[24px] text-black">Angaben gemäß § 5 DDG</p>
             <p className="font-sans font-regular text-base leading-[28px] text-black">
-              Barry Prendergast<br />
-              Friedrich-Engels-Straße 11<br />
-              15537 Grünheide (Mark)<br />
+              Barry Prendergast
+              <br />
+              Friedrich-Engels-Straße 11
+              <br />
+              15537 Grünheide (Mark)
+              <br />
               Deutschland
             </p>
           </section>
 
           <section className="flex flex-col gap-8">
-            <p className="font-sans font-black text-base leading-[24px] text-black">
-              Kontakt
-            </p>
+            <p className="font-sans font-black text-base leading-[24px] text-black">Kontakt</p>
             <p className="font-sans font-regular text-base leading-[28px] text-black">
               E-Mail:{' '}
-              <a
-                href="mailto:me@renderg.host"
-                className="underline underline-offset-4"
-              >
-                me@renderg.host
+              <a href="mailto:contact@renderg.host" className="underline underline-offset-4">
+                contact@renderg.host
               </a>
             </p>
           </section>
 
           <section className="flex flex-col gap-8">
-            <p className="font-sans font-black text-base leading-[24px] text-black">
-              Umsatzsteuer-ID
-            </p>
+            <p className="font-sans font-black text-base leading-[24px] text-black">Umsatzsteuer-ID</p>
             <p className="font-sans font-regular text-base leading-[28px] text-black">
               Umsatzsteuer-Identifikationsnummer gemäß § 27a Umsatzsteuergesetz: DE325048686
             </p>
           </section>
 
           <section className="flex flex-col gap-8">
-            <p className="font-sans font-black text-base leading-[24px] text-black">
-              Berufsbezeichnung
-            </p>
-            <p className="font-sans font-regular text-base leading-[28px] text-black">
-              Freiberuflicher Designer
-            </p>
+            <p className="font-sans font-black text-base leading-[24px] text-black">Berufsbezeichnung</p>
+            <p className="font-sans font-regular text-base leading-[28px] text-black">Freiberuflicher Designer</p>
           </section>
-
         </main>
 
         <PageFooter />
