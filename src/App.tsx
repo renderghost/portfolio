@@ -1,4 +1,5 @@
 import AboutPage from '@/pages/AboutPage';
+import ContactPage from '@/pages/ContactPage';
 import HomePage from '@/pages/HomePage';
 import ProjectsPage from '@/pages/ProjectsPage';
 import WorksPage from '@/pages/PortfolioPage';
@@ -43,6 +44,7 @@ const App: React.FC = () => {
         <Route path="/works" element={<WorksPage />} />
         <Route path="/writing" element={<WritingPage />} />
         <Route path="/projects" element={<ProjectsPage />} />
+        <Route path="/contact" element={<ContactPage />} />
         {/* <Route path="/studies" element={<Studies />} /> */}
       </Routes>
     </div>
