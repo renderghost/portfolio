@@ -8,7 +8,7 @@ import { Helmet } from 'react-helmet-async';
 const CARDS: CardHomeProps[] = [
   {
     overline: 'My Background',
-    title: "Hi! 👋 I'm Barry, a strategist, UX designer, and advisor living in Berlin, Germany.",
+    title: "Hi! 👋 I'm Barry, an Irish UX strategist, designer, and advisor based in Berlin, Germany.",
     description:
       "For nearly 20 years, I've worked with ambitious organisations to ease their growing pains and solve hard problems through clear conversation, rapid prototyping, and rigorous testing against the right metrics",
     linkLabel: 'Learn about me',
@@ -109,11 +109,8 @@ export default function HomePage(): JSX.Element {
       </Helmet>
 
       <div className="flex flex-col min-h-screen bg-blue isolate">
-        {/* <PageHeader usecase='home' className='sticky top-0 z-30' /> */}
         <HomeHeader />
-        {/* <CardGrid cards={CARDS} className="z-20 flex-1" /> */}
         <CardGrid cards={CARDS} className="flex-1" />
-        {/* <PageFooter className="z-10" /> */}
         <HomeFooter />
       </div>
     </>
