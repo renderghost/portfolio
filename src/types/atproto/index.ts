@@ -15,3 +15,12 @@ export type {
   LanguageProficiency,
   ProfileValue,
 } from './defineProtopro';
+
+// Sifa types
+export type {
+  SifaLanguageValue,
+  SifaLocation,
+  SifaPositionValue,
+  SifaSkillRef,
+  SifaSkillValue,
+} from './defineSifa';
