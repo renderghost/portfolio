@@ -1,6 +1,6 @@
 {
   "name": "portfolio",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "private": true,
   "type": "module",
   "scripts": {
@@ -31,8 +31,8 @@
     "@types/react": "latest",
     "@types/react-dom": "latest",
     "@types/react-router-dom": "latest",
-    "@typescript-eslint/eslint-plugin": "latest",
-    "@typescript-eslint/parser": "latest",
+    "@typescript-eslint/eslint-plugin": "^8.58.0",
+    "@typescript-eslint/parser": "^8.58.0",
     "@u3u/prettier-config": "latest",
     "@vitejs/plugin-react": "latest",
     "csv-parse": "latest",
@@ -45,7 +45,7 @@
     "globals": "latest",
     "prettier": "latest",
     "tsx": "latest",
-    "typescript": "latest",
+    "typescript": "^6.0.2",
     "vite": "latest"
   }
 }

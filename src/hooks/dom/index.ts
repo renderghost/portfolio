@@ -2,4 +2,4 @@
  * DOM-related hooks exports
  */
 
-export { trackVisibility, useInView } from './trackVisibility';
+export { useTrackVisibility, useInView } from './trackVisibility';

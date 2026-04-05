@@ -21,7 +21,7 @@ interface UseInViewOptions {
  * return <div ref={ref}>{isInView ? 'Visible!' : 'Hidden'}</div>;
  * ```
  */
-export function trackVisibility<T extends HTMLElement = HTMLElement>({
+export function useTrackVisibility<T extends HTMLElement = HTMLElement>({
   threshold = 0.1,
   triggerOnce = true,
   rootMargin = '0px',
@@ -57,5 +57,4 @@ export function trackVisibility<T extends HTMLElement = HTMLElement>({
   return { ref, isInView };
 }
 
-// Legacy export for backward compatibility
-export { trackVisibility as useInView };
+export { useTrackVisibility as useInView };
