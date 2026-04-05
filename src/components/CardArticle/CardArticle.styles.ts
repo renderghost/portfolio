@@ -20,7 +20,7 @@ export const metaText =
   'text-base font-medium leading-[28px] whitespace-nowrap text-black';
 
 export const title =
-  'text-[32px] font-black leading-[40px] text-black w-full';
+  'text-[24px] font-black leading-[32px] text-black w-full';
 
 export const subtitle =
   'text-base font-medium leading-[28px] text-black overflow-hidden text-ellipsis w-full';
