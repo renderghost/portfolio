@@ -13,3 +13,10 @@ export function buildRecordsUrl(collection: string, repo: string = ATPROTO_CONFI
 export function buildBlobUrl(blobRef: string, did: string = ATPROTO_CONFIG.DID): string {
   return `${ATPROTO_CONFIG.CDN_URL}/img/avatar/plain/${did}/${blobRef}@jpeg`;
 }
+
+/**
+ * Constructs the CDN URL for an article cover image
+ */
+export function buildCoverUrl(blobRef: string, did: string = ATPROTO_CONFIG.DID): string {
+  return `${ATPROTO_CONFIG.CDN_URL}/img/feed_thumbnail/plain/${did}/${blobRef}@jpeg`;
+}

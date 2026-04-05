@@ -8,6 +8,17 @@ export type { ATProtocolBlob, ATProtocolRecord, FetchResult, ListRecordsResponse
 // Leaflet types
 export type { ATProtocolDocument, ATProtocolPublication, DocumentValue, PublicationValue } from './defineLeaflet';
 
+// Standard site types
+export type {
+  ATProtocolStandardDocument,
+  ATProtocolStandardPublication,
+  StandardContentBlock,
+  StandardContentPage,
+  StandardDocumentContent,
+  StandardDocumentValue,
+  StandardPublicationValue,
+} from './defineStandard';
+
 // Protopro types
 export type {
   ATProtocolProfile,
