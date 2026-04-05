@@ -15,6 +15,6 @@ export const imageEl =
 export const captionStyles =
   'font-sans font-medium text-base leading-[28px] text-black w-full';
 
-export function getColStyles(usecase: 'full' | '2/3'): string {
+export function getColStyles(usecase: 'full' | '2/3' | '1/2'): string {
   return mergeClasses(imageColumnBase, COL_SPAN[usecase]);
 }
