@@ -2,10 +2,13 @@ export const cardWrapper =
   'flex flex-col gap-32 items-start w-full';
 
 export const thumbnailContainer =
-  'aspect-[16/9] w-full overflow-hidden bg-black-06 shrink-0';
+  'relative aspect-[16/9] w-full overflow-hidden bg-black-06 shrink-0';
 
 export const thumbnail =
   'object-cover w-full h-full';
+
+export const thumbnailBorder =
+  'absolute inset-0 ring-1 ring-inset ring-black-24 pointer-events-none z-10';
 
 export const contentContainer =
   'flex flex-col gap-16 items-start w-full';
