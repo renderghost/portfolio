@@ -8,26 +8,26 @@ import { Helmet } from 'react-helmet-async';
 const CARDS: CardHomeProps[] = [
   {
     overline: 'My Background',
-    title: "Hi! 👋 I'm Barry, an Irish UX strategist and designer living in Berlin, Germany.",
+    title: "Hi! 👋 I'm Barry, a strategist, UX designer, mentor and public speaker living in Berlin, Germany.",
     description:
-      "For 20 years, I've been helping ambitious organisations to ease their growing pains, solve hard problems through clear conversation, rapid prototyping, and rigorous testing against the right metrics",
+      "For nearly 20 years, I've worked with ambitious organisations to ease their growing pains and solve hard problems through clear conversation, rapid prototyping, and rigorous testing against the right metrics",
     linkLabel: 'Learn about me',
     linkHref: '/about',
     isHero: true,
   },
   {
     overline: 'My Career',
-    title: 'I help companies to achieve focus, collaborate better, and get to market faster.',
+    title: "I've led teams and shipped products and services across publishing, energy, government, pharma, and more.",
     description:
-      'I have led teams and shipped products across academic publishing, energy, government, pharma, and more, from early-stage startups to multinationals.', //
+      'From early-stage startups to multinationals, I create the conditions for teams to focus, collaborate, and get to market faster.', //
     linkLabel: 'Check my resume',
     linkHref: '/work',
   },
   {
     overline: 'My Work',
-    title: 'I specialise in outcome-driven experience and interface design for digital products and services.',
+    title: 'I specialise in outcome-driven experience and interface design for complex digital products and services.',
     description:
-      'I practice lean product management, user research, and UX design. I build the strategies, teams, and design systems to help teams to achieve their goals.',
+      'My practice connects product, research, and design to build the strategies, teams, and design systems that help organisations achieve their goals.',
     linkLabel: 'Browse my portfolio',
     linkHref: '/portfolio',
   },
