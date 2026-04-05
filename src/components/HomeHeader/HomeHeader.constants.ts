@@ -4,11 +4,14 @@ export interface NavLink {
 }
 
 export const NAV_LINKS: NavLink[] = [
-  { label: 'Bluesky', href: 'https://bsky.app/profile/renderg.host' },
-  { label: 'Calendar', href: 'https://calendly.com/barry-prendergast' },
-  { label: 'LinkedIn', href: 'https://linkedin.com/in/barrymprendergast' },
-  { label: 'Mail', href: '/contact' },
+  { label: 'Home', href: '/' },
+  { label: 'About', href: '/about' },
+  { label: 'Resume', href: '/work' },
+  { label: 'Portfolio', href: '/portfolio' },
+  { label: 'Articles', href: '/writing' },
+  { label: 'Projects', href: '/projects' },
+  { label: 'Contact', href: '/contact' },
 ];
 
 export const SITE_NAME = 'Barry Prendergast';
-export const SITE_ROLE = 'UX Strategy and Design';
+export const SITE_ROLE = 'UX Strategy & Design';

@@ -1,30 +1,39 @@
-import React from 'react';
 import { Link } from '@/components/Link/Link';
-import { DEFAULT_COPYRIGHT, FOOTER_LINKS } from './HomeFooter.constants';
-import {
-  copyrightStyles,
-  creditBlock,
-  getWrapperStyles,
-  legalBlock,
-} from './HomeFooter.styles';
+import React from 'react';
+import { DEFAULT_COPYRIGHT, LEGAL_LINKS, SOCIAL_LINKS } from './HomeFooter.constants';
+import { copyrightBlock, copyrightStyles, getWrapperStyles, legalBlock, socialBlock } from './HomeFooter.styles';
 import type { HomeFooterProps } from './HomeFooter.types';
 
-export const HomeFooter: React.FC<HomeFooterProps> = ({
-  copyright = DEFAULT_COPYRIGHT,
-  className,
-}) => {
+export const HomeFooter: React.FC<HomeFooterProps> = ({ copyright = DEFAULT_COPYRIGHT, className }) => {
   return (
     <footer className={getWrapperStyles(className)}>
-      <div className={creditBlock}>
+      {/* Copyright: order-3 mobile (bottom) → order-1 desktop (left) */}
+      <div className={copyrightBlock}>
         <p className={copyrightStyles}>{copyright}</p>
       </div>
+
+      {/* Legal links: order-2 on both */}
       <div className={legalBlock}>
-        {FOOTER_LINKS.map((link) => (
+        {LEGAL_LINKS.map((link) => (
           <Link
             key={link.label}
             href={link.href}
             label={link.label}
-            usecase='on contrast'
+            usecase="on contrast"
+            hasLeftIcon={false}
+            hasRightIcon={false}
+          />
+        ))}
+      </div>
+
+      {/* Social links: order-1 mobile (top) → order-3 desktop (right) */}
+      <div className={socialBlock}>
+        {SOCIAL_LINKS.map((link) => (
+          <Link
+            key={link.label}
+            href={link.href}
+            label={link.label}
+            usecase="on contrast"
             hasLeftIcon={false}
             hasRightIcon={false}
           />
