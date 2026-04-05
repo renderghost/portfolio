@@ -17,6 +17,7 @@ export const CardArticle: React.FC<CardArticleProps> = ({ article }) => {
         {article.coverImage && (
           <img src={article.coverImage} alt="" className={styles.coverImage} />
         )}
+        <div className={styles.coverImageBorder} />
       </div>
 
       {/* Content */}

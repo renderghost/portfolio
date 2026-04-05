@@ -16,6 +16,7 @@ export const CardProject: React.FC<CardProjectProps> = ({ project }) => {
             className={styles.thumbnail}
           />
         )}
+        <div className={styles.thumbnailBorder} />
       </div>
 
       {/* Content */}
