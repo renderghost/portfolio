@@ -1,5 +1,6 @@
 export interface CardCaseStudyProps {
   caseStudy: {
+    slug: string;
     title: string;
     summary: string;
     coverImage: string;

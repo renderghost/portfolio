@@ -1,17 +1,21 @@
-import { BadgeProject } from '@/components/BadgeProject/BadgeProject';
 import React from 'react';
+import { Link } from 'react-router-dom';
 import * as styles from './CardCaseStudy.styles';
 import type { CardCaseStudyProps } from './CardCaseStudy.types';
 
 export const CardCaseStudy: React.FC<CardCaseStudyProps> = ({ caseStudy }) => {
   return (
-    <div className={styles.cardWrapper}>
+    <Link
+      to={`/portfolio/${caseStudy.slug}`}
+      className={styles.cardWrapper}
+      aria-label={caseStudy.title}
+    >
       {/* Cover image — full width, 16:9 */}
       <div className={styles.coverImageContainer}>
         {caseStudy.coverImage && (
           <img
             src={caseStudy.coverImage}
-            alt=""
+            alt=''
             className={styles.coverImage}
           />
         )}
@@ -33,10 +37,7 @@ export const CardCaseStudy: React.FC<CardCaseStudyProps> = ({ caseStudy }) => {
         {caseStudy.summary && (
           <p className={styles.summary}>{caseStudy.summary}</p>
         )}
-
-        {/* Coming soon badge */}
-        <BadgeProject label="Coming Soon" variant="status" />
       </div>
-    </div>
+    </Link>
   );
 };
