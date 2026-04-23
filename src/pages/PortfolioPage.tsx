@@ -6,6 +6,7 @@ import type { JSX } from 'react';
 import { Helmet } from 'react-helmet-async';
 
 interface CaseStudyRecord {
+  slug: string;
   title: string;
   summary: string;
   coverImage: string;
@@ -35,22 +36,23 @@ export default function WorksPage(): JSX.Element {
       <Helmet>
         <title>Portfolio | Barry Prendergast</title>
         <meta
-          name="description"
-          content="Case studies in design strategy, product design, and design operations by Barry Prendergast."
+          name='description'
+          content='Case studies in design strategy, product design, and design operations by Barry Prendergast.'
         />
         <script
-          type="application/ld+json"
+          type='application/ld+json'
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </Helmet>
 
-      <div className="bg-whitesmoke min-h-screen flex flex-col">
-        <PageHeader pageTitle="My Portfolio" />
+      <div className='bg-whitesmoke min-h-screen flex flex-col'>
+        <PageHeader pageTitle='My Portfolio' />
 
-        <main className="flex flex-col gap-32 items-start px-24 pt-32 pb-128 flex-1">
+        <main className='flex flex-col gap-32 items-start px-24 pt-32 pb-128 flex-1'>
           <CardGridCaseStudy
             cards={caseStudies.map((cs) => ({
               caseStudy: {
+                slug: cs.slug,
                 title: cs.title,
                 summary: cs.summary,
                 coverImage: cs.coverImage,
