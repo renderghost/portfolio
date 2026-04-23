@@ -20,7 +20,7 @@ export default {
       whitesmoke: '#f2f0f0',
 
       // Blue
-      blue: '#0000ff',
+      blue: '#130DF2', //#0000ff
       cyan: '#00ffff',
       medlumblue: '#0000cd',
 
@@ -32,7 +32,7 @@ export default {
       // Yellow
       gold: '#ffd700',
       goldenrod: '#daa520',
-      yellow: '#ffff00',
+      yellow: '#eaf100', //#ffff00
 
       // Red
       darkred: '#8b0000',
@@ -57,16 +57,16 @@ export default {
       'black-90': '#000000e5',
 
       // Opacity variants — blue
-      'blue-03': '#0000ff08',
-      'blue-06': '#0000ff0f',
-      'blue-10': '#0000ff1a',
-      'blue-16': '#0000ff29',
-      'blue-24': '#0000ff3d',
-      'blue-38': '#0000ff61',
-      'blue-61': '#0000ff9c',
-      'blue-76': '#0000ffc2',
-      'blue-83': '#0000ffd4',
-      'blue-90': '#0000ffe5',
+      'blue-03': '#130DF208',
+      'blue-06': '#130DF20f',
+      'blue-10': '#130DF21a',
+      'blue-16': '#130DF229',
+      'blue-24': '#130DF23d',
+      'blue-38': '#130DF261',
+      'blue-61': '#130DF29c',
+      'blue-76': '#130DF2c2',
+      'blue-83': '#130DF2d4',
+      'blue-90': '#130DF2e5',
 
       // Opacity variants — white
       'white-03': '#ffffff08',

@@ -1,7 +1,5 @@
-export interface SectionImageProps {
+export interface SectionPitchLockedProps {
   src: string;
   alt: string;
-  caption?: string;
   usecase?: 'full' | 'large' | 'default' | 'small';
-  className?: string;
 }

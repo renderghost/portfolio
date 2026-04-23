@@ -1,7 +1,9 @@
 import { PageFooter } from '@/components/PageFooter/PageFooter';
 import { PageHeader } from '@/components/PageHeader/PageHeader';
-import { SectionPitch } from '@/components/SectionPitch/SectionPitch';
 import { SectionSkillCategory } from '@/components/SectionSkillCategory/SectionSkillCategory';
+import { SectionPitchLocked } from '@/components/SectionPitchLocked/SectionPitchLocked';
+import { SectionTableCaseStudy } from '@/components/SectionTableCaseStudy/SectionTableCaseStudy';
+import { formatSlug } from '@/components/SectionTableCaseStudy/SectionTableCaseStudy.constants';
 import { SectionText } from '@/components/SectionText/SectionText';
 import caseStudiesData from '@/data/json/casestudies.json';
 import type { JSX } from 'react';
@@ -29,25 +31,9 @@ interface CaseStudy {
 
 const SITE_URL = 'https://renderg.host';
 
-const sectionWrapper =
-  'grid grid-cols-3 2xl:grid-cols-4 gap-x-32 gap-y-32 w-full';
-const sectionCol =
-  'col-span-3 lg:col-span-2 flex flex-col gap-16 items-start justify-self-stretch self-start';
-const bodyStyles =
-  'font-sans font-medium text-base leading-[28px] text-black';
-const linkStyles =
-  'underline underline-offset-2 hover:text-dimgray transition-colors';
-
 function truncate(text: string, maxLength: number): string {
   if (text.length <= maxLength) return text;
   return text.slice(0, maxLength - 1).trimEnd() + '…';
-}
-
-function formatSlug(slug: string): string {
-  return slug
-    .split('-')
-    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
-    .join(' ');
 }
 
 export default function CaseStudyPage(): JSX.Element {
@@ -64,7 +50,6 @@ export default function CaseStudyPage(): JSX.Element {
   const metaDescription = truncate(caseStudy.summary, 160);
   const hasBody = caseStudy.body.trim().length > 0;
   const skills = caseStudy.relevantSkills.filter((s) => s.trim().length > 0);
-  const completedYear = new Date(caseStudy.endDate).getFullYear();
 
   const jsonLd = {
     '@context': 'https://schema.org',
@@ -112,62 +97,60 @@ export default function CaseStudyPage(): JSX.Element {
       </Helmet>
 
       <div className='flex flex-col items-center w-full bg-whitesmoke'>
-        <PageHeader pageTitle={caseStudy.title} />
+        <PageHeader
+          pageTitle={caseStudy.title}
+          breadcrumbs={[
+            { label: 'Home', href: '/' },
+            { label: 'Portfolio', href: '/portfolio' },
+          ]}
+        />
 
         <main className='flex flex-col gap-32 items-start w-full max-w-[1920px] px-24 pt-32 pb-128'>
-          <article className='flex flex-col gap-32 w-full'>
+          <article className='flex flex-col w-full gap-32'>
+           
+            
+            {/* Details table */}
+            <SectionTableCaseStudy
+              affiliation={caseStudy.affiliation}
+              affiliationURL={caseStudy.affiliationURL}
+              role={caseStudy.role}
+              endDate={caseStudy.endDate}
+              type={caseStudy.type}
+            />
+            
+             {/* Summary */}
+            <SectionText body={caseStudy.summary} />
 
-            {/* Meta sentence */}
-            <div className={sectionWrapper}>
-              <div className={sectionCol}>
-                <p className={bodyStyles}>
-                  Done in my role as {formatSlug(caseStudy.role)} working with{' '}
-                  <a
-                    href={caseStudy.affiliationURL}
-                    target='_blank'
-                    rel='noopener noreferrer'
-                    className={linkStyles}
-                  >
-                    {caseStudy.affiliation}
-                  </a>
-                  , completed in {completedYear}.
-                </p>
-              </div>
-            </div>
+            {/* Body HTML */}
+            {hasBody && (
+              <SectionText>
+                <div
+                  className='prose prose-neutral max-w-none'
+                  dangerouslySetInnerHTML={{ __html: caseStudy.body }}
+                />
+              </SectionText>
+            )}
+
+            {/* Pitch embed */}
+            {/* <SectionPitch
+              embedId={caseStudy.pitchEmbed}
+              title={`${caseStudy.title} — Pitch presentation`}
+            /> */}
+
+            {/* Locked pitch placeholder */}
+            <SectionPitchLocked
+              src={caseStudy.coverImage}
+              alt={`${caseStudy.title} — request access to view presentation`}
+            />
 
             {/* Skills */}
             {skills.length > 0 && (
               <SectionSkillCategory
                 category='Relevant Skills'
                 skills={skills.map(formatSlug)}
-                usecase='2/3'
               />
             )}
 
-            {/* Summary */}
-            <SectionText
-              body={caseStudy.summary}
-              size='md'
-              usecase='2/3'
-              showHeading={false}
-              showLink={false}
-            />
-
-            {/* Body HTML */}
-            {hasBody && (
-              <div className={sectionWrapper}>
-                <div
-                  className='col-span-3 lg:col-span-2 prose prose-neutral max-w-none'
-                  dangerouslySetInnerHTML={{ __html: caseStudy.body }}
-                />
-              </div>
-            )}
-
-            {/* Pitch embed */}
-            <SectionPitch
-              embedId={caseStudy.pitchEmbed}
-              title={`${caseStudy.title} — Pitch presentation`}
-            />
           </article>
         </main>
 

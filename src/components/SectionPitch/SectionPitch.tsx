@@ -2,8 +2,9 @@ import React from 'react';
 import { PITCH_BASE_URL } from './SectionPitch.constants';
 import {
   aspectWrapper,
-  colStyles,
+  contentWrapper,
   gridWrapper,
+  headingStyles,
   iframeStyles,
 } from './SectionPitch.styles';
 import type { SectionPitchProps } from './SectionPitch.types';
@@ -19,12 +20,13 @@ export const SectionPitch: React.FC<SectionPitchProps> = ({
 
   return (
     <div className={gridWrapper}>
-      <div className={colStyles}>
+      <div className={contentWrapper}>
+        <p className={headingStyles}>Presentation</p>
         <div className={aspectWrapper}>
           <iframe
             src={`${PITCH_BASE_URL}${embedId}`}
             title={title}
-            allow='fullscreen'
+            allow='fullscreen; clipboard-write'
             className={iframeStyles}
           />
         </div>

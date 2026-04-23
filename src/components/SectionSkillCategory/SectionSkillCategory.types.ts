@@ -1,5 +1,5 @@
 import type { CardSkillCategoryProps } from '@/components/CardSkillCategory/CardSkillCategory.types';
 
-export interface SectionSkillCategoryProps extends CardSkillCategoryProps {
-  usecase?: 'full' | '2/3';
-}
+export type SectionSkillCategoryProps = CardSkillCategoryProps & {
+  usecase?: 'full' | 'large' | 'default' | 'small';
+};

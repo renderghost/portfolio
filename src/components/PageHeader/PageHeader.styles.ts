@@ -1,22 +1,22 @@
 import { mergeClasses } from '@/lib/utils/mergeClasses';
 
 export const wrapperBase =
-  'flex flex-col lg:flex-row lg:items-start w-full max-w-[1920px] lg:min-h-[120px]';
+  'flex flex-col w-full max-w-[1920px]';
 
-// Mobile-only: EXIT link row (top of vertical stack)
-export const exitRow =
-  'flex lg:hidden items-center px-24 py-16 w-full order-1';
+// Row 1: back button left, nav right
+export const topRow =
+  'flex items-center justify-between px-24 py-16 w-full';
 
-// Title block: order-2 on mobile (below EXIT), order-1 on desktop (left)
+export const navGroup = 'flex gap-24 items-center';
+
+export const breadcrumbGroup = 'flex items-center gap-8';
+
+export const breadcrumbSeparator =
+  'font-sans font-medium text-base leading-[28px] text-dimgray select-none';
+
+// Row 2: page title (and optional overline) full width below
 export const titleBlock =
-  'flex flex-col gap-16 items-start px-24 py-16 ' +
-  'order-2 lg:order-1 lg:flex-1';
-
-// Nav: hidden on mobile, visible on desktop (right, order-2)
-export const navColumn =
-  'hidden lg:flex flex-1 items-start justify-end px-24 py-16 order-1 lg:order-2';
-
-export const navGroup = 'flex gap-24 items-start';
+  'flex flex-col gap-8 items-start px-24 pb-16 w-full';
 
 export const overlineStyles =
   'font-sans font-semibold text-base leading-[24px] ' +
