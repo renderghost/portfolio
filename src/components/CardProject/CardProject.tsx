@@ -51,18 +51,14 @@ export const CardProject: React.FC<CardProjectProps> = ({ project }) => {
               <Link
                 href={project.projectUrl}
                 label="View the Project"
-                hasLeftIcon={false}
-                hasRightIcon={true}
-                iconRight="→"
+                icon='right'
               />
             )}
             {project.sourceUrl && (
               <Link
                 href={project.sourceUrl}
                 label="View the Source"
-                hasLeftIcon={false}
-                hasRightIcon={true}
-                iconRight="→"
+                icon='right'
               />
             )}
           </div>

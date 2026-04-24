@@ -1,31 +1,29 @@
 import React from 'react';
 import { Link as RouterLink } from 'react-router-dom';
-import { DEFAULT_ICON_LEFT, DEFAULT_ICON_RIGHT } from './Link.constants';
-import { getLinkStyles, getLabelStyles, iconStyles } from './Link.styles';
+import { DEFAULT_ICON } from './Link.constants';
+import { getLinkStyles, iconStyles, labelStyles } from './Link.styles';
 import type { LinkProps } from './Link.types';
 
 export const Link: React.FC<LinkProps> = ({
   href,
   label,
+  color = 'blue',
   size = 'base',
-  usecase = 'default',
-  hasLeftIcon = false,
-  hasRightIcon = true,
-  iconLeft = DEFAULT_ICON_LEFT,
-  iconRight = DEFAULT_ICON_RIGHT,
+  icon = 'none',
+  iconChar = DEFAULT_ICON,
   className,
 }) => {
   const isInternal = href.startsWith('/') && !href.startsWith('//');
   const isExternal = href.startsWith('http://') || href.startsWith('https://');
 
-  const linkClass = getLinkStyles(size, usecase, className);
-  const labelClass = getLabelStyles(size);
+  const linkClass = getLinkStyles(color, size, className);
+  const iconEl = <span className={iconStyles}>{iconChar}</span>;
 
   const content = (
     <>
-      {hasLeftIcon && <span className={iconStyles}>{iconLeft}</span>}
-      <span className={labelClass}>{label}</span>
-      {hasRightIcon && <span className={iconStyles}>{iconRight}</span>}
+      {icon === 'left' && iconEl}
+      <span className={labelStyles}>{label}</span>
+      {icon === 'right' && iconEl}
     </>
   );
 
@@ -41,9 +39,7 @@ export const Link: React.FC<LinkProps> = ({
     <a
       href={href}
       className={linkClass}
-      {...(isExternal
-        ? { target: '_blank', rel: 'noopener noreferrer' }
-        : {})}
+      {...(isExternal ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
     >
       {content}
     </a>

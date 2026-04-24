@@ -12,7 +12,7 @@ export const SectionImage: React.FC<SectionImageProps> = ({
   src,
   alt,
   caption,
-  usecase = 'full',
+  usecase = 'default',
 }) => {
   return (
     <div className={gridWrapper}>

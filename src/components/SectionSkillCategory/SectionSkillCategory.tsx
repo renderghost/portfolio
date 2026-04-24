@@ -4,7 +4,7 @@ import { getColStyles, gridWrapper } from './SectionSkillCategory.styles';
 import type { SectionSkillCategoryProps } from './SectionSkillCategory.types';
 
 export const SectionSkillCategory: React.FC<SectionSkillCategoryProps> = ({
-  usecase = '2/3',
+  usecase = 'default',
   ...cardProps
 }) => {
   return (

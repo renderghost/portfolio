@@ -1,6 +1,7 @@
 import { CardGridProject } from '@/components/CardGridProject/CardGridProject';
 import { PageFooter } from '@/components/PageFooter/PageFooter';
 import { PageHeader } from '@/components/PageHeader/PageHeader';
+import { SectionHeader } from '@/components/SectionHeader/SectionHeader';
 import { Paragraph } from '@/components/Paragraph/Paragraph';
 import projectsData from '@/data/json/projects.json';
 import type { JSX } from 'react';
@@ -93,9 +94,10 @@ export default function ProjectsPage(): JSX.Element {
       </Helmet>
 
       <div className="bg-whitesmoke min-h-screen flex flex-col">
-        <PageHeader pageTitle="My Projects" />
+        <PageHeader />
 
         <main className="flex flex-col gap-64 items-start px-24 pt-32 pb-128 flex-1">
+          <SectionHeader title="My Projects" />
           {groups.length === 0 && (
             <Paragraph size="lg">No projects found.</Paragraph>
           )}

@@ -26,9 +26,7 @@ export const HomeHeader: React.FC<HomeHeaderProps> = ({ className }) => {
             key={link.label}
             href={link.href}
             label={link.label}
-            usecase='on contrast'
-            hasLeftIcon={false}
-            hasRightIcon={false}
+            color='white'
           />
         ))}
       </nav>

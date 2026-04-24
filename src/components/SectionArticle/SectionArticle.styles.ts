@@ -1,12 +1,5 @@
-import { mergeClasses } from '@/lib/utils/mergeClasses';
-import { COL_STYLES } from './SectionArticle.constants';
-
 export const gridWrapper =
-  'grid grid-cols-3 gap-x-32 gap-y-32 w-full';
+  'grid grid-cols-3 2xl:grid-cols-4 gap-x-32 gap-y-32 w-full';
 
-const columnBase =
-  'flex flex-col gap-0 items-start';
-
-export function getColStyles(usecase: 'full' | '2/3'): string {
-  return mergeClasses(columnBase, COL_STYLES[usecase]);
-}
+export const contentWrapper =
+  'col-span-3 lg:col-span-2 2xl:col-span-3 flex flex-col gap-0 items-start';

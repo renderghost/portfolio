@@ -3,21 +3,20 @@ import {
   attributionRow,
   attributionStyles,
   getColStyles,
-  getQuoteStyles,
   gridWrapper,
+  quoteStyles,
 } from './SectionQuote.styles';
 import type { SectionQuoteProps } from './SectionQuote.types';
 
 export const SectionQuote: React.FC<SectionQuoteProps> = ({
   quote,
   attribution,
-  size = 'lg',
-  usecase = 'full',
+  usecase = 'default',
 }) => {
   return (
     <div className={gridWrapper}>
       <div className={getColStyles(usecase)}>
-        <p className={getQuoteStyles(size)}>{quote}</p>
+        <p className={quoteStyles}>{quote}</p>
         {attribution && (
           <div className={attributionRow}>
             <span className={attributionStyles}>—</span>

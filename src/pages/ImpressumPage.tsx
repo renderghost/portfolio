@@ -1,5 +1,6 @@
 import { PageFooter } from '@/components/PageFooter/PageFooter';
 import { PageHeader } from '@/components/PageHeader/PageHeader';
+import { SectionHeader } from '@/components/SectionHeader/SectionHeader';
 import type { JSX } from 'react';
 import { Helmet } from 'react-helmet-async';
 
@@ -13,9 +14,10 @@ export default function ImpressumPage(): JSX.Element {
       </Helmet>
 
       <div className="min-h-screen flex flex-col bg-whitesmoke">
-        <PageHeader pageTitle="Impressum" />
+        <PageHeader />
 
         <main className="flex-1 flex flex-col gap-32 px-24 pt-32 pb-128 max-w-[720px]">
+          <SectionHeader title="Impressum" />
           <section className="flex flex-col gap-8">
             <p className="font-sans font-black text-base leading-[24px] text-black">Angaben gemäß § 5 DDG</p>
             <p className="font-sans font-regular text-base leading-[28px] text-black">

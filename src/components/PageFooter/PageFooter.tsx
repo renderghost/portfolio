@@ -32,9 +32,7 @@ export const PageFooter: React.FC<PageFooterProps> = ({
             key={link.label}
             href={link.href}
             label={link.label}
-            usecase='default'
-            hasLeftIcon={false}
-            hasRightIcon={false}
+            color='blue'
           />
         ))}
       </div>
@@ -46,9 +44,7 @@ export const PageFooter: React.FC<PageFooterProps> = ({
             key={link.label}
             href={link.href}
             label={link.label}
-            usecase='default'
-            hasLeftIcon={false}
-            hasRightIcon={false}
+            color='blue'
           />
         ))}
       </div>

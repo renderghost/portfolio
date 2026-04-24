@@ -2,44 +2,50 @@ import { Link } from '@/components/Link/Link';
 import React from 'react';
 import { NAV_LINKS } from './PageHeader.constants';
 import {
-  exitRow,
+  breadcrumbGroup,
+  breadcrumbSeparator,
   getWrapperStyles,
-  navColumn,
   navGroup,
-  overlineStyles,
-  pageTitleStyles,
-  titleBlock,
+  topRow,
 } from './PageHeader.styles';
 import type { PageHeaderProps } from './PageHeader.types';
 
-export const PageHeader: React.FC<PageHeaderProps> = ({ pageTitle, overline, className }) => {
+const DEFAULT_BREADCRUMBS = [{ label: 'Home', href: '/' }];
+
+export const PageHeader: React.FC<PageHeaderProps> = ({
+  className,
+  breadcrumbs,
+}) => {
+  const crumbs = breadcrumbs ?? DEFAULT_BREADCRUMBS;
+
   return (
     <header className={getWrapperStyles(className)}>
-      {/* Mobile only: EXIT link sits above the title */}
-      <div className={exitRow}>
-        <Link href="/" label="Back to Home" usecase="default" hasLeftIcon={true} hasRightIcon={false} />
-      </div>
-
-      {/* Title block: order-2 mobile → order-1 desktop */}
-      <div className={titleBlock}>
-        {overline && <p className={overlineStyles}>{overline}</p>}
-        {pageTitle && <p className={pageTitleStyles}>{pageTitle}</p>}
-      </div>
-
-      {/* Desktop only: full page nav sits to the right of title */}
-      <div className={navColumn}>
+      {/* Nav first in DOM (mobile top), breadcrumb second; order swapped on desktop */}
+      <div className={topRow}>
         <nav className={navGroup}>
           {NAV_LINKS.map((link) => (
             <Link
               key={link.label}
               href={link.href}
               label={link.label}
-              usecase="default"
-              hasLeftIcon={false}
-              hasRightIcon={false}
+              color='blue'
             />
           ))}
         </nav>
+        <div className={breadcrumbGroup}>
+          {crumbs.map((crumb, i) => (
+            <React.Fragment key={crumb.href}>
+              {i > 0 && <span className={breadcrumbSeparator}>/</span>}
+              <Link
+                href={crumb.href}
+                label={crumb.label}
+                color='blue'
+                icon={i === 0 ? 'left' : 'none'}
+                iconChar='←'
+              />
+            </React.Fragment>
+          ))}
+        </div>
       </div>
     </header>
   );

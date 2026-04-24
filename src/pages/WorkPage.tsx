@@ -1,6 +1,7 @@
 import { BadgeLanguage } from '@/components/BadgeLanguage/BadgeLanguage';
 import { PageFooter } from '@/components/PageFooter/PageFooter';
 import { PageHeader } from '@/components/PageHeader/PageHeader';
+import { SectionHeader } from '@/components/SectionHeader/SectionHeader';
 import { SectionPosition } from '@/components/SectionPosition/SectionPosition';
 import { SectionSkillCategory } from '@/components/SectionSkillCategory/SectionSkillCategory';
 import { useSifaLanguages, useSifaPositions, useSifaSkills } from '@/hooks/atproto';
@@ -43,9 +44,10 @@ export default function WorkPage(): JSX.Element {
       </Helmet>
 
       <div className="flex flex-col items-center w-full bg-whitesmoke">
-        <PageHeader pageTitle="My Resume" />
+        <PageHeader />
 
         <div className="flex flex-col gap-32 items-start w-full max-w-[1920px] px-24 pt-32 pb-128">
+          <SectionHeader title="My Resume" />
           {loading && <p className="font-sans font-medium text-base leading-[28px] text-black">Loading...</p>}
 
           {error && (

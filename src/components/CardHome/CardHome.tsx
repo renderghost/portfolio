@@ -25,10 +25,9 @@ export const CardHome: React.FC<CardHomeProps> = ({
       <Link
         href={linkHref}
         label={linkLabel}
-        size='medium'
-        usecase='on contrast'
-        hasLeftIcon={false}
-        hasRightIcon={true}
+        size='large'
+        color='white'
+        icon='right'
       />
     </div>
   );
