@@ -3,6 +3,7 @@ import { PageHeader } from '@/components/PageHeader/PageHeader';
 import { SectionHeader } from '@/components/SectionHeader/SectionHeader';
 import { SectionImage } from '@/components/SectionImage/SectionImage';
 import { SectionQuote } from '@/components/SectionQuote/SectionQuote';
+import { SectionReadingList } from '@/components/SectionReadingList/SectionReadingList';
 import { SectionText } from '@/components/SectionText/SectionText';
 import type { JSX } from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -81,6 +82,7 @@ export default function AboutPage(): JSX.Element {
           <SectionText body="I've spent almost 20 years helping organisations close the gap between what users need, what technology can (and can't) do, and what a business aspires to achieve, then building products and services that satisfy all three. I believe nothing useful or long-lasting gets made any other way." />
           <SectionText body="I believe that my role as a designer is to help people understand the status quo, and provide them with the tools, processes and knowledge to make postive and meaningful change. For me, that means having timely conversations, exposing complexity, testing risky assumptions, understanding constraints, and making good decisions collaboratively. I aim to leave every team more connected, informed and capable than when I joined them." />
           <SectionText body="In my spare time I enjoy making art and experimental music, writing articles, and some creative coding. I spend as much time outside with my kids as I can, and I read as widely as I can: design theory, systems thinking, information architecture, history, psychology, science fiction, and the occasional manual for fun." />
+          <SectionReadingList />
         </div>
 
         <PageFooter />

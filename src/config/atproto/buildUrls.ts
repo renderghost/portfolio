@@ -20,3 +20,10 @@ export function buildBlobUrl(blobRef: string, did: string = ATPROTO_CONFIG.DID):
 export function buildCoverUrl(blobRef: string, did: string = ATPROTO_CONFIG.DID): string {
   return `${ATPROTO_CONFIG.CDN_URL}/img/feed_thumbnail/plain/${did}/${blobRef}@jpeg`;
 }
+
+/**
+ * Constructs the PDS blob URL for blobs stored on a non-bsky PDS
+ */
+export function buildPdsBlobUrl(cid: string, did: string = ATPROTO_CONFIG.DID): string {
+  return `${ATPROTO_CONFIG.PDS_URL}/xrpc/com.atproto.sync.getBlob?did=${did}&cid=${cid}`;
+}

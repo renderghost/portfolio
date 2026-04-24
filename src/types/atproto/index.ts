@@ -27,6 +27,9 @@ export type {
   ProfileValue,
 } from './defineProtopro';
 
+// Bookhive types
+export type { BookValue } from './defineBookhive';
+
 // Sifa types
 export type {
   SifaLanguageValue,

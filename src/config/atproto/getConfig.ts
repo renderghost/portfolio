@@ -32,4 +32,5 @@ export const ATPROTO_COLLECTIONS = {
   POSITION: 'id.sifa.profile.position',
   SKILL: 'id.sifa.profile.skill',
   LANGUAGE: 'id.sifa.profile.language',
+  BOOKHIVE_BOOK: 'buzz.bookhive.book',
 } as const;
