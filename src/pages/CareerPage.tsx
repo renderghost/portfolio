@@ -5,8 +5,11 @@ import { SectionHeader } from '@/components/SectionHeader/SectionHeader';
 import { SectionPosition } from '@/components/SectionPosition/SectionPosition';
 import { SectionSkillCategory } from '@/components/SectionSkillCategory/SectionSkillCategory';
 import { useSifaLanguages, useSifaPositions, useSifaSkills } from '@/hooks/atproto';
+import { SeoHead } from '@/components/SeoHead/SeoHead';
+import { SITE_URL } from '@/components/SeoHead/SeoHead.constants';
 import type { JSX } from 'react';
 import { Helmet } from 'react-helmet-async';
+import { SectionText } from '@/components/SectionText/SectionText';
 
 const JSON_LD = {
   '@context': 'https://schema.org',
@@ -14,14 +17,38 @@ const JSON_LD = {
   mainEntity: {
     '@type': 'Person',
     name: 'Barry Prendergast',
-    jobTitle: 'UX Strategist and Designer',
-    url: 'https://renderg.host/work',
+    jobTitle: 'UX Designer, Researcher and Strategist',
+    url: 'https://renderg.host/career',
+    address: {
+      '@type': 'PostalAddress',
+      addressLocality: 'Berlin',
+      addressCountry: 'Germany',
+    },
+    description:
+      'UX designer, researcher, and strategist with 20+ years of experience leading teams and delivering complex digital products and services. Specialising in outcome-driven design, rapid prototyping, and rigorous testing to achieve measurable results.',
+    knowsAbout: [
+      'Outcome-Driven Design',
+      'Design Operations',
+      'Design Strategy',
+      'Design Systems',
+      'Human-Centred Design',
+      'Information Architecture',
+      'Interaction Design',
+      'Lean UX',
+      'Product Design',
+      'Rapid Prototyping',
+      'Service Design',
+      'Systems Thinking',
+      'Usability Testing',
+      'User Research',
+      'UX Design',
+    ],
   },
 };
 
 const sectionLabel = 'font-sans font-semibold text-base leading-[24px] text-dimgray ' + 'tracking-[1px] uppercase';
 
-export default function WorkPage(): JSX.Element {
+export default function CareerPage(): JSX.Element {
   const { data: positions, loading: positionsLoading, error: positionsError } = useSifaPositions();
   const { data: skillCategories, loading: skillsLoading, error: skillsError } = useSifaSkills();
   const { data: languages, loading: languagesLoading, error: languagesError } = useSifaLanguages();
@@ -34,20 +61,21 @@ export default function WorkPage(): JSX.Element {
 
   return (
     <>
+      <SeoHead
+        title='Career — Barry Prendergast | Outcome-Driven UX Strategy & Design, Berlin'
+        description='Career history of Barry Prendergast, UX designer, researcher, and strategist in Berlin. 20+ years leading teams and delivering complex digital products and services through outcome-driven design, rapid prototyping, and rigorous testing.'
+        canonical={`${SITE_URL}/career`}
+      />
       <Helmet>
-        <title>Resume | Barry Prendergast</title>
-        <meta
-          name="description"
-          content="Independent product designer helping organisations deliver better products through clear thinking, practical design, and meaningful collaboration."
-        />
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(JSON_LD) }} />
+        <script type='application/ld+json' dangerouslySetInnerHTML={{ __html: JSON.stringify(JSON_LD) }} />
       </Helmet>
 
       <div className="flex flex-col items-center w-full bg-whitesmoke">
         <PageHeader />
 
         <div className="flex flex-col gap-32 items-start w-full max-w-[1920px] px-24 pt-32 pb-128">
-          <SectionHeader title="My Resume" />
+          <SectionHeader title="My Career" />
+          <SectionText body="A selection of roles where I’ve helped teams deliver complex products and services through outcome-driven design." />
           {loading && <p className="font-sans font-medium text-base leading-[28px] text-black">Loading...</p>}
 
           {error && (
@@ -102,7 +130,7 @@ export default function WorkPage(): JSX.Element {
           {!loading && !error && languages && languages.length > 0 && (
             <>
               <p className={sectionLabel}>Languages</p>
-              <div className="flex gap-8 items-start flex-wrap">
+              <div className="flex flex-wrap items-start gap-8">
                 {languages.map((lang) => (
                   <BadgeLanguage key={lang.name} language={lang.name} proficiency={lang.proficiency} />
                 ))}

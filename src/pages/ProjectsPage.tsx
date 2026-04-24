@@ -4,6 +4,8 @@ import { PageHeader } from '@/components/PageHeader/PageHeader';
 import { SectionHeader } from '@/components/SectionHeader/SectionHeader';
 import { Paragraph } from '@/components/Paragraph/Paragraph';
 import projectsData from '@/data/json/projects.json';
+import { SeoHead } from '@/components/SeoHead/SeoHead';
+import { SITE_URL } from '@/components/SeoHead/SeoHead.constants';
 import type { JSX } from 'react';
 import { Helmet } from 'react-helmet-async';
 import type {
@@ -11,6 +13,7 @@ import type {
   ProjectRole,
   ProjectStatus,
 } from '@/components/CardProject/CardProject.types';
+import { SectionText } from '@/components/SectionText/SectionText';
 
 interface ProjectRecord {
   title: string;
@@ -65,13 +68,34 @@ const sectionLabel =
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'CollectionPage',
-  name: 'Projects by Barry Prendergast',
-  description: 'Design tools and personal projects by Barry Prendergast.',
+  name: 'Personal Projects — Barry Prendergast',
+  description:
+    'A collection of personal projects and experiments across art, music, design, writing, and code, exploring ideas without client constraints or commercial goals.',
   url: 'https://renderg.host/projects',
   author: {
     '@type': 'Person',
     name: 'Barry Prendergast',
     url: 'https://renderg.host',
+    address: {
+      '@type': 'PostalAddress',
+      addressLocality: 'Berlin',
+      addressCountry: 'Germany',
+    },
+    sameAs: [
+      'https://bsky.app/profile/renderg.host',
+      'https://linkedin.com/in/barrymprendergast',
+      'https://signal.me/#eu/XO_aKC1aE1GZYWdMx7WK7HKGSCfrlpNhlxLGNi774dhiL7qr32BAMrH1BqgChaiM',
+      'https://calendly.com/barry-prendergast',
+    ],
+    knowsAbout: [
+      'Creative Coding',
+      'Generative Art',
+      'Music Production',
+      'Interaction Design',
+      'Visual Art',
+      'Systems Thinking',
+      'Experimental Design',
+    ],
   },
 };
 
@@ -81,23 +105,24 @@ export default function ProjectsPage(): JSX.Element {
 
   return (
     <>
+      <SeoHead
+        title='Projects — Barry Prendergast | Experiments in Art, Design & Code'
+        description='Personal projects and experiments by Barry Prendergast, spanning art, music, design, and code. A space for exploration, curiosity, and building without constraints.'
+        canonical={`${SITE_URL}/projects`}
+      />
       <Helmet>
-        <title>Projects | Barry Prendergast</title>
-        <meta
-          name="description"
-          content="Design tools and personal projects by Barry Prendergast."
-        />
         <script
-          type="application/ld+json"
+          type='application/ld+json'
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </Helmet>
 
-      <div className="bg-whitesmoke min-h-screen flex flex-col">
+      <div className="flex flex-col min-h-screen bg-whitesmoke">
         <PageHeader />
 
-        <main className="flex flex-col gap-64 items-start px-24 pt-32 pb-128 flex-1">
+        <main className="flex flex-col items-start flex-1 gap-64 px-24 pt-32 pb-128">
           <SectionHeader title="My Projects" />
+          <SectionText body="Experiments, side projects, and ideas explored without briefs, deadlines, or constraints." />
           {groups.length === 0 && (
             <Paragraph size="lg">No projects found.</Paragraph>
           )}
@@ -105,7 +130,7 @@ export default function ProjectsPage(): JSX.Element {
           {groups.map(({ category, projects: groupProjects }) => (
             <section
               key={category}
-              className="flex flex-col gap-32 items-start w-full"
+              className="flex flex-col items-start w-full gap-32"
             >
               <p className={sectionLabel}>{category}</p>
 

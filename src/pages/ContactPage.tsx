@@ -2,12 +2,15 @@ import { Link } from '@/components/Link/Link';
 import { PageFooter } from '@/components/PageFooter/PageFooter';
 import { PageHeader } from '@/components/PageHeader/PageHeader';
 import { SectionHeader } from '@/components/SectionHeader/SectionHeader';
+import { SectionText } from '@/components/SectionText/SectionText';
+import { SeoHead } from '@/components/SeoHead/SeoHead';
+import { SITE_URL } from '@/components/SeoHead/SeoHead.constants';
 import type { JSX } from 'react';
 import { Helmet } from 'react-helmet-async';
 
 const CONTACT_LINKS = [
   {
-    label: 'Follow me on Bluesky',
+    label: 'Follow on Bluesky',
     href: 'https://bsky.app/profile/renderg.host',
   },
   {
@@ -15,7 +18,7 @@ const CONTACT_LINKS = [
     href: 'https://www.linkedin.com/in/barrymprendergast/',
   },
   {
-    label: 'Book a Meeting',
+    label: 'Book a Call',
     href: 'https://calendly.com/barry-prendergast',
   },
   {
@@ -33,30 +36,61 @@ const jsonLd = {
     '@type': 'Person',
     name: 'Barry Prendergast',
     url: 'https://renderg.host',
+    address: {
+      '@type': 'PostalAddress',
+      addressLocality: 'Berlin',
+      addressCountry: 'Germany',
+    },
+    sameAs: [
+      'https://bsky.app/profile/renderg.host',
+      'https://linkedin.com/in/barrymprendergast',
+      'https://signal.me/#eu/XO_aKC1aE1GZYWdMx7WK7HKGSCfrlpNhlxLGNi774dhiL7qr32BAMrH1BqgChaiM',
+      'https://calendly.com/barry-prendergast',
+    ],
+    knowsAbout: [
+      'Outcome-Driven Design',
+      'Design Operations',
+      'Design Strategy',
+      'Design Systems',
+      'Human-Centred Design',
+      'Information Architecture',
+      'Interaction Design',
+      'Lean UX',
+      'Product Design',
+      'Rapid Prototyping',
+      'Service Design',
+      'Systems Thinking',
+      'Usability Testing',
+      'User Research',
+      'UX Design',
+    ],
   },
 };
 
 export default function ContactPage(): JSX.Element {
   return (
     <>
+      <SeoHead
+        title='Contact — Barry Prendergast | UX Strategy & Design, Berlin'
+        description='Get in touch with Barry Prendergast, UX designer, researcher, and strategist based in Berlin. Work together to solve complex product and service problems through outcome-driven design, rapid prototyping, and practical collaboration.'
+        canonical={`${SITE_URL}/contact`}
+      />
       <Helmet>
-        <title>Contact | Barry Prendergast</title>
-        <meta name="description" content="Get in touch with Barry Prendergast via Bluesky, LinkedIn, or Calendly." />
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+        <script type='application/ld+json' dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       </Helmet>
 
-      <div className="min-h-screen flex flex-col bg-whitesmoke">
+      <div className="flex flex-col min-h-screen bg-whitesmoke ">
         <PageHeader />
 
-        <main className="flex-1 flex flex-col px-24 pt-32 pb-64">
+        <main className="flex flex-col flex-1 gap-32 px-24 pt-32 pb-64">
           <SectionHeader title="Contact" />
           {/* Statement */}
           <p className="font-sans font-black text-[40px] leading-[48px] sm:text-[56px] sm:leading-[64px] lg:text-[72px] lg:leading-[80px] xl:text-[96px] xl:leading-[104px] text-black max-w-[1400px]">
-            Let&apos;s talk about working together to build the right things, in the right way.
+            Let&apos;s talk today about solving the right problems, in the right way.
           </p>
-
+          <SectionText body="If you&apos;re working on a complex product or service and need clarity, alignment, or momentum, we should talk." />
           {/* Contact links */}
-          <div className="flex flex-col sm:flex-row gap-16 sm:gap-32 items-start pt-64">
+          <div className="flex flex-col items-start gap-16 pt-64 sm:flex-row sm:gap-32">
             {CONTACT_LINKS.map((link) => (
               <Link
                 key={link.label}
