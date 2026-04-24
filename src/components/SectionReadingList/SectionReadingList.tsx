@@ -66,7 +66,7 @@ export const SectionReadingList: React.FC<SectionReadingListProps> = ({
         {!loading && (
           <Link
             href={BOOKHIVE_URL}
-            label='View my full reading list'
+            label='View my reading list on BookHive'
             icon='right'
           />
         )}
