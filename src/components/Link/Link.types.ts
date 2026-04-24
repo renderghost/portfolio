@@ -1,14 +1,13 @@
-export type LinkSize = 'base' | 'medium';
-export type LinkUsecase = 'default' | 'mono' | 'on contrast';
+export type LinkColor = 'blue' | 'white' | 'black';
+export type LinkSize = 'base' | 'large';
+export type LinkIcon = 'left' | 'right' | 'none';
 
 export interface LinkProps {
   href: string;
   label: string;
+  color?: LinkColor;
   size?: LinkSize;
-  usecase?: LinkUsecase;
-  hasLeftIcon?: boolean;
-  hasRightIcon?: boolean;
-  iconLeft?: string;
-  iconRight?: string;
+  icon?: LinkIcon;
+  iconChar?: string;
   className?: string;
 }

@@ -1,6 +1,7 @@
 import { CardGridCaseStudy } from '@/components/CardGridCaseStudy/CardGridCaseStudy';
 import { PageFooter } from '@/components/PageFooter/PageFooter';
 import { PageHeader } from '@/components/PageHeader/PageHeader';
+import { SectionHeader } from '@/components/SectionHeader/SectionHeader';
 import caseStudiesData from '@/data/json/casestudies.json';
 import type { JSX } from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -46,9 +47,10 @@ export default function WorksPage(): JSX.Element {
       </Helmet>
 
       <div className='bg-whitesmoke min-h-screen flex flex-col'>
-        <PageHeader pageTitle='My Portfolio' />
+        <PageHeader />
 
         <main className='flex flex-col gap-32 items-start px-24 pt-32 pb-128 flex-1'>
+          <SectionHeader title='My Portfolio' />
           <CardGridCaseStudy
             cards={caseStudies.map((cs) => ({
               caseStudy: {

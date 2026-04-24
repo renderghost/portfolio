@@ -1,15 +1,11 @@
+import { Link } from '@/components/Link/Link';
 import React from 'react';
-import { Link } from 'react-router-dom';
 import * as styles from './CardCaseStudy.styles';
 import type { CardCaseStudyProps } from './CardCaseStudy.types';
 
 export const CardCaseStudy: React.FC<CardCaseStudyProps> = ({ caseStudy }) => {
   return (
-    <Link
-      to={`/portfolio/${caseStudy.slug}`}
-      className={styles.cardWrapper}
-      aria-label={caseStudy.title}
-    >
+    <div className={styles.cardWrapper}>
       {/* Cover image — full width, 16:9 */}
       <div className={styles.coverImageContainer}>
         {caseStudy.coverImage && (
@@ -37,7 +33,14 @@ export const CardCaseStudy: React.FC<CardCaseStudyProps> = ({ caseStudy }) => {
         {caseStudy.summary && (
           <p className={styles.summary}>{caseStudy.summary}</p>
         )}
+
+        {/* Link */}
+        <Link
+          href={`/portfolio/${caseStudy.slug}`}
+          label='View case study'
+          icon='right'
+        />
       </div>
-    </Link>
+    </div>
   );
 };

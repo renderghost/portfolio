@@ -96,31 +96,31 @@ body {
    */
 
   .heading-display {
-    @apply type-2xl font-bold font-sans;
+    @apply font-sans font-bold type-2xl;
   }
 
   .heading-2xl {
-    @apply type-2xl font-semibold font-sans;
+    @apply font-sans font-semibold type-2xl;
   }
 
   .heading-xl {
-    @apply type-xl font-semibold font-sans;
+    @apply font-sans font-semibold type-xl;
   }
 
   .heading-lg {
-    @apply type-lg font-extrabold font-sans;
+    @apply font-sans font-extrabold type-lg;
   }
 
   .heading-md {
-    @apply type-md font-extrabold font-sans;
+    @apply font-sans font-extrabold type-md;
   }
 
     .heading-base {
-    @apply type-base font-black font-sans;
+    @apply font-sans font-black type-base;
   }
 
   .heading-sm {
-    @apply type-sm font-black font-sans;
+    @apply font-sans font-black type-sm;
   }
 
   /**
@@ -129,27 +129,27 @@ body {
    */
 
   .paragraph-2xl {
-    @apply type-2xl font-semibold font-sans;
+    @apply font-sans font-semibold type-2xl;
   }
 
   .paragraph-xl {
-    @apply type-xl font-regular font-sans;
+    @apply font-sans type-xl font-regular;
   }
 
   .paragraph-lg {
-    @apply type-lg font-regular font-sans;
+    @apply font-sans type-lg font-regular;
   }
 
   .paragraph-md {
-    @apply type-md font-regular font-sans;
+    @apply font-sans type-md font-regular;
   }
 
     .paragraph-base {
-    @apply type-base font-regular font-sans;
+    @apply font-sans type-base font-regular;
   }
 
   .paragraph-sm {
-    @apply type-sm font-regular font-sans;
+    @apply font-sans type-sm font-regular;
   }
 
   /**
@@ -158,19 +158,19 @@ body {
    */
 
      .quote-2xl {
-    @apply type-2xl font-regular font-sans italic;
+    @apply font-sans italic type-2xl font-regular;
   }
 
   .quote-xl {
-    @apply type-xl font-regular font-sans italic;
+    @apply font-sans italic type-xl font-regular;
   }
 
   .quote-lg {
-    @apply type-lg font-regular font-serif italic;
+    @apply font-serif italic type-lg font-regular;
   }
 
   .quote-md {
-    @apply type-md font-regular font-serif italic;
+    @apply font-serif italic type-md font-regular;
   }
 
   /**
@@ -179,11 +179,11 @@ body {
    */
 
   .code-inline {
-    @apply type-base font-regular font-mono;
+    @apply font-mono type-base font-regular;
   }
 
   .code-block {
-    @apply type-base font-regular font-mono;
+    @apply font-mono type-base font-regular;
     line-height: 1.75;
   }
 
@@ -193,14 +193,14 @@ body {
    */
 
   .caption {
-    @apply type-sm font-regular font-sans;
+    @apply font-sans type-sm font-regular;
   }
 }
 
 @layer utilities {
   /* Text selection */
   ::selection {
-    @apply bg-yellow text-black;
+    @apply text-black bg-yellow;
   }
 
   /* Prevent orphans in headings (last word alone on a line) */

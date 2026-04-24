@@ -22,7 +22,7 @@ export default {
       // Blue
       blue: '#130DF2', //#0000ff
       cyan: '#00ffff',
-      medlumblue: '#0000cd',
+      mediumblue: '#0000cd',
 
       // Green
       chartreuse: '#7fff00',
@@ -30,9 +30,9 @@ export default {
       green: '#008000',
 
       // Yellow
-      gold: '#ffd700',
+      gold: '#ffd700', //#ffd700
       goldenrod: '#daa520',
-      yellow: '#eaf100', //#ffff00
+      yellow: '#ffff00', //#ffff00
 
       // Red
       darkred: '#8b0000',

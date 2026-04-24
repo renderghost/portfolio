@@ -1,5 +1,6 @@
 import { PageFooter } from '@/components/PageFooter/PageFooter';
 import { PageHeader } from '@/components/PageHeader/PageHeader';
+import { SectionHeader } from '@/components/SectionHeader/SectionHeader';
 import { SectionImage } from '@/components/SectionImage/SectionImage';
 import { SectionQuote } from '@/components/SectionQuote/SectionQuote';
 import { SectionText } from '@/components/SectionText/SectionText';
@@ -61,9 +62,10 @@ export default function AboutPage(): JSX.Element {
       </Helmet>
 
       <div className="flex flex-col items-center w-full bg-whitesmoke">
-        <PageHeader pageTitle="About Me" />
+        <PageHeader />
 
         <div className="flex flex-col gap-32 items-start w-full max-w-[1920px] px-24 pt-32 pb-128">
+          <SectionHeader title="About Me" />
           <SectionImage
             src="/art/portrait/art/colour.jpg"
             alt="A photo of Barry Prendergast"

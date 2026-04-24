@@ -1,6 +1,7 @@
 import { Link } from '@/components/Link/Link';
 import { PageFooter } from '@/components/PageFooter/PageFooter';
 import { PageHeader } from '@/components/PageHeader/PageHeader';
+import { SectionHeader } from '@/components/SectionHeader/SectionHeader';
 import type { JSX } from 'react';
 import { Helmet } from 'react-helmet-async';
 
@@ -45,9 +46,10 @@ export default function ContactPage(): JSX.Element {
       </Helmet>
 
       <div className="min-h-screen flex flex-col bg-whitesmoke">
-        <PageHeader pageTitle="Contact" />
+        <PageHeader />
 
         <main className="flex-1 flex flex-col px-24 pt-32 pb-64">
+          <SectionHeader title="Contact" />
           {/* Statement */}
           <p className="font-sans font-black text-[40px] leading-[48px] sm:text-[56px] sm:leading-[64px] lg:text-[72px] lg:leading-[80px] xl:text-[96px] xl:leading-[104px] text-black max-w-[1400px]">
             Let&apos;s talk about working together to build the right things, in the right way.
@@ -60,10 +62,8 @@ export default function ContactPage(): JSX.Element {
                 key={link.label}
                 href={link.href}
                 label={link.label}
-                size="medium"
-                usecase="default"
-                hasLeftIcon={false}
-                hasRightIcon={false}
+                size='large'
+                color='blue'
               />
             ))}
           </div>

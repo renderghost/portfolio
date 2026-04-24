@@ -1,5 +1,6 @@
 import { PageFooter } from '@/components/PageFooter/PageFooter';
 import { PageHeader } from '@/components/PageHeader/PageHeader';
+import { SectionHeader } from '@/components/SectionHeader/SectionHeader';
 import { SectionSkillCategory } from '@/components/SectionSkillCategory/SectionSkillCategory';
 import { SectionPitchLocked } from '@/components/SectionPitchLocked/SectionPitchLocked';
 import { SectionTableCaseStudy } from '@/components/SectionTableCaseStudy/SectionTableCaseStudy';
@@ -98,7 +99,6 @@ export default function CaseStudyPage(): JSX.Element {
 
       <div className='flex flex-col items-center w-full bg-whitesmoke'>
         <PageHeader
-          pageTitle={caseStudy.title}
           breadcrumbs={[
             { label: 'Home', href: '/' },
             { label: 'Portfolio', href: '/portfolio' },
@@ -107,8 +107,8 @@ export default function CaseStudyPage(): JSX.Element {
 
         <main className='flex flex-col gap-32 items-start w-full max-w-[1920px] px-24 pt-32 pb-128'>
           <article className='flex flex-col w-full gap-32'>
-           
-            
+            <SectionHeader title={caseStudy.title} />
+
             {/* Details table */}
             <SectionTableCaseStudy
               affiliation={caseStudy.affiliation}

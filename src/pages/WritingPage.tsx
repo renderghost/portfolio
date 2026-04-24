@@ -1,6 +1,7 @@
 import { CardGridArticle } from '@/components/CardGridArticle/CardGridArticle';
 import { PageFooter } from '@/components/PageFooter/PageFooter';
 import { PageHeader } from '@/components/PageHeader/PageHeader';
+import { SectionHeader } from '@/components/SectionHeader/SectionHeader';
 import { Paragraph } from '@/components/Paragraph/Paragraph';
 import { useLeaflet } from '@/hooks/atproto';
 import type { JSX } from 'react';
@@ -38,9 +39,10 @@ export default function WritingPage(): JSX.Element {
       </Helmet>
 
       <div className="bg-whitesmoke min-h-screen flex flex-col">
-        <PageHeader pageTitle="My Writing" />
+        <PageHeader />
 
         <main className="flex flex-col gap-32 items-start px-24 pt-32 pb-128 flex-1">
+          <SectionHeader title="My Writing" />
           {loading && <Paragraph size="lg">Loading posts...</Paragraph>}
 
           {error && (

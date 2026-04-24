@@ -4,8 +4,6 @@ export interface BreadcrumbItem {
 }
 
 export interface PageHeaderProps {
-  pageTitle?: string;
-  overline?: string;
   className?: string;
   breadcrumbs?: BreadcrumbItem[];
 }

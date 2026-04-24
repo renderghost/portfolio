@@ -19,9 +19,7 @@ export const HomeFooter: React.FC<HomeFooterProps> = ({ copyright = DEFAULT_COPY
             key={link.label}
             href={link.href}
             label={link.label}
-            usecase="on contrast"
-            hasLeftIcon={false}
-            hasRightIcon={false}
+            color='white'
           />
         ))}
       </div>
@@ -33,9 +31,7 @@ export const HomeFooter: React.FC<HomeFooterProps> = ({ copyright = DEFAULT_COPY
             key={link.label}
             href={link.href}
             label={link.label}
-            usecase="on contrast"
-            hasLeftIcon={false}
-            hasRightIcon={false}
+            color='white'
           />
         ))}
       </div>

@@ -6,9 +6,6 @@ import {
   breadcrumbSeparator,
   getWrapperStyles,
   navGroup,
-  overlineStyles,
-  pageTitleStyles,
-  titleBlock,
   topRow,
 } from './PageHeader.styles';
 import type { PageHeaderProps } from './PageHeader.types';
@@ -16,8 +13,6 @@ import type { PageHeaderProps } from './PageHeader.types';
 const DEFAULT_BREADCRUMBS = [{ label: 'Home', href: '/' }];
 
 export const PageHeader: React.FC<PageHeaderProps> = ({
-  pageTitle,
-  overline,
   className,
   breadcrumbs,
 }) => {
@@ -25,7 +20,7 @@ export const PageHeader: React.FC<PageHeaderProps> = ({
 
   return (
     <header className={getWrapperStyles(className)}>
-      {/* Row 1: nav first in DOM (mobile top), breadcrumb second; order swapped on desktop */}
+      {/* Nav first in DOM (mobile top), breadcrumb second; order swapped on desktop */}
       <div className={topRow}>
         <nav className={navGroup}>
           {NAV_LINKS.map((link) => (
@@ -33,9 +28,7 @@ export const PageHeader: React.FC<PageHeaderProps> = ({
               key={link.label}
               href={link.href}
               label={link.label}
-              usecase='default'
-              hasLeftIcon={false}
-              hasRightIcon={false}
+              color='blue'
             />
           ))}
         </nav>
@@ -46,19 +39,13 @@ export const PageHeader: React.FC<PageHeaderProps> = ({
               <Link
                 href={crumb.href}
                 label={crumb.label}
-                usecase='default'
-                hasLeftIcon={i === 0}
-                hasRightIcon={false}
+                color='blue'
+                icon={i === 0 ? 'left' : 'none'}
+                iconChar='←'
               />
             </React.Fragment>
           ))}
         </div>
-      </div>
-
-      {/* Row 2: page title full width */}
-      <div className={titleBlock}>
-        {overline && <p className={overlineStyles}>{overline}</p>}
-        {pageTitle && <p className={pageTitleStyles}>{pageTitle}</p>}
       </div>
     </header>
   );
