@@ -2,7 +2,7 @@ import { CardBook } from '@/components/CardBook/CardBook';
 import { Link } from '@/components/Link/Link';
 import { useBookhive } from '@/hooks/atproto';
 import React from 'react';
-import { BOOKHIVE_URL, getColStyles } from './SectionReadingList.constants';
+import { BOOKHIVE_URL, buildBookhiveBookUrl, getColStyles } from './SectionReadingList.constants';
 import {
   bookGrid,
   gridWrapper,
@@ -38,6 +38,7 @@ export const SectionReadingList: React.FC<SectionReadingListProps> = ({
                   authors={book.authors}
                   coverUrl={book.coverUrl}
                   stars={book.stars}
+                  href={book.hiveBookUri ? buildBookhiveBookUrl(book.hiveBookUri) : undefined}
                 />
               ))}
             </div>
@@ -55,6 +56,7 @@ export const SectionReadingList: React.FC<SectionReadingListProps> = ({
                   authors={book.authors}
                   coverUrl={book.coverUrl}
                   stars={book.stars}
+                  href={book.hiveBookUri ? buildBookhiveBookUrl(book.hiveBookUri) : undefined}
                 />
               ))}
             </div>

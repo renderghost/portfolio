@@ -3,4 +3,5 @@ export interface CardBookProps {
   authors: string[];
   coverUrl?: string;
   stars?: number;
+  href?: string;
 }

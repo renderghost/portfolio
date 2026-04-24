@@ -17,3 +17,8 @@ export function getColStyles(
 }
 
 export const BOOKHIVE_URL = 'https://bookhive.buzz/profile/renderg.host';
+
+export function buildBookhiveBookUrl(hiveBookUri: string): string {
+  const rkey = hiveBookUri.split('/').at(-1);
+  return `https://bookhive.buzz/books/${rkey}`;
+}

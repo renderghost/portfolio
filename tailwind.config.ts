@@ -15,7 +15,7 @@ export default {
 
       // Mono
       black: '#000000',
-      dimgray: '#696969',
+      dimgray: '#3e3e3e',
       white: '#ffffff',
       whitesmoke: '#f2f0f0',
 
