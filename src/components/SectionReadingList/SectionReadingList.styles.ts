@@ -9,7 +9,7 @@ export const h3Styles =
   'font-sans font-black text-base text-black w-full';
 
 export const bookGrid =
-  'grid grid-cols-3 md:grid-cols-4 xl:grid-cols-6 2xl:grid-cols-8 gap-16 w-full';
+  'grid grid-cols-3 md:grid-cols-4 xl:grid-cols-6 2xl:grid-cols-6 gap-16 w-full';
 
 export const loadingStyles =
   'font-sans font-medium text-base text-dimgray';

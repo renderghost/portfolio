@@ -3,23 +3,23 @@
     "title": "A11y Pixel",
     "description": "An invisible Figma component to help document accessibility attributes in design files at any level of specificity.",
     "thumbnail": "/art/projects/covers/a11y-pixel.jpg",
-    "projectUrl": "https://www.figma.com/community/file/1468516979425643600/the-a11y-pixel",
-    "sourceUrl": null,
-    "role": "Builder",
+    "projectUrl": null,
+    "sourceUrl": "https://www.figma.com/community/file/1468516979425643600/the-a11y-pixel",
+    "role": "Creator",
     "hasMyArtwork": false,
     "category": "Design",
-    "status": "Open"
+    "status": "Completed"
   },
   {
     "title": "AT Proto Science",
     "description": "Empowering science communities with open, democratic, researcher-owned infrastructure. We’re building communities and tech for publishing, curating, sharing, and discussing research online using ATProto and other decentralized protocols.",
     "thumbnail": "/art/projects/covers/at-science.jpg",
     "projectUrl": "https://atproto.science/",
-    "sourceUrl": null,
-    "role": "Contributor",
+    "sourceUrl": "https://github.com/ATProto-Science/at-science-homepagenull",
+    "role": "Helper",
     "hasMyArtwork": false,
     "category": "Science",
-    "status": "Open"
+    "status": "Completed"
   },
   {
     "title": "AT Proto Scholarly Lexicons",
@@ -27,10 +27,10 @@
     "thumbnail": "/art/projects/covers/at-science-lexicon.jpg",
     "projectUrl": null,
     "sourceUrl": "https://tangled.org/renderg.host/at-scholarly-lexicons",
-    "role": "Builder",
+    "role": "Creator",
     "hasMyArtwork": false,
     "category": "Science",
-    "status": "Closed"
+    "status": "Archived"
   },
   {
     "title": "Aperture",
@@ -38,10 +38,10 @@
     "thumbnail": "/art/projects/covers/aperture.jpg",
     "projectUrl": "https://frame.renderg.host/",
     "sourceUrl": "https://github.com/renderghost/frame",
-    "role": "Builder",
+    "role": "Creator",
     "hasMyArtwork": true,
     "category": "Art",
-    "status": "Closed"
+    "status": "Archived"
   },
   {
     "title": "Cumulus",
@@ -49,7 +49,7 @@
     "thumbnail": "/art/projects/covers/cumulist.jpg",
     "projectUrl": "https://bsky-list-manage-search.vercel.app/",
     "sourceUrl": "https://github.com/renderghost/bsky-list-manage--search",
-    "role": "Builder",
+    "role": "Creator",
     "hasMyArtwork": false,
     "category": "Social Media",
     "status": "In Progress"
@@ -60,32 +60,10 @@
     "thumbnail": "/art/projects/covers/bones.jpg",
     "projectUrl": "https://bones.renderg.host/",
     "sourceUrl": "https://github.com/renderghost/bones",
-    "role": "Builder",
+    "role": "Creator",
     "hasMyArtwork": false,
     "category": "Design",
     "status": "In Progress"
-  },
-  {
-    "title": "Bookhive",
-    "description": "My social reading list of my all-time favourite books across design, philosophy, prose and science.",
-    "thumbnail": "/art/projects/covers/bookhive.jpg",
-    "projectUrl": "https://bookhive.buzz/profile/renderg.host",
-    "sourceUrl": null,
-    "role": "User",
-    "hasMyArtwork": false,
-    "category": "Literature",
-    "status": "Open"
-  },
-  {
-    "title": "Deadfader",
-    "description": "",
-    "thumbnail": "/art/projects/covers/deadfader.jpg",
-    "projectUrl": "https://deadfader.bandcamp.com/",
-    "sourceUrl": null,
-    "role": "Contributor",
-    "hasMyArtwork": true,
-    "category": "Music",
-    "status": "Closed"
   },
   {
     "title": "Form Prototyper",
@@ -93,32 +71,10 @@
     "thumbnail": "/art/projects/covers/form-prototyper.jpg",
     "projectUrl": null,
     "sourceUrl": "https://github.com/renderghost/typeform-definition-extractor",
-    "role": "Builder",
+    "role": "Creator",
     "hasMyArtwork": false,
     "category": "Design",
-    "status": "Open"
-  },
-  {
-    "title": "gggiiirrrlllsss",
-    "description": "",
-    "thumbnail": "/art/projects/covers/gggiiirrrlllsss.jpg",
-    "projectUrl": "https://soundcloud.com/gggiiirrrlllsss",
-    "sourceUrl": null,
-    "role": "Builder",
-    "hasMyArtwork": true,
-    "category": "Music",
-    "status": "In Progress"
-  },
-  {
-    "title": "Grain",
-    "description": "My amateur snaps gallery where I pretend to be a professional photographer.",
-    "thumbnail": "/art/projects/covers/grains.jpg",
-    "projectUrl": "https://grain.social/profile/did:plc:s2rczyxit2v5vzedxqs326ri",
-    "sourceUrl": null,
-    "role": null,
-    "hasMyArtwork": true,
-    "category": "Art",
-    "status": "In Progress"
+    "status": "Completed"
   },
   {
     "title": "Lanyards",
@@ -126,21 +82,10 @@
     "thumbnail": "/art/projects/covers/lanyards.jpg",
     "projectUrl": null,
     "sourceUrl": "https://github.com/renderghost/lanyards",
-    "role": "Builder",
+    "role": "Creator",
     "hasMyArtwork": false,
     "category": "Science",
-    "status": "Closed"
-  },
-  {
-    "title": "Piratio",
-    "description": "",
-    "thumbnail": "/art/projects/covers/piratio.jpg",
-    "projectUrl": "https://soundcloud.com/piratio-isnt-dead",
-    "sourceUrl": null,
-    "role": "Builder",
-    "hasMyArtwork": true,
-    "category": "Music",
-    "status": "Closed"
+    "status": "Archived"
   },
   {
     "title": "Ramps",
@@ -148,7 +93,7 @@
     "thumbnail": "/art/projects/covers/ramps.jpg",
     "projectUrl": "https://ramps.renderg.host/",
     "sourceUrl": "https://github.com/renderghost/ramps",
-    "role": "Builder",
+    "role": "Creator",
     "hasMyArtwork": true,
     "category": "Art",
     "status": "In Progress"
@@ -159,10 +104,10 @@
     "thumbnail": "/art/projects/covers/read.jpg",
     "projectUrl": "https://read.renderg.host/",
     "sourceUrl": "https://github.com/renderghost/read",
-    "role": "Builder",
+    "role": "Creator",
     "hasMyArtwork": false,
     "category": "Literature",
-    "status": "Closed"
+    "status": "Archived"
   },
   {
     "title": "Science Fiction",
@@ -170,10 +115,10 @@
     "thumbnail": "/art/projects/covers/science-fiction.jpg",
     "projectUrl": "https://github.com/Morressier/fictional-design-data",
     "sourceUrl": null,
-    "role": "Builder",
+    "role": "Creator",
     "hasMyArtwork": false,
     "category": "Science",
-    "status": "Open"
+    "status": "Completed"
   },
   {
     "title": "Semble for Chrome",
@@ -181,7 +126,7 @@
     "thumbnail": "/art/projects/covers/semble-for google chrome.jpg",
     "projectUrl": null,
     "sourceUrl": "https://tangled.org/renderg.host/semble-chrome-extension",
-    "role": "Builder",
+    "role": "Creator",
     "hasMyArtwork": false,
     "category": "Science",
     "status": "In Progress"
@@ -192,21 +137,21 @@
     "thumbnail": "/art/projects/covers/semble-for raycast.jpg",
     "projectUrl": null,
     "sourceUrl": "https://tangled.org/renderg.host/semble-raycast-extension",
-    "role": "Builder",
+    "role": "Creator",
     "hasMyArtwork": false,
     "category": "Science",
     "status": "In Progress"
   },
   {
-    "title": "Sound Selections",
+    "title": "SoundSelections",
     "description": "A fancy discovery app for my many many Spotify playlists. Warning: may contain questionable music choices.",
     "thumbnail": "/art/projects/covers/sound-selections.jpg",
     "projectUrl": "https://selections.renderg.host/",
     "sourceUrl": "https://github.com/renderghost/selections",
-    "role": "Builder",
+    "role": "Creator",
     "hasMyArtwork": true,
     "category": "Music",
-    "status": "Open"
+    "status": "Completed"
   },
   {
     "title": "Soundsky",
@@ -214,10 +159,10 @@
     "thumbnail": "/art/projects/covers/soundsky.jpg",
     "projectUrl": "https://soundsky.cloud/",
     "sourceUrl": "https://github.com/soundskycloud/soundSky",
-    "role": "Contributor",
+    "role": "Helper",
     "hasMyArtwork": false,
     "category": "Music",
-    "status": "Closed"
+    "status": "Archived"
   },
   {
     "title": "Spectra",
@@ -225,7 +170,7 @@
     "thumbnail": "/art/projects/covers/spectra.jpg",
     "projectUrl": "https://spectra.renderg.host/",
     "sourceUrl": "https://github.com/renderghost/spectra",
-    "role": "Builder",
+    "role": "Creator",
     "hasMyArtwork": false,
     "category": "Design",
     "status": "In Progress"
@@ -236,10 +181,10 @@
     "thumbnail": "/art/projects/covers/steps-for web.jpg",
     "projectUrl": "http://steps.renderg.host/",
     "sourceUrl": "https://github.com/renderghost/steps-web",
-    "role": "Builder",
+    "role": "Creator",
     "hasMyArtwork": false,
     "category": "Design",
-    "status": "Open"
+    "status": "Completed"
   },
   {
     "title": "Strategy Schmategy",
@@ -247,10 +192,10 @@
     "thumbnail": "/art/projects/covers/strategy.jpg",
     "projectUrl": "https://strategyschmategy.renderg.host/",
     "sourceUrl": "https://github.com/renderghost/strategy-schmategy",
-    "role": "Builder",
+    "role": "Creator",
     "hasMyArtwork": false,
     "category": "Design",
-    "status": "Open"
+    "status": "Completed"
   },
   {
     "title": "Tailgunner for Chrome",
@@ -258,10 +203,10 @@
     "thumbnail": "/art/projects/covers/tailgunner-for chrome.jpg",
     "projectUrl": null,
     "sourceUrl": "https://github.com/renderghost/tailgunner-chrome-extension",
-    "role": "Builder",
+    "role": "Creator",
     "hasMyArtwork": false,
     "category": "Design",
-    "status": "Open"
+    "status": "Completed"
   },
   {
     "title": "Touch OSC for Endlesss",
@@ -269,9 +214,9 @@
     "thumbnail": "/art/projects/covers/endlesss-osc.jpg",
     "projectUrl": null,
     "sourceUrl": "https://github.com/renderghost/endlesss-studio-osc",
-    "role": "Builder",
+    "role": "Creator",
     "hasMyArtwork": false,
     "category": "Music",
-    "status": "Open"
+    "status": "Completed"
   }
 ]

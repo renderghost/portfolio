@@ -13,5 +13,6 @@ export interface CardPositionProps {
   startedAt?: string;
   endedAt?: string;
   location?: CardPositionLocation;
+  workplaceType?: string;
   remote?: boolean;
 }

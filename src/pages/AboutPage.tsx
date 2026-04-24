@@ -3,7 +3,6 @@ import { PageHeader } from '@/components/PageHeader/PageHeader';
 import { SectionHeader } from '@/components/SectionHeader/SectionHeader';
 import { SectionImage } from '@/components/SectionImage/SectionImage';
 import { SectionQuote } from '@/components/SectionQuote/SectionQuote';
-import { SectionReadingList } from '@/components/SectionReadingList/SectionReadingList';
 import { SectionText } from '@/components/SectionText/SectionText';
 import { SeoHead } from '@/components/SeoHead/SeoHead';
 import { SITE_URL } from '@/components/SeoHead/SeoHead.constants';
@@ -84,7 +83,6 @@ export default function AboutPage(): JSX.Element {
           <SectionText body="I help organisations close the gap between what users need, what technology can (and can't) do, and what the business aspires to achieve. Then we build products and services that satisfy all three. I believe nothing useful or long-lasting gets made any other way." />
           <SectionText body="I believe that my role as researcher and designer is to help people understand the context clearly, and provide them with the right tools to make positive changes. For me, that means having timely conversations, exposing complexity, testing risky assumptions, understanding constraints, and making good decisions collaboratively. I aim to leave every team more connected, informed and capable than when I joined them." />
           <SectionText body="In my spare time I enjoy making art and experimental music, writing articles, and some creative coding. I spend as much time outside with my kids as I can, and I read as widely as I can: design theory, systems thinking, information architecture, history, psychology, science fiction, and the occasional manual for fun." />
-          <SectionReadingList />
         </div>
 
         <PageFooter />
