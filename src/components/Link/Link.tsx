@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link as RouterLink } from 'react-router-dom';
 import { DEFAULT_ICON } from './Link.constants';
-import { getLinkStyles, iconStyles, labelStyles } from './Link.styles';
+import { getLinkStyles, iconStyles, labelStyles, labelWrapStyles } from './Link.styles';
 import type { LinkProps } from './Link.types';
 
 export const Link: React.FC<LinkProps> = ({
@@ -12,6 +12,7 @@ export const Link: React.FC<LinkProps> = ({
   icon = 'none',
   iconChar = DEFAULT_ICON,
   className,
+  wrap = false,
 }) => {
   const isInternal = href.startsWith('/') && !href.startsWith('//');
   const isExternal = href.startsWith('http://') || href.startsWith('https://');
@@ -22,7 +23,7 @@ export const Link: React.FC<LinkProps> = ({
   const content = (
     <>
       {icon === 'left' && iconEl}
-      <span className={labelStyles}>{label}</span>
+      <span className={wrap ? labelWrapStyles : labelStyles}>{label}</span>
       {icon === 'right' && iconEl}
     </>
   );

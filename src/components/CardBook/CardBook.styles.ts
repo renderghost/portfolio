@@ -13,10 +13,10 @@ export const titleStyles =
   'font-sans font-bold text-base leading-[20px] text-black line-clamp-2';
 
 export const authorStyles =
-  'font-sans font-medium text-[12px] leading-[18px] text-dimgray line-clamp-1';
+  'font-sans font-medium text-sm leading-[18px] text-dimgray line-clamp-1';
 
-export const starsWrapper = 'flex items-center gap-2';
+export const starsWrapper = 'flex items-center gap-4';
 
-export const starFilled = 'text-black text-[12px] leading-none';
+export const starFilled = 'text-black text-sm';
 
-export const starEmpty = 'text-dimgray text-[12px] leading-none';
+export const starEmpty = 'text-black-24 text-sm';

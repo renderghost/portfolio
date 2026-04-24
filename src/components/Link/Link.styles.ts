@@ -30,4 +30,9 @@ export const labelStyles =
   'group-focus-visible:decoration-solid ' +
   'shrink-0 overflow-hidden text-ellipsis whitespace-nowrap';
 
+export const labelWrapStyles =
+  'underline decoration-dotted underline-offset-4 ' +
+  'group-hover:decoration-solid ' +
+  'group-focus-visible:decoration-solid';
+
 export const iconStyles = 'shrink-0';

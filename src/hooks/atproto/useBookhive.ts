@@ -11,6 +11,7 @@ export interface Book {
   stars?: number;
   status: string;
   createdAt: string;
+  hiveBookUri?: string;
 }
 
 export interface Bookshelf {
@@ -42,6 +43,7 @@ export function useBookhive(): Bookshelf {
         stars: r.value.stars !== undefined ? Math.round(r.value.stars / 2) : undefined,
         status: r.value.status ?? '',
         createdAt: r.value.createdAt,
+        hiveBookUri: r.value.hiveBookUri ?? `at://did:plc:enu2j5xjlqsjaylv3du4myh4/buzz.bookhive.catalogBook/${r.value.hiveId}`,
       }));
 
     const byDate = (a: Book, b: Book) =>

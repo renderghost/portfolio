@@ -1,3 +1,4 @@
+import { Link } from '@/components/Link/Link';
 import React from 'react';
 import { STAR_CHAR, TOTAL_STARS } from './CardBook.constants';
 import {
@@ -9,7 +10,6 @@ import {
   starEmpty,
   starFilled,
   starsWrapper,
-  titleStyles,
 } from './CardBook.styles';
 import type { CardBookProps } from './CardBook.types';
 
@@ -18,6 +18,7 @@ export const CardBook: React.FC<CardBookProps> = ({
   authors,
   coverUrl,
   stars,
+  href,
 }) => {
   return (
     <div className={cardWrapper}>
@@ -29,7 +30,12 @@ export const CardBook: React.FC<CardBookProps> = ({
         )}
       </div>
 
-      <p className={titleStyles}>{title}</p>
+      {href ? (
+        <Link href={href} label={title} color='black' icon='none' wrap />
+      ) : (
+        <p className='font-sans font-bold text-base leading-[20px] text-black line-clamp-2'>{title}</p>
+      )}
+
       <p className={authorStyles}>{authors.join(', ')}</p>
 
       {stars !== undefined && (

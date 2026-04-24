@@ -10,4 +10,5 @@ export interface LinkProps {
   icon?: LinkIcon;
   iconChar?: string;
   className?: string;
+  wrap?: boolean;
 }
