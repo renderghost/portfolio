@@ -2,6 +2,8 @@ import { CardGrid } from '@/components/CardGrid/CardGrid';
 import type { CardHomeProps } from '@/components/CardHome/CardHome.types';
 import { HomeFooter } from '@/components/HomeFooter/HomeFooter';
 import { HomeHeader } from '@/components/HomeHeader/HomeHeader';
+import { SeoHead } from '@/components/SeoHead/SeoHead';
+import { SITE_URL } from '@/components/SeoHead/SeoHead.constants';
 import type { JSX } from 'react';
 import { Helmet } from 'react-helmet-async';
 
@@ -21,7 +23,7 @@ const CARDS: CardHomeProps[] = [
     description:
       'From early-stage startups to multinationals, I create the conditions for teams to focus, collaborate, and get to market faster.', //
     linkLabel: 'Check my resume',
-    linkHref: '/work',
+    linkHref: '/career',
   },
   {
     overline: 'My Work',
@@ -104,8 +106,13 @@ const JSON_LD = {
 export default function HomePage(): JSX.Element {
   return (
     <>
+      <SeoHead
+        title='Barry Prendergast — UX Designer & Design Strategist, Berlin'
+        description='Independent UX designer and strategist based in Berlin. I help ambitious organisations build better products through design strategy, systems thinking, and meaningful collaboration.'
+        canonical={SITE_URL}
+      />
       <Helmet>
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(JSON_LD) }} />
+        <script type='application/ld+json' dangerouslySetInnerHTML={{ __html: JSON.stringify(JSON_LD) }} />
       </Helmet>
 
       <div className="flex flex-col min-h-screen bg-blue isolate">

@@ -3,6 +3,8 @@ import { PageFooter } from '@/components/PageFooter/PageFooter';
 import { PageHeader } from '@/components/PageHeader/PageHeader';
 import { SectionHeader } from '@/components/SectionHeader/SectionHeader';
 import caseStudiesData from '@/data/json/casestudies.json';
+import { SeoHead } from '@/components/SeoHead/SeoHead';
+import { SITE_URL } from '@/components/SeoHead/SeoHead.constants';
 import type { JSX } from 'react';
 import { Helmet } from 'react-helmet-async';
 
@@ -34,12 +36,12 @@ export default function WorksPage(): JSX.Element {
 
   return (
     <>
+      <SeoHead
+        title='Portfolio | Barry Prendergast, UX Designer Berlin'
+        description='Case studies in UX strategy, product design, and design operations by Barry Prendergast — independent designer based in Berlin, Germany.'
+        canonical={`${SITE_URL}/portfolio`}
+      />
       <Helmet>
-        <title>Portfolio | Barry Prendergast</title>
-        <meta
-          name='description'
-          content='Case studies in design strategy, product design, and design operations by Barry Prendergast.'
-        />
         <script
           type='application/ld+json'
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

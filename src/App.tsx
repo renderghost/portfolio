@@ -5,7 +5,7 @@ import ContactPage from '@/pages/ContactPage';
 import HomePage from '@/pages/HomePage';
 import ProjectsPage from '@/pages/ProjectsPage';
 import WorksPage from '@/pages/PortfolioPage';
-import WorkPage from '@/pages/WorkPage';
+import CareerPage from '@/pages/CareerPage';
 import WritingPage from '@/pages/WritingPage';
 import React, { useEffect } from 'react';
 import { Route, Routes, useLocation } from 'react-router-dom';
@@ -50,7 +50,7 @@ const App: React.FC = () => {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/about" element={<AboutPage />} />
-        <Route path="/work" element={<WorkPage />} />
+        <Route path="/career" element={<CareerPage />} />
         <Route path="/portfolio" element={<WorksPage />} />
         <Route path="/portfolio/:slug" element={<CaseStudyPage />} />
         <Route path="/writing" element={<WritingPage />} />

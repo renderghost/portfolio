@@ -5,6 +5,8 @@ import { SectionHeader } from '@/components/SectionHeader/SectionHeader';
 import { SectionPosition } from '@/components/SectionPosition/SectionPosition';
 import { SectionSkillCategory } from '@/components/SectionSkillCategory/SectionSkillCategory';
 import { useSifaLanguages, useSifaPositions, useSifaSkills } from '@/hooks/atproto';
+import { SeoHead } from '@/components/SeoHead/SeoHead';
+import { SITE_URL } from '@/components/SeoHead/SeoHead.constants';
 import type { JSX } from 'react';
 import { Helmet } from 'react-helmet-async';
 
@@ -15,13 +17,13 @@ const JSON_LD = {
     '@type': 'Person',
     name: 'Barry Prendergast',
     jobTitle: 'UX Strategist and Designer',
-    url: 'https://renderg.host/work',
+    url: 'https://renderg.host/career',
   },
 };
 
 const sectionLabel = 'font-sans font-semibold text-base leading-[24px] text-dimgray ' + 'tracking-[1px] uppercase';
 
-export default function WorkPage(): JSX.Element {
+export default function CareerPage(): JSX.Element {
   const { data: positions, loading: positionsLoading, error: positionsError } = useSifaPositions();
   const { data: skillCategories, loading: skillsLoading, error: skillsError } = useSifaSkills();
   const { data: languages, loading: languagesLoading, error: languagesError } = useSifaLanguages();
@@ -34,20 +36,20 @@ export default function WorkPage(): JSX.Element {
 
   return (
     <>
+      <SeoHead
+        title='Career | Barry Prendergast, UX Designer Berlin'
+        description='Career history of Barry Prendergast, independent UX strategist and product designer based in Berlin, Germany. Available for freelance projects.'
+        canonical={`${SITE_URL}/career`}
+      />
       <Helmet>
-        <title>Resume | Barry Prendergast</title>
-        <meta
-          name="description"
-          content="Independent product designer helping organisations deliver better products through clear thinking, practical design, and meaningful collaboration."
-        />
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(JSON_LD) }} />
+        <script type='application/ld+json' dangerouslySetInnerHTML={{ __html: JSON.stringify(JSON_LD) }} />
       </Helmet>
 
       <div className="flex flex-col items-center w-full bg-whitesmoke">
         <PageHeader />
 
         <div className="flex flex-col gap-32 items-start w-full max-w-[1920px] px-24 pt-32 pb-128">
-          <SectionHeader title="My Resume" />
+          <SectionHeader title="My Career" />
           {loading && <p className="font-sans font-medium text-base leading-[28px] text-black">Loading...</p>}
 
           {error && (

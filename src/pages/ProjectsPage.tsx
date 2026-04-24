@@ -4,6 +4,8 @@ import { PageHeader } from '@/components/PageHeader/PageHeader';
 import { SectionHeader } from '@/components/SectionHeader/SectionHeader';
 import { Paragraph } from '@/components/Paragraph/Paragraph';
 import projectsData from '@/data/json/projects.json';
+import { SeoHead } from '@/components/SeoHead/SeoHead';
+import { SITE_URL } from '@/components/SeoHead/SeoHead.constants';
 import type { JSX } from 'react';
 import { Helmet } from 'react-helmet-async';
 import type {
@@ -81,14 +83,14 @@ export default function ProjectsPage(): JSX.Element {
 
   return (
     <>
+      <SeoHead
+        title='Projects | Barry Prendergast, UX Designer Berlin'
+        description='Personal design tools and creative projects by Barry Prendergast, UX designer and strategist based in Berlin, Germany.'
+        canonical={`${SITE_URL}/projects`}
+      />
       <Helmet>
-        <title>Projects | Barry Prendergast</title>
-        <meta
-          name="description"
-          content="Design tools and personal projects by Barry Prendergast."
-        />
         <script
-          type="application/ld+json"
+          type='application/ld+json'
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </Helmet>

@@ -7,6 +7,7 @@ import { SectionTableCaseStudy } from '@/components/SectionTableCaseStudy/Sectio
 import { formatSlug } from '@/components/SectionTableCaseStudy/SectionTableCaseStudy.constants';
 import { SectionText } from '@/components/SectionText/SectionText';
 import caseStudiesData from '@/data/json/casestudies.json';
+import { SeoHead } from '@/components/SeoHead/SeoHead';
 import type { JSX } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Navigate, useParams } from 'react-router-dom';
@@ -78,19 +79,13 @@ export default function CaseStudyPage(): JSX.Element {
 
   return (
     <>
+      <SeoHead
+        title={`${caseStudy.title} | Barry Prendergast`}
+        description={metaDescription}
+        canonical={canonicalUrl}
+        ogType='article'
+      />
       <Helmet>
-        <title>{caseStudy.title} | Barry Prendergast</title>
-        <meta name='description' content={metaDescription} />
-        <link rel='canonical' href={canonicalUrl} />
-        <meta property='og:type' content='article' />
-        <meta property='og:url' content={canonicalUrl} />
-        <meta property='og:title' content={caseStudy.title} />
-        <meta property='og:description' content={metaDescription} />
-        <meta property='og:image' content={caseStudy.coverImage} />
-        <meta name='twitter:card' content='summary_large_image' />
-        <meta name='twitter:title' content={caseStudy.title} />
-        <meta name='twitter:description' content={metaDescription} />
-        <meta name='twitter:image' content={caseStudy.coverImage} />
         <script
           type='application/ld+json'
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

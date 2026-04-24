@@ -1,17 +1,19 @@
 import { PageFooter } from '@/components/PageFooter/PageFooter';
 import { PageHeader } from '@/components/PageHeader/PageHeader';
 import { SectionHeader } from '@/components/SectionHeader/SectionHeader';
+import { SeoHead } from '@/components/SeoHead/SeoHead';
+import { SITE_URL } from '@/components/SeoHead/SeoHead.constants';
 import type { JSX } from 'react';
-import { Helmet } from 'react-helmet-async';
 
 export default function ImpressumPage(): JSX.Element {
   return (
     <>
-      <Helmet>
-        <title>Impressum | Barry Prendergast</title>
-        <meta name="description" content="Legal disclosure for renderg.host pursuant to § 5 DDG." />
-        <meta name="robots" content="noindex" />
-      </Helmet>
+      <SeoHead
+        title='Impressum | Barry Prendergast'
+        description='Legal disclosure for renderg.host pursuant to § 5 DDG.'
+        canonical={`${SITE_URL}/impressum`}
+        noIndex
+      />
 
       <div className="min-h-screen flex flex-col bg-whitesmoke">
         <PageHeader />

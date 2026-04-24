@@ -4,6 +4,8 @@ import { PageHeader } from '@/components/PageHeader/PageHeader';
 import { SectionHeader } from '@/components/SectionHeader/SectionHeader';
 import { Paragraph } from '@/components/Paragraph/Paragraph';
 import { useLeaflet } from '@/hooks/atproto';
+import { SeoHead } from '@/components/SeoHead/SeoHead';
+import { SITE_URL } from '@/components/SeoHead/SeoHead.constants';
 import type { JSX } from 'react';
 import { Helmet } from 'react-helmet-async';
 
@@ -26,14 +28,14 @@ export default function WritingPage(): JSX.Element {
 
   return (
     <>
+      <SeoHead
+        title='Writing | Barry Prendergast, UX Designer Berlin'
+        description='Articles on UX strategy, product design, design systems, and systems thinking by Barry Prendergast, independent designer based in Berlin, Germany.'
+        canonical={`${SITE_URL}/writing`}
+      />
       <Helmet>
-        <title>Writing | Barry Prendergast</title>
-        <meta
-          name="description"
-          content="Articles and writing on design strategy, product design, and design operations by Barry Prendergast."
-        />
         <script
-          type="application/ld+json"
+          type='application/ld+json'
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </Helmet>
