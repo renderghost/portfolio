@@ -2,6 +2,8 @@
  * AT Protocol hooks exports
  */
 
+export { useBookhive } from './useBookhive';
+export type { Book, Bookshelf } from './useBookhive';
 export { useLeaflet } from './useLeaflet';
 export type { Document, Publication } from './useLeaflet';
 export { useProtopro } from './useProtopro';
