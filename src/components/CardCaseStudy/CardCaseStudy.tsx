@@ -6,7 +6,7 @@ import type { CardCaseStudyProps } from './CardCaseStudy.types';
 export const CardCaseStudy: React.FC<CardCaseStudyProps> = ({ caseStudy }) => {
   return (
     <div className={styles.cardWrapper}>
-      {/* Cover image — full width, 16:9 */}
+      {/* Cover image */}
       <div className={styles.coverImageContainer}>
         {caseStudy.coverImage && (
           <img
@@ -19,11 +19,17 @@ export const CardCaseStudy: React.FC<CardCaseStudyProps> = ({ caseStudy }) => {
 
       {/* Content */}
       <div className={styles.contentContainer}>
-        {/* Meta row: affiliation · type */}
+        {/* Meta row: affiliation · type · year */}
         <div className={styles.metaRow}>
           <span className={styles.metaText}>{caseStudy.affiliation}</span>
           <span className={styles.metaText}>·</span>
           <span className={styles.metaText}>{caseStudy.type}</span>
+          {caseStudy.yearEnded && (
+            <>
+              <span className={styles.metaText}>·</span>
+              <span className={styles.metaText}>{caseStudy.yearEnded}</span>
+            </>
+          )}
         </div>
 
         {/* Title */}
@@ -37,8 +43,9 @@ export const CardCaseStudy: React.FC<CardCaseStudyProps> = ({ caseStudy }) => {
         {/* Link */}
         <Link
           href={`/portfolio/${caseStudy.slug}`}
-          label='View case study'
+          label='Read'
           icon='right'
+          iconChar='↗'
         />
       </div>
     </div>

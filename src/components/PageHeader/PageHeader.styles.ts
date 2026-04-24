@@ -13,7 +13,7 @@ export const navGroup =
 export const breadcrumbGroup = 'flex items-center gap-8 md:order-1';
 
 export const breadcrumbSeparator =
-  'font-sans font-medium text-base leading-[28px] text-dimgray select-none';
+  'font-sans font-medium text-base text-dimgray select-none';
 
 
 export function getWrapperStyles(className?: string): string {

@@ -66,7 +66,7 @@ export default function AboutPage(): JSX.Element {
       <div className="flex flex-col items-center w-full bg-whitesmoke">
         <PageHeader />
 
-        <div className="flex flex-col gap-32 items-start w-full max-w-[1920px] px-24 pt-32 pb-128">
+        <div className="flex flex-col gap-32 items-start w-full max-w-[1920px] px-24 pt-24 gap-24 pb-128">
           <SectionHeader title="About Me" statement="How I approach complex product and service problems by bringing structure to ambiguity and using outcome-driven design to make better decisions in messy, real-world systems." />
           <SectionImage
             src="/art/portrait/art/colour.jpg"

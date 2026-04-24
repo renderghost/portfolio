@@ -1,3 +1,4 @@
+import { Markdown } from '@/components/Markdown/Markdown';
 import React from 'react';
 import * as styles from './CardPosition.styles';
 import type { CardPositionProps } from './CardPosition.types';
@@ -12,67 +13,53 @@ export const CardPosition: React.FC<CardPositionProps> = ({
   company,
   title,
   description,
-  employmentType,
   startedAt,
   endedAt,
   location,
-  remote,
 }) => {
   const isCurrent = !endedAt;
   const formattedStart = startedAt ? formatDate(startedAt) : null;
-  const formattedEnd = endedAt ? formatDate(endedAt) : null;
+  const formattedEnd = endedAt ? formatDate(endedAt) : 'Date';
+
+  const hasLocation = location && (location.city || location.country);
 
   return (
-    <div className={styles.cardWrapper}>
+    <div className={styles.getCardWrapper(isCurrent)}>
 
+      {/* Title row */}
+      <div className={styles.titleRow}>
+        <p className={styles.titleStyles}>{title}</p>
+        {isCurrent && (
+          <span className={styles.currentBadge}>Current</span>
+        )}
+      </div>
 
-      {/* Title */}
-      <p className={styles.titleStyles}>{title}</p>
-
-      {/* Meta row: company · type on left, badge + dates on right */}
+      {/* Meta row */}
       <div className={styles.metaRow}>
         <div className={styles.metaLeft}>
           <span>{company}</span>
-          {employmentType && (
+          {hasLocation && (
             <>
               <span>·</span>
-              <span>{employmentType}</span>
+              <span>
+                {location.city}
+                {location.city && location.country && ', '}
+                {location.country}
+              </span>
             </>
           )}
         </div>
-        <div className={styles.metaRight}>
-          {isCurrent && (
-            <span className={styles.currentBadge}>Current</span>
-          )}
-          {formattedStart && (
-            <div className={styles.dateRow}>
-              <span>{formattedStart}</span>
-              <span>–</span>
-              <span>{formattedEnd ?? 'Date'}</span>
-            </div>
-          )}
-        </div>
+        {formattedStart && (
+          <div className={styles.metaRight}>
+            <span>{formattedStart}</span>
+            <span>–</span>
+            <span>{formattedEnd}</span>
+          </div>
+        )}
       </div>
-      {/* Description */}
-      {description && (
-        <p className={styles.descriptionStyles}>{description}</p>
-      )}
 
-      {/* Location row */}
-      {(location || remote) && (
-        <div className={styles.locationRow}>
-          {location && (location.city || location.country) && (
-            <div className={styles.locationText}>
-              {location.city && <span>{location.city}</span>}
-              {location.city && location.country && <span>,</span>}
-              {location.country && <span>{location.country}</span>}
-            </div>
-          )}
-          {remote && (
-            <span className={styles.remoteBadge}>Remote</span>
-          )}
-        </div>
-      )}
+      {/* Description */}
+      {description && <Markdown>{description}</Markdown>}
     </div>
   );
 };

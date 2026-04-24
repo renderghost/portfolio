@@ -7,7 +7,7 @@ import type { CardProjectProps } from './CardProject.types';
 export const CardProject: React.FC<CardProjectProps> = ({ project }) => {
   return (
     <div className={styles.cardWrapper}>
-      {/* Thumbnail — full width, 16:9 */}
+      {/* Thumbnail */}
       <div className={styles.thumbnailContainer}>
         {project.thumbnail && (
           <img
@@ -16,7 +16,6 @@ export const CardProject: React.FC<CardProjectProps> = ({ project }) => {
             className={styles.thumbnail}
           />
         )}
-        <div className={styles.thumbnailBorder} />
       </div>
 
       {/* Content */}
@@ -52,6 +51,7 @@ export const CardProject: React.FC<CardProjectProps> = ({ project }) => {
                 href={project.projectUrl}
                 label="View the Project"
                 icon='right'
+                iconChar='↗'
               />
             )}
             {project.sourceUrl && (
@@ -59,6 +59,7 @@ export const CardProject: React.FC<CardProjectProps> = ({ project }) => {
                 href={project.sourceUrl}
                 label="View the Source"
                 icon='right'
+                iconChar='↗'
               />
             )}
           </div>

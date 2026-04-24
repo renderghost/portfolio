@@ -1,26 +1,23 @@
 export const cardWrapper =
-  'flex flex-col gap-32 items-start w-full';
+  'flex flex-col items-start w-full bg-white';
 
 export const thumbnailContainer =
-  'relative aspect-[16/9] w-full overflow-hidden bg-black-06 shrink-0';
+  'relative aspect-[7/4] w-full overflow-hidden bg-black-06 shrink-0';
 
 export const thumbnail =
   'object-cover w-full h-full';
 
-export const thumbnailBorder =
-  'absolute inset-0 ring-1 ring-inset ring-black-24 pointer-events-none z-10';
-
 export const contentContainer =
-  'flex flex-col gap-16 items-start w-full';
+  'flex flex-col gap-16 items-start w-full p-32';
 
 export const badgeRow =
   'flex gap-8 items-center flex-wrap';
 
 export const title =
-  'text-[24px] font-black leading-[32px] text-black w-full';
+  'font-sans font-black text-[32px] leading-[40px] text-black w-full';
 
 export const description =
-  'text-base font-medium leading-[28px] text-black overflow-hidden text-ellipsis w-full';
+  'font-sans font-medium text-base leading-[28px] text-black w-full';
 
 export const linksRow =
   'flex flex-row gap-8 items-center flex-wrap';
