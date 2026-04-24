@@ -67,7 +67,7 @@ export default function AboutPage(): JSX.Element {
         <PageHeader />
 
         <div className="flex flex-col gap-32 items-start w-full max-w-[1920px] px-24 pt-32 pb-128">
-          <SectionHeader title="About Me" />
+          <SectionHeader title="About Me" statement="How I approach complex product and service problems by bringing structure to ambiguity and using outcome-driven design to make better decisions in messy, real-world systems." />
           <SectionImage
             src="/art/portrait/art/colour.jpg"
             alt="A photo of Barry Prendergast"

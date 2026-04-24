@@ -9,7 +9,6 @@ import { SeoHead } from '@/components/SeoHead/SeoHead';
 import { SITE_URL } from '@/components/SeoHead/SeoHead.constants';
 import type { JSX } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { SectionText } from '@/components/SectionText/SectionText';
 
 const JSON_LD = {
   '@context': 'https://schema.org',
@@ -74,8 +73,7 @@ export default function CareerPage(): JSX.Element {
         <PageHeader />
 
         <div className="flex flex-col gap-32 items-start w-full max-w-[1920px] px-24 pt-32 pb-128">
-          <SectionHeader title="My Career" />
-          <SectionText body="A selection of roles where I’ve helped teams deliver complex products and services through outcome-driven design." />
+          <SectionHeader title="My Career" statement="A selection of roles across startups, agencies, and enterprise organisations where I’ve helped teams deliver complex products and services in challenging, fast-moving environments." />
           {loading && <p className="font-sans font-medium text-base leading-[28px] text-black">Loading...</p>}
 
           {error && (

@@ -80,7 +80,7 @@ export default function WorksPage(): JSX.Element {
         <PageHeader />
 
         <main className='flex flex-col items-start flex-1 gap-32 px-24 pt-32 pb-128'>
-          <SectionHeader title='My Portfolio' />
+          <SectionHeader title='My Portfolio' statement='Case studies from across publishing, energy, government, pharma, startups, and enterprise organisations, focused on solving complex product and service problems through outcome-driven design.' />
           <CardGridCaseStudy
             cards={caseStudies.map((cs) => ({
               caseStudy: {

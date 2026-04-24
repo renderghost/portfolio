@@ -46,7 +46,7 @@ const CARDS: CardHomeProps[] = [
     title: 'I bring the same drive and curiosity to personal projects that I bring to my design work.',
     description:
       'Experiments and side projects spanning music, visual art, writing, and code. No brief, no deadline, and no client but myself. Just curiosity and whatever tools and toys are within reach.',
-    linkLabel: 'Explore my projects',
+    linkLabel: 'Explore my personal projects',
     linkHref: '/portfolio',
   },
   {

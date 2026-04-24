@@ -13,7 +13,6 @@ import type {
   ProjectRole,
   ProjectStatus,
 } from '@/components/CardProject/CardProject.types';
-import { SectionText } from '@/components/SectionText/SectionText';
 
 interface ProjectRecord {
   title: string;
@@ -120,9 +119,8 @@ export default function ProjectsPage(): JSX.Element {
       <div className="flex flex-col min-h-screen bg-whitesmoke">
         <PageHeader />
 
-        <main className="flex flex-col items-start flex-1 gap-64 px-24 pt-32 pb-128">
-          <SectionHeader title="My Projects" />
-          <SectionText body="Experiments, side projects, and ideas explored without briefs, deadlines, or constraints." />
+        <main className="flex flex-col items-start flex-1 gap-32 px-24 pt-32 pb-128">
+          <SectionHeader title="My Personal Projects" statement="Self-directed experiments in music, art, writing, and code, explored without briefs, deadlines, or constraints." />
           {groups.length === 0 && (
             <Paragraph size="lg">No projects found.</Paragraph>
           )}

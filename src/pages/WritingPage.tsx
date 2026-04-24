@@ -8,7 +8,6 @@ import { SeoHead } from '@/components/SeoHead/SeoHead';
 import { SITE_URL } from '@/components/SeoHead/SeoHead.constants';
 import type { JSX } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { SectionText } from '@/components/SectionText/SectionText';
 
 export default function WritingPage(): JSX.Element {
   const { data: documents, loading, error } = useLeaflet();
@@ -85,8 +84,7 @@ export default function WritingPage(): JSX.Element {
         <PageHeader />
 
         <main className="flex flex-col items-start flex-1 gap-32 px-24 pt-32 pb-128">
-          <SectionHeader title="My Writing" />
-          <SectionText body="Practical writing on UX, systems, and product design, focused on solving real problems, not describing them." />
+          <SectionHeader title="My Writing" statement="Field notes, opinions, and reflections on UX, systems, and product design, shaped by real work with teams trying to make sense of complex problems and make better decisions." />
           {loading && <Paragraph size="lg">Loading posts...</Paragraph>}
 
           {error && (

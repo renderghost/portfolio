@@ -2,7 +2,6 @@ import { Link } from '@/components/Link/Link';
 import { PageFooter } from '@/components/PageFooter/PageFooter';
 import { PageHeader } from '@/components/PageHeader/PageHeader';
 import { SectionHeader } from '@/components/SectionHeader/SectionHeader';
-import { SectionText } from '@/components/SectionText/SectionText';
 import { SeoHead } from '@/components/SeoHead/SeoHead';
 import { SITE_URL } from '@/components/SeoHead/SeoHead.constants';
 import type { JSX } from 'react';
@@ -83,14 +82,14 @@ export default function ContactPage(): JSX.Element {
         <PageHeader />
 
         <main className="flex flex-col flex-1 gap-32 px-24 pt-32 pb-64">
-          <SectionHeader title="Contact" />
+          <SectionHeader title="Contact Me" />
           {/* Statement */}
           <p className="font-sans font-black text-[40px] leading-[48px] sm:text-[56px] sm:leading-[64px] lg:text-[72px] lg:leading-[80px] xl:text-[96px] xl:leading-[104px] text-black max-w-[1400px]">
-            Let&apos;s talk today about solving the right problems, in the right way.
+            If you&apos;re working on a product or service and want to improve clarity, alignment, and momentum, let&apos;s connect.
           </p>
-          <SectionText body="If you&apos;re working on a complex product or service and need clarity, alignment, or momentum, we should talk." />
+          
           {/* Contact links */}
-          <div className="flex flex-col items-start gap-16 pt-64 sm:flex-row sm:gap-32">
+          <div className="flex flex-col items-start gap-16 sm:flex-row md:gap-32">
             {CONTACT_LINKS.map((link) => (
               <Link
                 key={link.label}
