@@ -49,7 +49,10 @@ export default function CaseStudyPage(): JSX.Element {
   }
 
   const canonicalUrl = `${SITE_URL}/portfolio/${caseStudy.slug}`;
-  const metaDescription = truncate(caseStudy.summary, 160);
+  const metaDescription = truncate(
+    `${caseStudy.summary} Focused on outcome-driven UX design, systems thinking, and real-world delivery.`,
+    160
+  );
   const hasBody = caseStudy.body.trim().length > 0;
   const skills = caseStudy.relevantSkills.filter((s) => s.trim().length > 0);
 
@@ -69,18 +72,26 @@ export default function CaseStudyPage(): JSX.Element {
     publisher: {
       '@type': 'Person',
       name: 'Barry Prendergast',
+      url: SITE_URL,
     },
+
+    // 🔑 Critical missing signal
     about: {
-      '@type': 'Organization',
-      name: caseStudy.affiliation,
-      url: caseStudy.affiliationURL,
+      '@type': 'Thing',
+      name: caseStudy.title,
     },
+
+    // 🔑 THIS is the real upgrade (contextualisation)
+    articleSection: 'UX Case Study',
+
+    // 🔑 Skill signal (very underused, very powerful)
+    keywords: caseStudy.relevantSkills?.join(', '),
   };
 
   return (
     <>
       <SeoHead
-        title={`${caseStudy.title} | Barry Prendergast`}
+        title={`${caseStudy.title} — UX Case Study | Barry Prendergast`}
         description={metaDescription}
         canonical={canonicalUrl}
         ogType='article'

@@ -10,7 +10,7 @@ import { Helmet } from 'react-helmet-async';
 const CARDS: CardHomeProps[] = [
   {
     overline: 'My Background',
-    title: "Hi! 👋 I'm Barry, an Irish UX strategist, designer, and advisor based in Berlin, Germany.",
+    title: "Hi! 👋 I'm Barry, an Irish UX designer, researcher, and strategist based in Berlin, Germany.",
     description:
       "For nearly 20 years, I've worked with ambitious organisations to ease their growing pains and solve hard problems through clear conversation, rapid prototyping, and rigorous testing against the right metrics",
     linkLabel: 'Learn about me',
@@ -63,7 +63,7 @@ const JSON_LD = {
   '@context': 'https://schema.org',
   '@type': 'Person',
   name: 'Barry Prendergast',
-  jobTitle: 'UX Strategist and Designer',
+  jobTitle: 'UX Designer, Researcher and Strategist',
   url: 'https://renderg.host',
   address: {
     '@type': 'PostalAddress',
@@ -71,34 +71,28 @@ const JSON_LD = {
     addressCountry: 'Germany',
   },
   description:
-    'Independent product designer helping organisations deliver better products through clear thinking, practical design, and meaningful collaboration.',
+    'Independent UX designer, researcher, and strategist based in Berlin. Specialising in outcome-driven design for complex digital products and services, using rapid prototyping, clear collaboration, and rigorous testing to deliver measurable results.',
   sameAs: [
     'https://bsky.app/profile/renderg.host',
     'https://linkedin.com/in/barrymprendergast',
     'https://signal.me/#eu/XO_aKC1aE1GZYWdMx7WK7HKGSCfrlpNhlxLGNi774dhiL7qr32BAMrH1BqgChaiM',
-    `https://calendly.com/barry-prendergast`,
+    'https://calendly.com/barry-prendergast',
   ],
-  // worksFor: {
-  //   '@type': 'Organization',
-  //   name: 'Thomas Kuhn Foundation',
-  //   url: 'https://thomaskuhnfoundation.org/',
-  // },
   knowsAbout: [
-    'Content Design',
+    'Outcome-Driven Design',
     'Design Operations',
     'Design Strategy',
     'Design Systems',
-    'DesignOps',
     'Human-Centred Design',
     'Information Architecture',
     'Interaction Design',
     'Lean UX',
     'Product Design',
+    'Rapid Prototyping',
     'Service Design',
     'Systems Thinking',
-    'UI Design',
-    'User Experience Design',
-    'User Interface Design',
+    'Usability Testing',
+    'User Research',
     'UX Design',
   ],
 };
@@ -107,8 +101,8 @@ export default function HomePage(): JSX.Element {
   return (
     <>
       <SeoHead
-        title='Barry Prendergast — UX Designer & Design Strategist, Berlin'
-        description='Independent UX designer and strategist based in Berlin. I help ambitious organisations build better products through design strategy, systems thinking, and meaningful collaboration.'
+        title='Barry Prendergast — Outcome-Driven UX Strategy & Design, Berlin'
+        description='Independent UX designer, researcher, and strategist in Berlin. I help teams solve complex product and service problems through outcome-driven design, rapid prototyping, and rigorous testing.'
         canonical={SITE_URL}
       />
       <Helmet>

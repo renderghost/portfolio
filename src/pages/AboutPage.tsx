@@ -24,7 +24,7 @@ const JSON_LD = {
       addressCountry: 'Germany',
     },
     description:
-      'Independent UX Strategist and Designer helping organisations deliver better products and services through clear thinking, practical design, and meaningful collaboration.',
+      'Independent UX designer, researcher, and strategist based in Berlin. Specialising in outcome-driven design for complex digital products and services, using rapid prototyping, clear collaboration, and rigorous testing to deliver measurable results.',
     sameAs: [
       'https://bsky.app/profile/renderg.host',
       'https://linkedin.com/in/barrymprendergast',
@@ -32,21 +32,20 @@ const JSON_LD = {
       'https://calendly.com/barry-prendergast',
     ],
     knowsAbout: [
-      'Content Design',
+      'Outcome-Driven Design',
       'Design Operations',
       'Design Strategy',
       'Design Systems',
-      'DesignOps',
       'Human-Centred Design',
       'Information Architecture',
       'Interaction Design',
       'Lean UX',
       'Product Design',
+      'Rapid Prototyping',
       'Service Design',
       'Systems Thinking',
-      'UI Design',
-      'User Experience Design',
-      'User Interface Design',
+      'Usability Testing',
+      'User Research',
       'UX Design',
     ],
   },
@@ -56,8 +55,8 @@ export default function AboutPage(): JSX.Element {
   return (
     <>
       <SeoHead
-        title='About Barry Prendergast | UX Designer & Strategist, Berlin'
-        description='Irish researcher and designer based in Berlin with 20+ years helping organisations close the gap between user needs, technology, and business goals.'
+        title='About Barry Prendergast — Outcome-Driven UX Designer & Strategist, Berlin'
+        description='Irish UX designer, researcher, and strategist based in Berlin. I help teams solve complex product and service problems by aligning user needs, technology, and business goals through outcome-driven design and practical collaboration.'
         canonical={`${SITE_URL}/about`}
       />
       <Helmet>
@@ -81,9 +80,9 @@ export default function AboutPage(): JSX.Element {
           />
           <SectionText body="Most complex design problems are system problems. The interface is just where we experience them." />
           <SectionText body="Great design operates at every level, from system to interaction to interface, and design decisions at each level shape the result. Successful teams use design as a strategic lever to build innovative products and services, deliver outsized business and user value, and drive sustainable growth." />
-          <SectionText body="I started my career as a graphic designer working in print in the 90s, transitioning to UX design in the early 2000s. After nearly two decades working on UX across many domains, the common thread that drives me is helping people with different goals, perspectives, and priorities deliver something worthwhile, spectacular, and coherent." />
+          <SectionText body="I started my career as a graphic designer working in print in the 90s, transitioning to UX design in the early 2000s. After nearly two decades working on UX across many domains, the common thread that drives me is helping people with different goals, perspectives, and priorities deliver something beautiful, coherent, and worthwhile." />
           <SectionText body="I help organisations close the gap between what users need, what technology can (and can't) do, and what the business aspires to achieve. Then we build products and services that satisfy all three. I believe nothing useful or long-lasting gets made any other way." />
-          <SectionText body="I believe that my role as researcher and designer is to help people understand the status quo, and provide them with the tools, processes and knowledge to make postive and meaningful change. For me, that means having timely conversations, exposing complexity, testing risky assumptions, understanding constraints, and making good decisions collaboratively. I aim to leave every team more connected, informed and capable than when I joined them." />
+          <SectionText body="I believe that my role as researcher and designer is to help people understand the context clearly, and provide them with the right tools to make positive changes. For me, that means having timely conversations, exposing complexity, testing risky assumptions, understanding constraints, and making good decisions collaboratively. I aim to leave every team more connected, informed and capable than when I joined them." />
           <SectionText body="In my spare time I enjoy making art and experimental music, writing articles, and some creative coding. I spend as much time outside with my kids as I can, and I read as widely as I can: design theory, systems thinking, information architecture, history, psychology, science fiction, and the occasional manual for fun." />
           <SectionReadingList />
         </div>

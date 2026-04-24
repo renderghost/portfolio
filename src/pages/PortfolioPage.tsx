@@ -20,14 +20,42 @@ interface CaseStudyRecord {
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'CollectionPage',
-  name: 'Portfolio by Barry Prendergast',
+  name: 'UX Case Studies — Barry Prendergast',
   description:
-    'Case studies in design strategy, product design, and design operations by Barry Prendergast.',
-  url: 'https://renderg.host/works',
+    'A collection of UX case studies demonstrating outcome-driven design for complex digital products and services, including strategy, research, prototyping, and delivery.',
+  url: 'https://renderg.host/portfolio',
   author: {
     '@type': 'Person',
     name: 'Barry Prendergast',
     url: 'https://renderg.host',
+    address: {
+      '@type': 'PostalAddress',
+      addressLocality: 'Berlin',
+      addressCountry: 'Germany',
+    },
+    sameAs: [
+      'https://bsky.app/profile/renderg.host',
+      'https://linkedin.com/in/barrymprendergast',
+      'https://signal.me/#eu/XO_aKC1aE1GZYWdMx7WK7HKGSCfrlpNhlxLGNi774dhiL7qr32BAMrH1BqgChaiM',
+      'https://calendly.com/barry-prendergast',
+    ],
+    knowsAbout: [
+      'Outcome-Driven Design',
+      'Design Operations',
+      'Design Strategy',
+      'Design Systems',
+      'Human-Centred Design',
+      'Information Architecture',
+      'Interaction Design',
+      'Lean UX',
+      'Product Design',
+      'Rapid Prototyping',
+      'Service Design',
+      'Systems Thinking',
+      'Usability Testing',
+      'User Research',
+      'UX Design',
+    ],
   },
 };
 
@@ -37,8 +65,8 @@ export default function WorksPage(): JSX.Element {
   return (
     <>
       <SeoHead
-        title='Portfolio | Barry Prendergast, UX Designer Berlin'
-        description='Case studies in UX strategy, product design, and design operations by Barry Prendergast — independent designer based in Berlin, Germany.'
+        title='Portfolio — Barry Prendergast | Outcome-Driven UX Case Studies, Berlin'
+        description='UX case studies by Barry Prendergast, Berlin-based designer, researcher, and strategist. Real-world examples of solving complex product and service problems through outcome-driven design, rapid prototyping, rigorous testing and measurable results.'
         canonical={`${SITE_URL}/portfolio`}
       />
       <Helmet>
@@ -48,10 +76,10 @@ export default function WorksPage(): JSX.Element {
         />
       </Helmet>
 
-      <div className='bg-whitesmoke min-h-screen flex flex-col'>
+      <div className='flex flex-col min-h-screen bg-whitesmoke'>
         <PageHeader />
 
-        <main className='flex flex-col gap-32 items-start px-24 pt-32 pb-128 flex-1'>
+        <main className='flex flex-col items-start flex-1 gap-32 px-24 pt-32 pb-128'>
           <SectionHeader title='My Portfolio' />
           <CardGridCaseStudy
             cards={caseStudies.map((cs) => ({
