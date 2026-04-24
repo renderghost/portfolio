@@ -83,7 +83,7 @@ export default function WritingPage(): JSX.Element {
       <div className="flex flex-col min-h-screen bg-whitesmoke">
         <PageHeader />
 
-        <main className="flex flex-col items-start flex-1 gap-32 px-24 pt-32 pb-128">
+       <main className='flex flex-col items-start flex-1 max-w-[1920px] px-24 pt-24 gap-24 pb-128'>
           <SectionHeader title="My Writing" statement="Field notes, opinions, and reflections on UX, systems, and product design, shaped by real work with teams trying to make sense of complex problems and make better decisions." />
           {loading && <Paragraph size="lg">Loading posts...</Paragraph>}
 

@@ -1,32 +1,25 @@
-export const cardWrapper =
-  'flex flex-col gap-16 items-start w-full';
+import { mergeClasses } from '@/lib/utils/mergeClasses';
 
-export const metaRow =
-  'flex items-start justify-between w-full';
+const cardBase = 'flex flex-col gap-16 items-start p-32 w-full';
 
-export const metaLeft =
-  'flex gap-4 items-start font-sans font-medium text-base leading-[28px] text-black whitespace-nowrap';
+export function getCardWrapper(isCurrent: boolean): string {
+  return mergeClasses(cardBase, isCurrent ? 'bg-white' : 'bg-black-06');
+}
 
-export const metaRight =
-  'flex gap-16 items-center';
-
-export const dateRow =
-  'flex gap-1 items-center font-sans font-medium text-base leading-[28px] text-black whitespace-nowrap';
-
-export const currentBadge =
-  'bg-yellow px-8 font-sans font-medium text-base leading-[28px] text-black whitespace-nowrap';
+export const titleRow =
+  'flex items-start justify-between w-full gap-16';
 
 export const titleStyles =
-  'font-sans font-black text-[24px] leading-[32px] text-black w-full overflow-hidden text-ellipsis';
+  'font-sans font-black text-[24px] leading-[32px] text-black';
 
-export const descriptionStyles =
-  'font-sans font-medium text-base leading-[28px] text-black w-full overflow-hidden text-ellipsis';
+export const currentBadge =
+  'bg-yellow px-8 font-sans font-medium text-base leading-[28px] text-black whitespace-nowrap shrink-0';
 
-export const locationRow =
-  'flex gap-16 items-start';
+export const metaRow =
+  'flex items-center justify-between w-full';
 
-export const locationText =
-  'flex gap-1 items-start font-sans font-medium text-base leading-[28px] text-black whitespace-nowrap';
+export const metaLeft =
+  'flex gap-8 items-center font-sans font-medium text-base leading-[28px] text-black whitespace-nowrap';
 
-export const remoteBadge =
-  'bg-black-10 px-8 font-sans font-medium text-base leading-[28px] text-black whitespace-nowrap';
+export const metaRight =
+  'flex gap-1 items-center font-sans font-medium text-base leading-[28px] text-black whitespace-nowrap';

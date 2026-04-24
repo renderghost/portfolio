@@ -6,5 +6,6 @@ export interface CardCaseStudyProps {
     coverImage: string;
     affiliation: string;
     type: string;
+    yearEnded?: string;
   };
 }

@@ -81,7 +81,7 @@ export default function ContactPage(): JSX.Element {
       <div className="flex flex-col min-h-screen bg-whitesmoke ">
         <PageHeader />
 
-        <main className="flex flex-col flex-1 gap-32 px-24 pt-32 pb-64">
+        <main className="flex flex-col flex-1 max-w-[1920px] px-24 pt-24 gap-24 pb-128">
           <SectionHeader title="Contact Me" />
           {/* Statement */}
           <p className="font-sans font-black text-[40px] leading-[48px] sm:text-[56px] sm:leading-[64px] lg:text-[72px] lg:leading-[80px] xl:text-[96px] xl:leading-[104px] text-black max-w-[1400px]">

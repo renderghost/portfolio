@@ -119,7 +119,7 @@ export default function ProjectsPage(): JSX.Element {
       <div className="flex flex-col min-h-screen bg-whitesmoke">
         <PageHeader />
 
-        <main className="flex flex-col items-start flex-1 gap-32 px-24 pt-32 pb-128">
+        <main className='flex flex-col items-start flex-1 max-w-[1920px] px-24 pt-24 gap-24 pb-128'>
           <SectionHeader title="My Personal Projects" statement="Self-directed experiments in music, art, writing, and code, explored without briefs, deadlines, or constraints." />
           {groups.length === 0 && (
             <Paragraph size="lg">No projects found.</Paragraph>

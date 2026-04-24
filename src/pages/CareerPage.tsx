@@ -1,4 +1,5 @@
 import { BadgeLanguage } from '@/components/BadgeLanguage/BadgeLanguage';
+import { Link } from '@/components/Link/Link';
 import { PageFooter } from '@/components/PageFooter/PageFooter';
 import { PageHeader } from '@/components/PageHeader/PageHeader';
 import { SectionHeader } from '@/components/SectionHeader/SectionHeader';
@@ -52,8 +53,13 @@ export default function CareerPage(): JSX.Element {
   const { data: skillCategories, loading: skillsLoading, error: skillsError } = useSifaSkills();
   const { data: languages, loading: languagesLoading, error: languagesError } = useSifaLanguages();
 
+  const PAST_POSITIONS_LIMIT = 9;
+  const LINKEDIN_URL = 'https://linkedin.com/in/barrymprendergast';
+
   const currentPositions = positions?.filter((p) => !p.endedAt) ?? [];
-  const pastPositions = positions?.filter((p) => !!p.endedAt) ?? [];
+  const allPastPositions = positions?.filter((p) => !!p.endedAt) ?? [];
+  const pastPositions = allPastPositions.slice(0, PAST_POSITIONS_LIMIT);
+  const hasMorePastPositions = allPastPositions.length > PAST_POSITIONS_LIMIT;
 
   const loading = positionsLoading || skillsLoading || languagesLoading;
   const error = positionsError ?? skillsError ?? languagesError;
@@ -72,7 +78,7 @@ export default function CareerPage(): JSX.Element {
       <div className="flex flex-col items-center w-full bg-whitesmoke">
         <PageHeader />
 
-        <div className="flex flex-col gap-32 items-start w-full max-w-[1920px] px-24 pt-32 pb-128">
+        <div className="flex flex-col items-start w-full max-w-[1920px] px-24 pt-24 gap-24 pb-128">
           <SectionHeader title="My Career" statement="A selection of roles across startups, agencies, and enterprise organisations where I’ve helped teams deliver complex products and services in challenging, fast-moving environments." />
           {loading && <p className="font-sans font-medium text-base leading-[28px] text-black">Loading...</p>}
 
@@ -113,6 +119,9 @@ export default function CareerPage(): JSX.Element {
                   location={position.location}
                 />
               ))}
+              {hasMorePastPositions && (
+                <Link href={LINKEDIN_URL} label="View more on LinkedIn" color="blue" />
+              )}
             </>
           )}
 
