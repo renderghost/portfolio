@@ -30,6 +30,9 @@ export type {
 // Bookhive types
 export type { BookValue } from './defineBookhive';
 
+// Grain types
+export type { GrainAspectRatio, GrainPhotoItem, GrainPhotoValue } from './defineGrain';
+
 // Sifa types
 export type {
   SifaLanguageValue,

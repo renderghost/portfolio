@@ -1,9 +1,8 @@
 import { BadgeLanguage } from '@/components/BadgeLanguage/BadgeLanguage';
-import { Link } from '@/components/Link/Link';
+import { CardListPosition } from '@/components/CardListPosition/CardListPosition';
 import { PageFooter } from '@/components/PageFooter/PageFooter';
 import { PageHeader } from '@/components/PageHeader/PageHeader';
 import { SectionHeader } from '@/components/SectionHeader/SectionHeader';
-import { SectionPosition } from '@/components/SectionPosition/SectionPosition';
 import { SectionSkillCategory } from '@/components/SectionSkillCategory/SectionSkillCategory';
 import { useSifaLanguages, useSifaPositions, useSifaSkills } from '@/hooks/atproto';
 import { SeoHead } from '@/components/SeoHead/SeoHead';
@@ -46,20 +45,16 @@ const JSON_LD = {
   },
 };
 
-const sectionLabel = 'font-sans font-semibold text-base leading-[24px] text-dimgray ' + 'tracking-[1px] uppercase';
 
 export default function CareerPage(): JSX.Element {
   const { data: positions, loading: positionsLoading, error: positionsError } = useSifaPositions();
   const { data: skillCategories, loading: skillsLoading, error: skillsError } = useSifaSkills();
   const { data: languages, loading: languagesLoading, error: languagesError } = useSifaLanguages();
 
-  const PAST_POSITIONS_LIMIT = 9;
   const LINKEDIN_URL = 'https://linkedin.com/in/barrymprendergast';
 
   const currentPositions = positions?.filter((p) => !p.endedAt) ?? [];
-  const allPastPositions = positions?.filter((p) => !!p.endedAt) ?? [];
-  const pastPositions = allPastPositions.slice(0, PAST_POSITIONS_LIMIT);
-  const hasMorePastPositions = allPastPositions.length > PAST_POSITIONS_LIMIT;
+  const pastPositions = positions?.filter((p) => !!p.endedAt) ?? [];
 
   const loading = positionsLoading || skillsLoading || languagesLoading;
   const error = positionsError ?? skillsError ?? languagesError;
@@ -86,48 +81,26 @@ export default function CareerPage(): JSX.Element {
             <p className="font-sans font-medium text-base leading-[28px] text-black">Error loading data: {error}</p>
           )}
 
-          {!loading && !error && currentPositions.length > 0 && (
-            <>
-              <p className={sectionLabel}>Current Roles</p>
-              {currentPositions.map((position, index) => (
-                <SectionPosition
-                  key={`current-${position.company}-${index}`}
-                  company={position.company}
-                  title={position.title}
-                  description={position.description}
-                  employmentType={position.employmentType}
-                  startedAt={position.startedAt}
-                  endedAt={position.endedAt}
-                  location={position.location}
-                />
-              ))}
-            </>
+          {!loading && !error && (
+            <CardListPosition
+              title='Current Roles'
+              variant='current'
+              positions={currentPositions}
+            />
           )}
 
-          {!loading && !error && pastPositions.length > 0 && (
-            <>
-              <p className={sectionLabel}>Previous Roles</p>
-              {pastPositions.map((position, index) => (
-                <SectionPosition
-                  key={`past-${position.company}-${index}`}
-                  company={position.company}
-                  title={position.title}
-                  description={position.description}
-                  employmentType={position.employmentType}
-                  startedAt={position.startedAt}
-                  endedAt={position.endedAt}
-                  location={position.location}
-                />
-              ))}
-              {hasMorePastPositions && (
-                <Link href={LINKEDIN_URL} label="View more on LinkedIn" color="blue" />
-              )}
-            </>
+          {!loading && !error && (
+            <CardListPosition
+              title='Previous Roles'
+              variant='past'
+              positions={pastPositions}
+              linkedinUrl={LINKEDIN_URL}
+            />
           )}
 
           {!loading && !error && skillCategories && skillCategories.length > 0 && (
             <>
-              <p className={sectionLabel}>Skills</p>
+              <p className={'font-sans font-semibold text-base leading-[24px] text-dimgray tracking-[1px] uppercase'}>Skills</p>
               {skillCategories.map((group) => (
                 <SectionSkillCategory key={group.category} category={group.category} skills={group.skills} />
               ))}
@@ -136,7 +109,7 @@ export default function CareerPage(): JSX.Element {
 
           {!loading && !error && languages && languages.length > 0 && (
             <>
-              <p className={sectionLabel}>Languages</p>
+              <p className={'font-sans font-semibold text-base leading-[24px] text-dimgray tracking-[1px] uppercase'}>Languages</p>
               <div className="flex flex-wrap items-start gap-8">
                 {languages.map((lang) => (
                   <BadgeLanguage key={lang.name} language={lang.name} proficiency={lang.proficiency} />

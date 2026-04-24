@@ -4,7 +4,7 @@ export const coverWrapper =
   'aspect-[2/3] w-full bg-black-06 overflow-hidden relative shrink-0';
 
 export const coverImage =
-  'absolute inset-0 w-full h-full object-cover';
+  'absolute inset-0 w-full h-full object-cover [image-rendering:high-quality]';
 
 export const coverPlaceholder =
   'absolute inset-0 w-full h-full bg-black-10';

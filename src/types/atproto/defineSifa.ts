@@ -32,6 +32,11 @@ export interface SifaLanguageValue {
   createdAt: string;
 }
 
+export type SifaWorkplaceType =
+  | 'id.sifa.defs#remote'
+  | 'id.sifa.defs#hybrid'
+  | 'id.sifa.defs#onSite';
+
 export interface SifaPositionValue {
   $type: 'id.sifa.profile.position';
   company: string;
@@ -41,6 +46,7 @@ export interface SifaPositionValue {
   startedAt: string;
   endedAt?: string;
   location?: SifaLocation;
+  workplaceType?: SifaWorkplaceType;
   skills?: SifaSkillRef[];
   isPrimary?: boolean;
 }

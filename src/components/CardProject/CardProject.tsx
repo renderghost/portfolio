@@ -27,7 +27,7 @@ export const CardProject: React.FC<CardProjectProps> = ({ project }) => {
               <BadgeProject label={project.role} variant="role" />
             )}
             {project.hasMyArtwork && (
-              <BadgeProject label="My Artwork" variant="artwork" />
+              <BadgeProject label="Creative Works" variant="artwork" />
             )}
             {project.status && (
               <BadgeProject label={project.status} variant="status" />

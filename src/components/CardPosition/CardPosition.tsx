@@ -1,5 +1,6 @@
 import { Markdown } from '@/components/Markdown/Markdown';
 import React from 'react';
+import { WORKPLACE_TYPE_LABELS } from './CardPosition.constants';
 import * as styles from './CardPosition.styles';
 import type { CardPositionProps } from './CardPosition.types';
 
@@ -16,12 +17,13 @@ export const CardPosition: React.FC<CardPositionProps> = ({
   startedAt,
   endedAt,
   location,
+  workplaceType,
 }) => {
   const isCurrent = !endedAt;
   const formattedStart = startedAt ? formatDate(startedAt) : null;
   const formattedEnd = endedAt ? formatDate(endedAt) : 'Date';
 
-  const hasLocation = location && (location.city || location.country);
+  const hasLocation = location && (location.city || location.region || location.countryCode);
 
   return (
     <div className={styles.getCardWrapper(isCurrent)}>
@@ -42,10 +44,16 @@ export const CardPosition: React.FC<CardPositionProps> = ({
             <>
               <span>·</span>
               <span>
-                {location.city}
-                {location.city && location.country && ', '}
-                {location.country}
+                {[location.city, location.region, location.countryCode]
+                  .filter(Boolean)
+                  .join(', ')}
               </span>
+            </>
+          )}
+          {workplaceType && WORKPLACE_TYPE_LABELS[workplaceType] && (
+            <>
+              <span>·</span>
+              <span>{WORKPLACE_TYPE_LABELS[workplaceType]}</span>
             </>
           )}
         </div>

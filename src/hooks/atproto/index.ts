@@ -3,6 +3,8 @@
  */
 
 export { useBookhive } from './useBookhive';
+export { useGrainPhotos } from './useGrainPhotos';
+export type { GrainPhotoItem } from '@/types/atproto/defineGrain';
 export type { Book, Bookshelf } from './useBookhive';
 export { useLeaflet } from './useLeaflet';
 export type { Document, Publication } from './useLeaflet';

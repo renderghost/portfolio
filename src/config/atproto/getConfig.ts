@@ -25,12 +25,11 @@ export const ALLOWED_PUBLICATION_RKEYS: ReadonlySet<string> = new Set([
 
 /** Collection identifiers for AT Protocol records */
 export const ATPROTO_COLLECTIONS = {
-  PUBLICATION: 'pub.leaflet.publication',
-  DOCUMENT: 'pub.leaflet.document',
   STANDARD_PUBLICATION: 'site.standard.publication',
   STANDARD_DOCUMENT: 'site.standard.document',
   POSITION: 'id.sifa.profile.position',
   SKILL: 'id.sifa.profile.skill',
   LANGUAGE: 'id.sifa.profile.language',
   BOOKHIVE_BOOK: 'buzz.bookhive.book',
+  GRAIN_PHOTO: 'social.grain.photo',
 } as const;
