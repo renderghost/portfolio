@@ -25,8 +25,20 @@ export const PageHeader: React.FC<PageHeaderProps> = ({
 
   return (
     <header className={getWrapperStyles(className)}>
-      {/* Row 1: breadcrumb left, primary nav right */}
+      {/* Row 1: nav first in DOM (mobile top), breadcrumb second; order swapped on desktop */}
       <div className={topRow}>
+        <nav className={navGroup}>
+          {NAV_LINKS.map((link) => (
+            <Link
+              key={link.label}
+              href={link.href}
+              label={link.label}
+              usecase='default'
+              hasLeftIcon={false}
+              hasRightIcon={false}
+            />
+          ))}
+        </nav>
         <div className={breadcrumbGroup}>
           {crumbs.map((crumb, i) => (
             <React.Fragment key={crumb.href}>
@@ -41,18 +53,6 @@ export const PageHeader: React.FC<PageHeaderProps> = ({
             </React.Fragment>
           ))}
         </div>
-        <nav className={navGroup}>
-          {NAV_LINKS.map((link) => (
-            <Link
-              key={link.label}
-              href={link.href}
-              label={link.label}
-              usecase='default'
-              hasLeftIcon={false}
-              hasRightIcon={false}
-            />
-          ))}
-        </nav>
       </div>
 
       {/* Row 2: page title full width */}
