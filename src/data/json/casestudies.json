@@ -2,20 +2,18 @@
   {
     "affiliation": "Brandwatch",
     "affiliationURL": "https://www.brandwatch.com/",
-    "body": "<p id=\"\">Maecenas faucibus mollis interdum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed posuere consectetur est at lobortis. Etiam porta sem malesuada magna mollis euismod.</p><p id=\"\">Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Etiam porta sem malesuada magna mollis euismod. Curabitur blandit tempus porttitor. Curabitur blandit tempus porttitor.</p>",
-    "collectionId": "63020a6ad411031c64d74168",
+    "body": "Vizia was originally a single-use internal tool — a social data display built for one screen, one location, and one person to manage on-site. It couldn't support marketing, sales, product, or executive teams, didn't scale beyond a single data source, required physical access to fix problems, and had no admin infrastructure for managing multiple screens or users.<br/><br/>Redefining the product meant rebuilding almost everything. Working in agile sprints with engineers and data scientists, I led the design of a new data abstraction layer that could ingest and transform multiple source types and match them to appropriate visualisation types, including custom charts. I redesigned onboarding, rebuilt the visualisation layer with a new visual language that could work across industries and use cases, and designed a Chrome extension for remote instance management. The rebuilt admin tool let multiple users manage multiple screens in real time, from anywhere.<br/><br/>The harder work was organisational. Vizia wasn't the flagship product and wasn't generating significant revenue. Getting executive support meant making the case for latent enterprise demand the original product couldn't serve. Partnering with Unilever as an early design partner gave the team the grounding in real enterprise needs that made that case credible. The result was a platform adopted across entire businesses, making social intelligence accessible to people who had never been able to use it before.",
     "coverImage": "https://uploads-ssl.webflow.com/63020a6ad41103e186d7416a/64a11cd365d155b164b5a017_hero--19.svg",
     "startDate": "Mon Oct 31 2016 00:00:00 GMT+0000 (Coordinated Universal Time)",
     "endDate": "Mon Oct 31 2016 00:00:00 GMT+0000 (Coordinated Universal Time)",
-    "itemId": "64171a179f12e0f16aed2556",
     "pitchEmbed": "5176aa05-c687-4582-9b81-344dc9944a38",
     "published": "Fri May 24 2024 11:51:23 GMT+0000 (Coordinated Universal Time)",
     "relevantSkills": [
       "data-visualization",
       "design-strategy",
+      "design-systems",
       "interaction-design",
       "interface-design",
-      "internet-of-things",
       "product-design",
       "rapid-prototyping",
       "stakeholder-engagement",
@@ -23,8 +21,8 @@
     ],
     "role": "Senior UX Designer",
     "slug": "brandwatch-vizia",
-    "summary": "Vizia was Brandwatch's visual analytics command centre. I designed the data visualisation layer that transformed raw social media intelligence into realtime dashboards across organisations, making complex insights accessible to non-analyst stakeholders and enabling faster, evidence-based decisions at scale.",
-    "title": "Democratising intelligence-driven decision making across enterprise organisations",
+    "summary": "Vizia started as a single-use internal display outside the CEO's office. Working with engineers, data scientists and product managers, I led the design to turn it into an enterprise-grade intelligence platform adopted across entire organisations. VBrandwatch was acquired by Cision for $450m in 2021, and Vizia was a key asset in that deal.",
+    "title": "From wall display to enterprise intelligence platform: rebuilding Brandwatch Vizia for scale",
     "type": "Product Design"
   },
   {

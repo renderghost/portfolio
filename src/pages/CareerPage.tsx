@@ -100,7 +100,7 @@ export default function CareerPage(): JSX.Element {
 
           {!loading && !error && skillCategories && skillCategories.length > 0 && (
             <>
-              <p className={'font-sans font-semibold text-base leading-[24px] text-dimgray tracking-[1px] uppercase'}>Skills</p>
+              <p className={'font-sans font-semibold text-base text-dimgray tracking-[1px] uppercase'}>Skills</p>
               {skillCategories.map((group) => (
                 <SectionSkillCategory key={group.category} category={group.category} skills={group.skills} />
               ))}
@@ -109,7 +109,7 @@ export default function CareerPage(): JSX.Element {
 
           {!loading && !error && languages && languages.length > 0 && (
             <>
-              <p className={'font-sans font-semibold text-base leading-[24px] text-dimgray tracking-[1px] uppercase'}>Languages</p>
+              <p className={'font-sans font-semibold text-base text-dimgray tracking-[1px] uppercase'}>Languages</p>
               <div className="flex flex-wrap items-start gap-8">
                 {languages.map((lang) => (
                   <BadgeLanguage key={lang.name} language={lang.name} proficiency={lang.proficiency} />
