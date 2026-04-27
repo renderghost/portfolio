@@ -1,4 +1,4 @@
-import { Link } from '@/components/Link/Link';
+// import { Link } from '@/components/Link/Link'; // Disabled — Issue #53
 import React from 'react';
 import * as styles from './CardCaseStudy.styles';
 import type { CardCaseStudyProps } from './CardCaseStudy.types';
@@ -40,13 +40,13 @@ export const CardCaseStudy: React.FC<CardCaseStudyProps> = ({ caseStudy }) => {
           <p className={styles.summary}>{caseStudy.summary}</p>
         )}
 
-        {/* Link */}
-        <Link
+        {/* Link — commented out until case studies are ready (Issue #53) */}
+        {/* <Link
           href={`/portfolio/${caseStudy.slug}`}
           label='Read'
           icon='right'
           iconChar='↗'
-        />
+        /> */}
       </div>
     </div>
   );

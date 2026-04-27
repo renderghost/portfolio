@@ -1,6 +1,6 @@
 import AboutPage from '@/pages/AboutPage';
-import InterestsPage from '@/pages/InterestsPage';
-import CaseStudyPage from '@/pages/CaseStudyPage';
+// import InterestsPage from '@/pages/InterestsPage'; // Disabled — not ready
+// import CaseStudyPage from '@/pages/CaseStudyPage'; // Disabled — Issue #53
 import ImpressumPage from '@/pages/ImpressumPage';
 import ContactPage from '@/pages/ContactPage';
 import HomePage from '@/pages/HomePage';
@@ -53,10 +53,11 @@ const App: React.FC = () => {
         <Route path="/about" element={<AboutPage />} />
         <Route path="/career" element={<CareerPage />} />
         <Route path="/portfolio" element={<WorksPage />} />
-        <Route path="/portfolio/:slug" element={<CaseStudyPage />} />
+        {/* Case study subpages disabled until content is ready (Issue #53) */}
+        {/* <Route path="/portfolio/:slug" element={<CaseStudyPage />} /> */}
         <Route path="/writing" element={<WritingPage />} />
         <Route path="/projects" element={<ProjectsPage />} />
-        <Route path="/interests" element={<InterestsPage />} />
+        {/* <Route path="/interests" element={<InterestsPage />} /> */}{/* Disabled — not ready */}
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/impressum" element={<ImpressumPage />} />
         {/* <Route path="/studies" element={<Studies />} /> */}
