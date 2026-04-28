@@ -34,7 +34,7 @@ export const CardListPosition: React.FC<CardListPositionProps> = ({
         <>
           <div className={styles.bannerGrid}>
             <div className={styles.bannerInner}>
-              <p className={styles.bannerHeadline}>Currently engaged.</p>
+              <p className={styles.bannerHeadline}>Open to Work</p>
               <p className={styles.bannerDescription}>
                 If you&apos;re working on a complex product or service and need clearer direction or better outcomes, let&apos;s talk about your ambitions.
               </p>

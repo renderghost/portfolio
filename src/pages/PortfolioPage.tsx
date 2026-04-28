@@ -1,4 +1,5 @@
 import { CardGridCaseStudy } from '@/components/CardGridCaseStudy/CardGridCaseStudy';
+import { Link } from '@/components/Link/Link';
 import { PageFooter } from '@/components/PageFooter/PageFooter';
 import { PageHeader } from '@/components/PageHeader/PageHeader';
 import { SectionHeader } from '@/components/SectionHeader/SectionHeader';
@@ -81,6 +82,20 @@ export default function WorksPage(): JSX.Element {
 
         <main className='flex flex-col items-start flex-1 max-w-[1920px] px-24 pt-24 gap-24 pb-128'>
           <SectionHeader title='My Portfolio' statement='Case studies from across publishing, energy, government, pharma, startups, and enterprise organisations, focused on solving complex product and service problems through outcome-driven design.' />
+
+          {/* NDA notice banner — Issue #53 */}
+          <div className='w-full'>
+            <div className='flex flex-col gap-16 items-start bg-white p-32 w-full'>
+              <p className='font-sans font-black text-2xl text-black'>
+                Case studies available on request
+              </p>
+              <p className='font-sans font-medium text-base leading-[28px] text-black'>
+                To protect my clients&rsquo; confidentiality, much of my work isn&rsquo;t public. If you&rsquo;d like to see more, get in touch.
+              </p>
+              <Link href='mailto:contact@renderg.host?subject=Requesting%20access%20to%20case%20studies' label='Request access' color='black' icon='right' iconChar='→' />
+            </div>
+          </div>
+
           <CardGridCaseStudy
             cards={caseStudies.map((cs) => ({
               caseStudy: {
