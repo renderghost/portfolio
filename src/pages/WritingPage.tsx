@@ -32,7 +32,7 @@ export default function WritingPage(): JSX.Element {
         'https://bsky.app/profile/renderg.host',
         'https://linkedin.com/in/barrymprendergast',
         'https://signal.me/#eu/XO_aKC1aE1GZYWdMx7WK7HKGSCfrlpNhlxLGNi774dhiL7qr32BAMrH1BqgChaiM',
-        'https://calendly.com/barry-prendergast',
+        'https://cal.com/renderghost',
       ],
       knowsAbout: [
         'UX Strategy',
